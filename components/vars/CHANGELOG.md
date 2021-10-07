@@ -3,6 +3,83 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@3.1.0-alpha.3...@spectrum-css/vars@4.0.0)
+
+### 🐛 Bug fixes
+
+* adjusted tokens for treeview from DSS ([6d9168a](https://github.com/adobe/spectrum-css/commit/6d9168a))
+* resolve failing test by applying t-shirt size to actionbar example ([1d55f90](https://github.com/adobe/spectrum-css/commit/1d55f90))
+* update spectrum-tokens to 7.0.0-beta.27 ([fffd834](https://github.com/adobe/spectrum-css/commit/fffd834))
+* updating latest spectrum-tokens ([d35b957](https://github.com/adobe/spectrum-css/commit/d35b957))
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+* use updated tokens & resolve treeview build errors ([c892536](https://github.com/adobe/spectrum-css/commit/c892536))
+
+
+### 🛑 BREAKING CHANGES
+
+* t-shirt sizes added.
+
+
+
+
+
+<a name="3.1.0-alpha.3"></a>
+# 3.1.0-alpha.3
+🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@3.1.0-alpha.2...@spectrum-css/vars@3.1.0-alpha.3)
+
+### 🐛 Bug fixes
+
+* added padding to unselected listitem back ([f167013](https://github.com/adobe/spectrum-css/commit/f167013))
+
+
+
+
+
+<a name="3.1.0-alpha.2"></a>
+# 3.1.0-alpha.2
+🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@3.1.0-alpha.1...@spectrum-css/vars@3.1.0-alpha.2)
+
+### 🐛 Bug fixes
+
+* drop # from placeholder varnames, replace with _ ([aa167bb](https://github.com/adobe/spectrum-css/commit/aa167bb))
+* update checkbox disable background ([0dfb656](https://github.com/adobe/spectrum-css/commit/0dfb656))
+* updated to @adobe/spectrum-tokens@7.0.0-beta.18 ([e604447](https://github.com/adobe/spectrum-css/commit/e604447))
+* updated to @adobe/spectrum-tokens@7.0.0-beta.20 ([74eaad1](https://github.com/adobe/spectrum-css/commit/74eaad1))
+* updated to @adobe/spectrum-tokens@7.0.0-beta.21 ([083ff44](https://github.com/adobe/spectrum-css/commit/083ff44))
+
+
+
+
+
+<a name="3.1.0-alpha.1"></a>
+# 3.1.0-alpha.1
+🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@3.1.0-alpha.0...@spectrum-css/vars@3.1.0-alpha.1)
+
+**Note:** Version bump only for package @spectrum-css/vars
+
+
+
+
+
+<a name="3.1.0-alpha.0"></a>
+# 3.1.0-alpha.0
+🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@3.0.2...@spectrum-css/vars@3.1.0-alpha.0)
+
+### ✨ Features
+
+* updated to latest spectrum-tokens version ([0d7cc73](https://github.com/adobe/spectrum-css/commit/0d7cc73))
+
+
+### 🐛 Bug fixes
+
+* updating min-width on card ([f15db2a](https://github.com/adobe/spectrum-css/commit/f15db2a))
+
+
+
+
+
 <a name="3.0.2"></a>
 ## 3.0.2
 🗓 2021-04-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@3.0.1...@spectrum-css/vars@3.0.2)
