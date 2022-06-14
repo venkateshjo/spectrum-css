@@ -23,7 +23,9 @@
     "backstop:test-all": "backstop test --docker --config=backstop_data/backstop_test.js --env=local themes=lightest,light,dark,darkest scales=medium,large",
     "kill-zombies": "pkill -f \"(chrome)?(--headless)\"",
     "prepare": "gulp prepare",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -44,10 +46,20 @@
     "@adobe/spectrum-css-workflow-icons": "^1.2.1",
     "@adobe/spectrum-express-tokens-deprecated": "^1.0.0-beta.35",
     "@adobe/spectrum-tokens-deprecated": "^11.8.0",
+    "@babel/core": "^7.18.5",
     "@commitlint/cli": "^8.3.3",
     "@commitlint/config-conventional": "^8.3.3",
     "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.39",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack4": "^6.5.9",
+    "@storybook/html": "^6.5.9",
+    "@storybook/manager-webpack4": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
     "audit-ci": "^2.0.1",
+    "babel-loader": "^8.2.5",
     "backstopjs-spectrum": "^5.0.14",
     "del": "^5.1.0",
     "gh-pages": "^3.0.0",
@@ -87,5 +99,6 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
-  }
+  },
+  "dependencies": {}
 }
