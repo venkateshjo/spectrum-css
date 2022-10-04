@@ -28,6 +28,11 @@ governing permissions and limitations under the License.
   --spectrum-heading-heading-strong: var(--spectrum-heading-strong);
   --spectrum-heading-heading-strong-emphasized: var(--spectrum-heading-heading-strong-emphasized);
 
+  --spectrum-heading-cjk: var(--spectrum-cjk-heading);
+  --spectrum-heading-cjk-strong: var(--spectrum-heading-strong);
+  --spectrum-heading-cjk-emphasized: var(--spectrum-cjk-heading-emphasized);
+  --spectrum-heading-cjk-strong-emphasized: var(--spectrum-cjk-heading-strong-emphasized);
+
   /* Light */
   --spectrum-heading-heading-light-strong: var(--spectrum-heading-light-strong);
   --spectrum-heading-heading-light-strong-emphasized: var(--spectrum-heading-light-strong-emphasized);
@@ -38,35 +43,30 @@ governing permissions and limitations under the License.
   --spectrum-heading-sans-serif-light: var(--spectrum-sans-serif-heading-light);
   --spectrum-heading-sans-serif-light-emphasized: var(--spectrum-sans-serif-heading-light-emphasized);
 
-  /* Heavy */
-  --spectrum-heading-heading-heavy: var(--spectrum-heading-heavy);
-  --spectrum-heading-heading-heavy-strong: var(--spectrum-heading-heavy-strong);
-  --spectrum-heading-heading-heavy-strong-emphasized: var(--spectrum-heading-heavy-strong-emphasized);
-
-  --spectrum-heading-cjk: var(--spectrum-cjk-heading);
-  --spectrum-heading-cjk-strong: var(--spectrum-heading-strong);
-  --spectrum-heading-cjk-emphasized: var(--spectrum-cjk-heading-emphasized);
-  --spectrum-heading-cjk-strong-emphasized: var(--spectrum-cjk-heading-strong-emphasized);
-
   --spectrum-heading-cjk-light: var(--spectrum-cjk-heading-light);
   --spectrum-heading-cjk-light-strong: var(--spectrum-cjk-heading-light-strong);
   --spectrum-heading-cjk-light-emphasized: var(--spectrum-cjk-heading-light-emphasized);
   --spectrum-heading-cjk-light-strong-emphasized: var(--spectrum-cjk-heading-light-strong-emphasized);
+
+  /* Heavy */
+  --spectrum-heading-heading-heavy: var(--spectrum-heading-heavy);
+  --spectrum-heading-heading-heavy-strong: var(--spectrum-heading-heavy-strong);
+  --spectrum-heading-heading-heavy-strong-emphasized: var(--spectrum-heading-heavy-strong-emphasized);
 
   --spectrum-heading-cjk-heavy: var(--spectrum-cjk-heading-heavy);
   --spectrum-heading-cjk-heavy-strong: var(--spectrum-cjk-heading-heavy-strong);
   --spectrum-heading-cjk-heavy-emphasized: var(--spectrum-cjk-heading-heavy-emphasized);
   --spectrum-heading-cjk-heavy-strong-emphasized: var(--spectrum-cjk-heading-heavy-strong-emphasized);
 
-  --spectrum-heading-font-color: var(--spectrum-gray-900);
-
-  --spectrum-heading-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
-
   --spectrum-heading-heading-line-height: var(--spectrum-heading-line-height);
   --spectrum-heading-cjk-line-height: var(--spectrum-cjk-heading-line-height);
 
+  --spectrum-heading-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
+
   --spectrum-heading-margin-start: var(--spectrum-heading-margin-top-multiplier);
   --spectrum-heading-margin-end: var(--spectrum-heading-margin-bottom-multiplier);
+
+  --spectrum-heading-font-color: var(--spectrum-gray-900);
 }
 
 /* Heading t-shirt sizes */
@@ -258,7 +258,7 @@ governing permissions and limitations under the License.
   --spectrum-body-serif: var(--spectrum-font-family-serif);
 
   --spectrum-body-body-strong: var(--spectrum-body-strong);
-  --spectrum-body-body-emphasized: var(--spectrum-body-emphasized);
+  /* --spectrum-body-body-emphasized: var(--spectrum-body-emphasized); */
   --spectrum-body-body-strong-emphasized: var(--spectrum-body-strong-emphasized);
 
   --spectrum-body-cjk: var(--spectrum-cjk-body);
@@ -320,7 +320,7 @@ governing permissions and limitations under the License.
 
   em,
   .spectrum-Body-emphasized {
-    font-family: var(--spectrum-body-body-emphasized);
+    /* font-family: var(--spectrum-body-body-emphasized); */
   }
 
   .spectrum-Body-strong.spectrum-Body-emphasized {
