@@ -1,4 +1,7 @@
 import { html } from 'lit-html';
+import './dist/themes/spectrum.css';
+import './dist/themes/express.css';
+import './dist/index.css';
 
 export const HelpText = ({
   isDisabled = false,
@@ -20,6 +23,7 @@ export const HelpText = ({
   `;
 
   return html`
+    <div style="max-width: 500px;">
     <div
       class=${[
         'spectrum-HelpText',
@@ -32,6 +36,7 @@ export const HelpText = ({
       <div class="spectrum-HelpText-text">
         ${text}
       </div>
+    </div>
     </div>
   `;
 }
