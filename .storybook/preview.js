@@ -36,6 +36,17 @@ export const parameters = {
   }
 }
 
+const withDefaultStyles = (StoryFn, context) => {
+  const { parameters, globals } = context;
+  const defaultStyles = parameters.defaultStyles || globals.defaultStyles;
+
+  useEffect(() => {
+    document.body.classList.add('spectrum', 'spectrum--medium', 'spectrum--light');
+  });
+
+  return StoryFn();
+}
+
 const withRTL = (StoryFn, context) => {
   const { parameters, globals } = context;
 
@@ -45,9 +56,9 @@ const withRTL = (StoryFn, context) => {
   useEffect(() => {
     // Set RTL only if passed as a parameter or toggled via toolbar
     document.body.dir = textDirection
-  }, [textDirection])
+  }, [textDirection]);
 
   return StoryFn();
 }
 
-export const decorators = [withRTL]
+export const decorators = [withDefaultStyles, withRTL];
