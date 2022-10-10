@@ -9,6 +9,18 @@ import '../components/vars/dist/spectrum-large.css';
 import '../components/tokens/dist/index.css';
 
 export const globalTypes = {
+  scale: {
+    name: 'Scale',
+    description: 'The platform scale',
+    defaultValue: 'medium',
+    toolbar: {
+      dynamicTitle: true,
+      items: [
+        { value: 'medium', title: 'Medium'},
+        { value: 'large', title: 'Large'},
+      ]
+    }
+  },
   textDirection: {
     name: 'Text direction',
     description: 'Direction of the text',
@@ -18,6 +30,19 @@ export const globalTypes = {
       items: [
         { value: 'ltr', icon: 'arrowrightalt', title: 'left to right' },
         { value: 'rtl', icon: 'arrowleftalt', title: 'right to left' },
+      ]
+    }
+  },
+  vars: {
+    name: 'Vars',
+    description: 'Set the vars',
+    defaultValue: 'spectrum',
+    toolbar: {
+      // show the theme name once selected in the toolbar
+      dynamicTitle: true,
+      items: [
+        { value: 'spectrum', title: 'Spectrum' },
+        { value: 'express', title: 'Express' },
       ]
     }
   }
@@ -36,13 +61,41 @@ export const parameters = {
   }
 }
 
-const withDefaultStyles = (StoryFn, context) => {
+const withDefaultStyles = (StoryFn) => {
+  document.body.classList.add('spectrum', 'spectrum--medium', 'spectrum--light');
+  return StoryFn();
+}
+
+const withScale = (StoryFn, context) => {
   const { parameters, globals } = context;
-  const defaultStyles = parameters.defaultStyles || globals.defaultStyles;
+
+  const defaultScale = 'medium';
+  const scale = parameters.scale || globals.scale || defaultScale;
 
   useEffect(() => {
-    document.body.classList.add('spectrum', 'spectrum--medium', 'spectrum--light');
-  });
+    let isDefault = scale === defaultScale;
+    if (isDefault) {
+      document.body.classList.remove('spectrum--large');
+      document.body.classList.add('spectrum--medium');
+    } else {
+      document.body.classList.remove('spectrum--medium');
+      document.body.classList.add('spectrum--large');
+    }
+  }, [scale]);
+
+  return StoryFn();
+}
+
+const withVars = (StoryFn, context) => {
+  const { parameters, globals } = context;
+
+  const defaultVars = 'spectrum';
+  const vars = parameters.vars || globals.vars || defaultVars;
+
+  useEffect(() => {
+    let isDefault = vars === defaultVars;
+    document.body.classList.toggle('spectrum--express', !isDefault);
+  }, [vars]);
 
   return StoryFn();
 }
@@ -54,11 +107,10 @@ const withRTL = (StoryFn, context) => {
   const textDirection = parameters.textDirection || globals.textDirection || defaultDirection;
 
   useEffect(() => {
-    // Set RTL only if passed as a parameter or toggled via toolbar
     document.body.dir = textDirection
   }, [textDirection]);
 
   return StoryFn();
 }
 
-export const decorators = [withDefaultStyles, withRTL];
+export const decorators = [withDefaultStyles, withScale, withVars, withRTL];
