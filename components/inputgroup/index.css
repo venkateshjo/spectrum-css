@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,11 +10,453 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+.spectrum-InputGroup--sizeS {
+  --spectrum-combobox-block-size: var(--spectrum-component-height-75);
+  --spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-75);
+  --spectrum-combobox-font-size: var(--spectrum-font-size-75);
+
+  --spectrum-combobox-spacing-inline-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-small);
+  --spectrum-combobox-block-spacing-edge-to-progress-circle: var(--spectrum-field-top-to-progress-circle-small);
+  --spectrum-combobox-block-spacing-edge-to-alert: var(--spectrum-field-top-to-alert-icon-small);
+  --spectrum-combobox-spacing-edge-to-menu: var(--spectrum-component-to-menu-small);
+  --spectrum-combobox-spacing-block-start-edge-to-textfield: var(--spectrum-component-top-to-text-75);
+  --spectrum-combobox-spacing-block-end-edge-to-textfield: var(--spectrum-component-bottom-to-text-75);
+  --spectrum-combobox-spacing-inline-start-edge-to-textfield: var(--spectrum-component-edge-to-text-75);
+  --spectrum-combobox-spacing-inline-end-edge-to-button: var(--spectrum-component-edge-to-text-75);
+}
+
+.spectrum-InputGroup--sizeM {
+  --spectrum-combobox-block-size: var(--spectrum-component-height-100);
+  --spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-100);
+  --spectrum-combobox-font-size: var(--spectrum-font-size-100);
+
+  --spectrum-combobox-spacing-inline-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-medium);
+  --spectrum-combobox-block-spacing-edge-to-progress-circle: var(--spectrum-field-top-to-progress-circle-medium);
+  --spectrum-combobox-block-spacing-edge-to-alert: var(--spectrum-field-top-to-alert-icon-medium);
+  --spectrum-combobox-spacing-edge-to-menu: var(--spectrum-component-to-menu-medium);
+  --spectrum-combobox-spacing-block-start-edge-to-textfield: var(--spectrum-component-top-to-text-100);
+  --spectrum-combobox-spacing-block-end-edge-to-textfield: var(--spectrum-component-bottom-to-text-100);
+  --spectrum-combobox-spacing-inline-start-edge-to-textfield: var(--spectrum-component-edge-to-text-100);
+  --spectrum-combobox-spacing-inline-end-edge-to-button: var(--spectrum-component-edge-to-text-100);
+}
+
+.spectrum-InputGroup--sizeL {
+  --spectrum-combobox-block-size: var(--spectrum-component-height-200);
+  --spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-200);
+  --spectrum-combobox-font-size: var(--spectrum-font-size-200);
+
+  --spectrum-combobox-spacing-inline-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-large);
+  --spectrum-combobox-block-spacing-edge-to-progress-circle: var(--spectrum-field-top-to-progress-circle-large);
+  --spectrum-combobox-block-spacing-edge-to-alert: var(--spectrum-field-top-to-alert-icon-large);
+  --spectrum-combobox-spacing-edge-to-menu: var(--spectrum-component-to-menu-large);
+  --spectrum-combobox-spacing-block-start-edge-to-textfield: var(--spectrum-component-top-to-text-200);
+  --spectrum-combobox-spacing-block-end-edge-to-textfield: var(--spectrum-component-bottom-to-text-200);
+  --spectrum-combobox-spacing-inline-start-edge-to-textfield: var(--spectrum-component-edge-to-text-200);
+  --spectrum-combobox-spacing-inline-end-edge-to-button: var(--spectrum-component-edge-to-text-200);
+}
+
+.spectrum-InputGroup--sizeXL {
+  --spectrum-combobox-block-size: var(--spectrum-component-height-300);
+  --spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-300);
+  --spectrum-combobox-font-size: var(--spectrum-font-size-300);
+
+  --spectrum-combobox-spacing-inline-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-extra-large);
+  --spectrum-combobox-block-spacing-edge-to-progress-circle: var(--spectrum-field-top-to-progress-circle-extra-large);
+  --spectrum-combobox-block-spacing-edge-to-alert: var(--spectrum-field-top-to-alert-icon-extra-large);
+  --spectrum-combobox-spacing-edge-to-menu: var(--spectrum-component-to-menu-extra-large);
+  --spectrum-combobox-spacing-block-start-edge-to-textfield: var(--spectrum-component-top-to-text-300);
+  --spectrum-combobox-spacing-block-end-edge-to-textfield: var(--spectrum-component-bottom-to-text-300);
+  --spectrum-combobox-spacing-inline-start-edge-to-textfield: var(--spectrum-component-edge-to-text-300);
+  --spectrum-combobox-spacing-inline-end-edge-to-button: var(--spectrum-component-edge-to-text-300);
+}
+
 .spectrum-InputGroup {
+  /* Placeholders */
+  --spectrum-combobox-quiet-fieldbutton-border-radius: 0;
+  --spectrum-combobox-button-size: 32px;
+  
+  --spectrum-combobox-min-inline-size: var(--spectrum-combo-box-minimum-width-multiplier);
+  --spectrum-combobox-block-size: var(--spectrum-component-height-100);
+  --spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-100);
+  --spectrum-combobox-font-size: var(--spectrum-font-size-100);
+
+  --spectrum-combobox-spacing-inline-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-medium);
+  --spectrum-combobox-block-spacing-edge-to-progress-circle: var(--spectrum-field-top-to-progress-circle-medium);
+  --spectrum-combobox-block-spacing-edge-to-alert: var(--spectrum-field-top-to-alert-icon-medium);
+  --spectrum-combobox-spacing-edge-to-menu: var(--spectrum-component-to-menu-medium);
+  --spectrum-combobox-spacing-block-start-edge-to-textfield: var(--spectrum-component-top-to-text-100);
+  --spectrum-combobox-spacing-block-end-edge-to-textfield: var(--spectrum-component-bottom-to-text-100);
+  --spectrum-combobox-spacing-inline-start-edge-to-textfield: var(--spectrum-component-edge-to-text-100);
+  --spectrum-combobox-spacing-inline-end-edge-to-button: var(--spectrum-component-edge-to-text-100);
+
+  --spectrum-combobox-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+  --spectrum-combobox-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+  --spectrum-combobox-focus-indicator-color: var(--spectrum-focus-indicator-color);
+
+  --spectrum-combobox-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-combobox-border-width: var(--spectrum-border-width-100);
+
+  --spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component);
+
+  --spectrum-combobox-font-family: var(--spectrum-font-family-default);
+
+  --spectrum-combobox-font-color-default: var(--spectrum-neutral-content-color-default);
+  --spectrum-combobox-font-color-hover: var(--spectrum-neutral-content-color-hover);
+  --spectrum-combobox-font-color-active: var(--spectrum-neutral-content-color-down);
+  --spectrum-combobox-font-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+
+  --spectrum-combobox-background-color-default: var(--spectrum-gray-50);
+  --spectrum-combobox-background-color-hover: var(--spectrum-gray-50);
+  --spectrum-combobox-background-color-active: var(--spectrum-gray-50);
+  --spectrum-combobox-background-color-key-focus: var(--spectrum-gray-50);
+
+  --spectrum-combobox-background-color-disabled: var(--spectrum-disabled-background-color);
+  --spectrum-combobox-font-color-disabled: var(--spectrum-disabled-content-color);
+
+  --spectrum-combobox-border-color-invalid-default: var(--spectrum-negative-border-color-default);
+  --spectrum-combobox-border-color-invalid-hover: var(--spectrum-negative-border-color-hover);
+  --spectrum-combobox-border-color-invalid-active: var(--spectrum-negative-border-color-down);
+  --spectrum-combobox-border-color-invalid-key-focus: var(--spectrum-negative-border-color-key-focus);
+
+  --spectrum-combobox-alert-icon-color: var(--spectrum-negative-visual-color);
+}
+
+.spectrum-InputGroup--quiet {
+  --spectrum-combobox-min-inline-size: var(--spectrum-combo-box-quiet-minimum-width-multiplier);
+  --spectrum-combobox-spacing-block-start-to-border: var(--spectrum-field-edge-to-border-quiet);
+  --spectrum-combobox-spacing-inline-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-quiet);
+  --spectrum-combobox-spacing-inline-start-to-textfield: var(--spectrum-field-edge-to-text-quiet);
+
+  --spectrum-combobox-border-color-disabled: var(--spectrum-disabled-border-color);
+
+  --spectrum-combobox-background-color: rgb(248, 248, 248);
+}
+
+@media (forced-colors: active) {
+  .spectrum-InputGroup {
+    --highcontrast-combobox-focus-indicator-color: Highlight;
+  }
+}
+
+.spectrum-InputGroup {
+  position: relative;
+
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  min-inline-size: var(--mod-combobox-min-inline-size, var(--spectrum-combobox-min-inline-size));
+  block-size: var(--mod-combobox-block-size, var(--spectrum-combobox-block-size));
+
+  margin-block-start: var(--mod-combobox-spacing-label-to-combobox, var(--spectrum-combobox-spacing-label-to-combobox));
+
+  border-radius: var(--mod-combobox-border-radius, var(--spectrum-combobox-border-radius));
+  border-width: var(--mod-combobox-border-width, var(--spectrum-combobox-border-width));
+
+  .spectrum-InputGroup-textfield {
+    .spectrum-Textfield-validationIcon {
+      position: absolute;
+      inset-block-start: var(--mod-combobox-block-spacing-edge-to-alert, var(--spectrum-combobox-block-spacing-edge-to-alert));
+      inset-block-end: var(--mod-combobox-block-spacing-edge-to-alert, var(--spectrum-combobox-block-spacing-edge-to-alert));
+
+      /* TODO Apply icon size tokens correctly */
+      inline-size: var(--mod-combobox-icon-size, var(--spectrum-combobox-icon-size));
+      block-size: var(--mod-combobox-icon-size, var(--spectrum-combobox-icon-size));
+    }
+
+    &:focus, &:focus-visible, &.is-focused, &.is-keyboardFocused {
+      border: none;
+
+      &::after {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .spectrum-InputGroup-button:not(:disabled):not(.is-invalid) {
+    .spectrum-PickerButton-fill {
+      /* Subcomponent token override */
+      --spectrum-alias-infieldbutton-fill-border-color-default: var(--spectrum-combobox-border-color-default);
+      border-color: var(--mod-combobox-border-color-default, var(--spectrum-alias-infieldbutton-fill-border-color-default));
+    }
+
+    &:focus, &.is-focused, &.is-keyboardFocused {
+      .spectrum-PickerButton-fill:not(.is-invalid) {
+        border-color: var(--mod-combobox--border-color-key-focus, var(--spectrum-alias-infieldbutton-fill-border-color-key-focus));
+      }
+    }
+  }
+
+  & .is-open.spectrum-Popover {
+    transform: translateY(var(--mod-combobox-spacing-edge-to-menu, var(--spectrum-combobox-spacing-edge-to-menu)));
+  }
+}
+
+.spectrum-InputGroup.is-invalid {
+  .spectrum-InputGroup-input {
+
+    border-color: var(--mod-combobox-border-color-invalid-default, var(--spectrum-combobox-border-color-invalid-default));
+
+    &:hover {
+      border-color: var(--mod-combobox-border-color-invalid-hover, var(--spectrum-combobox-border-color-invalid-hover));
+    }
+
+    &:active {
+      border-color: var(--mod-combobox-border-color-invalid-active, var(--spectrum-combobox-border-color-invalid-active));
+    }
+
+    &.focus-ring {
+      box-shadow: none;
+      /* Subcomponent token override */
+      --spectrum-alias-infieldbutton-fill-border-color-key-focus: var(--spectrum-combobox-border-color-invalid-key-focus);
+      border-color: var(--mod-combobox-border-color-key-focus, var(--spectrum-alias-infieldbutton-fill-border-color-key-focus));
+    }
+  }
+
+  .spectrum-Textfield-validationIcon {
+    color: var(--mod-combobox-alert-icon-color, var(--spectrum-combobox-alert-icon-color));
+  }
+}
+
+.spectrum-InputGroup.is-disabled {
+  .spectrum-InputGroup-input {
+    background-color: var(--mod-combobox-background-color-disabled, var(--spectrum-combobox-background-color-disabled));
+
+    &::placeholder {
+      color: var(--mod-combobox-font-color-disabled, var(--spectrum-combobox-font-color-disabled));
+    }
+  }
+}
+
+.spectrum-InputGroup-progress-circle {
+  position: absolute;
+  inset-inline-end: calc(
+    var(--mod-combobox-spacing-inline-icon-to-button, var(--spectrum-combobox-spacing-inline-icon-to-button)) +
+    var(--mod-combobox-button-size, var(--spectrum-combobox-button-size))
+  );
+  inset-block-start: var(--mod-combobox-block-spacing-edge-to-progress-circle, var(--spectrum-combobox-block-spacing-edge-to-progress-circle));
+  inset-block-end: var(--mod-combobox-block-spacing-edge-to-alert, var(--spectrum-combobox-block-spacing-edge-to-alert));
+}
+
+/* Overrides inset-inline position from spectrum-Textfield.is-invalid */
+[dir="ltr"] .spectrum-Textfield.is-invalid {
+  .spectrum-Textfield-validationIcon {
+    inset-inline-end: calc(
+      var(--mod-combobox-spacing-inline-icon-to-button, var(--spectrum-combobox-spacing-inline-icon-to-button)) +
+      var(--mod-combobox-button-size, var(--spectrum-combobox-button-size)));
+  }
+}
+
+/* Overrides inset-inline-end position from spectrum-Textfield--quiet.is-invalid */
+[dir="ltr"] .spectrum-Textfield.spectrum-Textfield--quiet.is-invalid {
+  .spectrum-Textfield-validationIcon {
+    inset-inline-end: var(--mod-combobox-button-size, var(--spectrum-combobox-button-size));
+  }
+}
+
+.spectrum-InputGroup-button {
+  /* Be above textfield so box shadow shines through */
+  position: absolute;
+  inset-inline-end: 0;
+
+  .spectrum-PickerButton-fill {
+    border-color: var(--mod-combobox-border-color-default, var(--spectrum-combobox-border-color-default));
+  }
+
+  &.is-focused, &.is-keyboardFocused {
+    .spectrum-PickerButton-fill {
+      border-color: var(--mod-alias-infieldbutton-fill-border-color-key-focus, var(--spectrum-alias-infieldbutton-fill-border-color-key-focus));
+    }
+  }
+}
+
+.spectrum-InputGroup-button.is-invalid {
+  &:focus, &.is-focused, &.is-keyboardFocused {
+    .spectrum-PickerButton-fill {
+      /* Subcomponent token override */
+      --spectrum-alias-input-border-color-invalid-key-focus: var(--spectrum-combobox-border-color-invalid-key-focus);
+      border-color: var(--mod-border-color-invalid-key-focus, var(--spectrum-alias-input-border-color-invalid-key-focus));
+    }
+  }
+}
+
+.spectrum-InputGroup-textfield {
+  /* Hide native outline */
+  outline-style: solid;
+  outline-color: transparent;
+
+  &.is-focused, &.is-keyboardFocused {
+    .spectrum-InputGroup-input {
+      border-color: var(--mod-alias-infieldbutton-fill-border-color-key-focus, var(--spectrum-alias-infieldbutton-fill-border-color-key-focus));
+    }
+  }
+
+  &:focus-within {
+    &::after {
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: calc(
+        (var(--mod-combobox-focus-indicator-gap, var(--spectrum-combobox-focus-indicator-gap)) +
+         var(--mod-combobox-border-width, var(--spectrum-combobox-border-width)) *
+         -1)
+      );
+      inline-size: calc(
+        100% +
+        (var(--mod-combobox-focus-indicator-gap, var(--spectrum-combobox-focus-indicator-gap)) * 2) +
+        (var(--mod-combobox-border-width, var(--spectrum-combobox-border-width)) *
+         2)
+      );
+      block-size: calc(
+        100%  +
+        (var(--mod-combobox-focus-indicator-gap, var(--spectrum-combobox-focus-indicator-gap)) * 2) +
+        (var(--mod-combobox-border-width, var(--spectrum-combobox-border-width)) *
+         2)
+      );
+      margin: auto;
+      margin-inline-start: calc(
+        (var(--mod-combobox-focus-indicator-gap, var(--spectrum-combobox-focus-indicator-gap)) +
+         var(--mod-combobox-focus-indicator-thickness, var(--spectrum-combobox-focus-indicator-thickness)) +
+         var(--mod-combobox-border-width, var(--spectrum-combobox-border-width))) *
+        -1);
+      border-style: solid;
+      border-width: var(--mod-combobox-focus-indicator-thickness, var(--spectrum-combobox-focus-indicator-thickness));
+      border-color: var(--highcontrast-combobox-focus-indicator-color, var(--mod-combobox-focus-indicator-color, var(--spectrum-combobox-focus-indicator-color)));
+      border-radius: calc(
+        var(--mod-combobox-border-radius, var(--spectrum-combobox-border-radius)) +
+        var(--mod-combobox-focus-indicator-gap, var(--spectrum-combobox-focus-indicator-gap)) +
+        var(--mod-combobox-border-width, var(--spectrum-combobox-border-width)));
+    }
+  }
+}
+
+.spectrum-InputGroup-input {
+  padding-block-start: var(--mod-combobox-spacing-block-start-edge-to-textfield, var(--spectrum-combobox-spacing-block-start-edge-to-textfield));
+  padding-block-end: var(--mod-combobox-spacing-block-end-edge-to-textfield, var(--spectrum-combobox-spacing-block-end-edge-to-textfield));
+  padding-inline-start: var(--mod-combobox-spacing-inline-start-edge-to-textfield, var(--spectrum-combobox-spacing-inline-start-edge-to-textfield));
+  padding-inline-end: var(--mod-combobox-spacing-inline-end-edge-to-button, var(--spectrum-combobox-spacing-inline-end-edge-to-button));
+
+  background-color: var(--mod-combobox-background-color-default, var(--spectrum-combobox-background-color-default));
+  border-color: var(--mod-combobox-border-color-default, var(--spectrum-combobox-border-color-default));
+
+  /* fill space */
+  flex: 1;
+
+  &::placeholder {
+    font-size: var(--mod-combobox-font-size, var(--spectrum-combobox-font-size));
+    font-family: var(--mod-combobox-font-family, var(--spectrum-combobox-font-family));
+
+    color: var(--mod-combobox-font-color-default, var(--spectrum-combobox-font-color-default));
+  }
+
+  &:hover {
+    background-color: var(--mod-combobox-background-color-hover, var(--spectrum-combobox-background-color-hover));
+    border-color: var(--mod-combobox-border-color-hover, var(--spectrum-combobox-border-color-hover));
+
+    &::placeholder {
+      color: var(--mod-combobox-font-color-hover, var(--spectrum-combobox-font-color-hover));
+    }
+  }
+
+  &:active {
+    background-color: var(--mod-combobox-background-color-active, var(--spectrum-combobox-background-color-active));
+    border-color: var(--mod-combobox-border-color-active, var(--spectrum-combobox-border-color-active));
+
+    &::placeholder {
+      color: var(--mod-combobox-font-color-active, var(--spectrum-combobox-font-color-active));
+    }
+  }
+
+  &:focus-visible,
+  &:focus-ring,
+  &.is-focused {
+    background-color: var(--mod-combobox-background-color-key-focus, var(--spectrum-combobox-background-color-key-focus));
+    border-color: var(--mod-alias-infieldbutton-fill-border-color-key-focus, var(--spectrum-alias-infieldbutton-fill-border-color-key-focus));
+
+    &::placeholder {
+      color: var(--mod-combobox-font-color-key-focus, var(--spectrum-combobox-font-color-key-focus));
+    }
+  }
+}
+
+.spectrum-InputGroup--quiet {
+  border-radius: var(--mod-combobox-quiet-fieldbutton-border-radius, var(--spectrum-combobox-quiet-fieldbutton-border-radius));
+
+  .spectrum-InputGroup-textfield {
+    &:focus-within::after {
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: calc(
+        (var(--mod-combobox-focus-indicator-gap, var(--spectrum-combobox-focus-indicator-gap)) +
+         var(--mod-combobox-border-width, var(--spectrum-combobox-border-width)) *
+         -1));
+      inline-size: calc(
+        100% +
+        var(--mod-combobox-border-width, var(--spectrum-combobox-border-width))
+      );
+      block-size: calc(
+        100%  +
+        (var(--mod-combobox-focus-indicator-gap, var(--spectrum-combobox-focus-indicator-gap)) * 2) +
+        (var(--mod-combobox-border-width, var(--spectrum-combobox-border-width)) *
+         2)
+      );
+      margin: auto;
+      border: 0;
+      border-bottom-style: solid;
+      border-bottom-width: var(--mod-combobox-focus-indicator-thickness, var(--spectrum-combobox-focus-indicator-thickness));
+      border-bottom-color: var(--mod-combobox-focus-indicator-color, var(--spectrum-combobox-focus-indicator-color));
+      border-radius: 0;
+    }
+  }
+
+  .spectrum-InputGroup-button {
+    inline-size: auto;
+
+    .spectrum-PickerButton-fill {
+      border: none;
+    }
+  }
+
+  .spectrum-InputGroup-input {
+    padding-block-end: var(--mod-combobox-spacing-block-start-to-border, var(--spectrum-combobox-spacing-block-start-to-border));
+    padding-inline-start: var(--mod-combobox-spacing-inline-start-to-textfield, var(--spectrum-combobox-spacing-inline-start-to-textfield));
+    background-color: var(--mod-combobox-background-color, var(--spectrum-combobox-background-color));
+  }
+
+  .spectrum-InputGroup-input:disabled {
+    background-color: transparent;
+    border-bottom-color: var(--mod-combobox-border-color-disabled, var(--spectrum-combobox-border-color-disabled));
+  }
+}
+
+/* Date Picker*/
+
+.spectrum-DatePicker {
+ --spectrum-global-dimension-size-100: 10px;
+ --spectrum-global-dimension-size-150: 15px;
+ --spectrum-global-dimension-size-225:22px;
+ --spectrum-global-dimension-size-400: 40px;
+ --spectrum-global-dimension-size-1600: 160px;
+ --spectrum-alias-infieldbutton-full-height-m: 40px;
+ --spectrum-global-dimension-size-900: 90px;
+ --spectrum-global-dimension-size-200: 20px;
+ --spectrum-global-dimension-size-450: 45p;
+ --spectrum-global-dimension-size-300: 30px;
+ --spectrum-global-dimension-static-font-size-100: 17px;
+ --spectrum-textfield-m-texticon-icon-size: var(--spectrum-global-dimension-size-225);
+ --spectrum-textfield-m-texticon-height: var(--spectrum-global-dimension-size-400);
+
   /* Todo: move to DNA */
   --spectrum-combobox-quiet-fieldbutton-border-radius: 0;
-  --spectrum-combobox-field-border-width-right: 0;
-  --spectrum-combobox-quiet-fieldbutton-padding-right: 0;
 
   --spectrum-inputgroup-generic-padding: var(--spectrum-global-dimension-size-150);
 
@@ -70,64 +512,10 @@ governing permissions and limitations under the License.
   --spectrum-datepicker-range-dash-line-height: calc(
     var(--spectrum-textfield-m-texticon-height) - var(--spectrum-global-dimension-size-100)
   );
-
-  /* be square: we're a little ahead of DNA at the time of writing, but Nate said so */
-  --spectrum-combobox-button-width: calc(
-    var(--spectrum-global-dimension-size-400)
-  );
-
-  --spectrum-combobox-quiet-button-offset: calc(
-    var(--spectrum-actionbutton-m-texticon-min-width) / 2 -
-      var(--spectrum-alias-ui-icon-chevron-size-100) / 2
-  );
-
-  /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
-  --spectrum-textfield-icon-inline-end-override: calc(var(--spectrum-alias-infieldbutton-full-height-m) + var(--spectrum-global-dimension-size-100));
-}
-
-/* hack: use var so it doesn't disappear */
-.🤫 {
-  width: var(--spectrum-textfield-icon-inline-end-override);
-}
-
-.spectrum-InputGroup {
-  position: relative;
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  min-inline-size: var(--spectrum-alias-single-line-width);
-  border-radius: var(--spectrum-alias-border-radius-regular);
-}
-
-.spectrum-InputGroup-button {
-  /* Be above textfield so box shadow shines through */
-  position: absolute;
-  inset-inline-end: 0;
-}
-
-.spectrum-InputGroup-input {
-  /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
-  padding-inline-end: var(--spectrum-alias-infieldbutton-full-height-m);
-
-  /* fill space */
-  flex: 1;
-}
-
-.spectrum-InputGroup--quiet {
-  border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
-
-  /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
-  --spectrum-textfield-icon-inline-end-override: var(--spectrum-alias-infieldbutton-full-height-m);
-
-  .spectrum-InputGroup-button {
-    inline-size: auto;
-
-    inset-inline-end: calc(-1 * var(--spectrum-alias-combobox-quiet-button-offset-x));
-  }
 }
 
 .spectrum-Datepicker--range {
-  border-radius: var(--spectrum-alias-border-radius-regular);
+  border-radius: var(--spectrum-combobox-border-radius);
 
   /* focus-ring */
   &:after {
@@ -138,15 +526,15 @@ governing permissions and limitations under the License.
     right: 0;
     bottom: 0;
     top: 0;
-    margin: calc(var(--spectrum-textfield-m-texticon-focus-ring-gap) * -1);
-    border-radius: calc(var(--spectrum-textfield-m-texticon-border-radius) + var(--spectrum-textfield-m-texticon-focus-ring-gap));
+    margin: calc(var(--spectrum-combobox-focus-indicator-gap) * -1);
+    border-radius: calc(var(--spectrum-combobox-border-radius) + var(--spectrum-combobox-focus-indicator-gap));
     border-color: transparent;
-    transition: box-shadow var(--spectrum-global-animation-duration-100) ease-in-out, border-color var(--spectrum-global-animation-duration-100) ease-in-out;
+    transition: box-shadow var(--spectrum-animation-duration-100) ease-in-out, border-color var(--spectrum-animation-duration-100) ease-in-out;
   }
 
   &.is-keyboardFocused:not(.spectrum-InputGroup--quiet) {
     &:after {
-      box-shadow: 0 0 0 var(--spectrum-textfield-m-texticon-focus-ring-border-width) var(--spectrum-textfield-m-textonly-focus-ring-border-color-key-focus);
+      box-shadow: 0 0 0 var(--spectrum-combobox-focus-indicator-thickness) var(--spectrum-combobox-focus-indicator-color);
     }
 
     .spectrum-InputGroup-textfield:after {
@@ -159,8 +547,8 @@ governing permissions and limitations under the License.
       margin: 0;
       box-shadow: none;
       border-radius: 0;
-      border-bottom: 2px solid var(--spectrum-textfield-m-textonly-focus-ring-border-color-key-focus);
-      bottom: calc(-1 * var(--spectrum-alias-input-quiet-focusline-gap));
+      border-bottom: 2px solid var(--spectrum-combobox-focus-indicator-color);
+      bottom: calc(-1 * var(--spectrum-combobox-focus-indicator-gap));
     }
   }
 
