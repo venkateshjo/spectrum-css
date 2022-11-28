@@ -1,5 +1,4 @@
 import { unpackDecorator } from "./helpers/utilities.js";
-import { withIconsWrapper } from "./helpers/decorators/iconsWrapper.js";
 
 import {
   textDirectionType,
@@ -13,20 +12,16 @@ import {
   withReducedMotionWrapper
 } from "./helpers/decorators/index.js";
 
-// Load global styles
-import '!!style-loader!css-loader!@spectrum-css/vars/dist/spectrum-global.css';
-import '!!style-loader!css-loader!@spectrum-css/page/dist/index-vars.css';
+import '@spectrum-css/tokens/dist/index.css';
+import '@spectrum-css/page/dist/index-vars.css';
 
-import '!!style-loader!css-loader!@spectrum-css/vars/dist/spectrum-medium.css'; // default
-import '!!style-loader!css-loader!@spectrum-css/vars/dist/spectrum-large.css';
+window.__spectrum_context__ = {};
 
-import '!!style-loader!css-loader!@spectrum-css/vars/dist/spectrum-lightest.css';
-import '!!style-loader!css-loader!@spectrum-css/vars/dist/spectrum-midlight.css';
-import '!!style-loader!css-loader!@spectrum-css/vars/dist/spectrum-light.css'; // default
-import '!!style-loader!css-loader!@spectrum-css/vars/dist/spectrum-dark.css';
-import '!!style-loader!css-loader!@spectrum-css/vars/dist/spectrum-middark.css';
-import '!!style-loader!css-loader!@spectrum-css/vars/dist/spectrum-darkest.css';
+window.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.add('spectrum');
+});
 
+// @todo: resolve errors on 'name' and 'title' in console
 export const globalTypes = {
   textDirection: textDirectionType,
   lang: langType,
@@ -40,7 +35,6 @@ export const parameters = {
   isToolShown: false,
   controls: {
     expanded: false,
-    backgrounds: false,
     hideNoControlsWarning: true,
   },
   html: {
@@ -56,10 +50,13 @@ export const parameters = {
       wrapLines: false,
     },
   },
-  backgrounds: { disable: true },
-  viewport: { disable: true },
   docs: {
     inlineStories: true,
+    source: {
+        type: 'dynamic',
+        language: 'html',
+    },
+    iframeHeight: '200px',
   },
 };
 
@@ -67,7 +64,6 @@ export const decorators = [
   withTextDirectionWrapper,
   withLanguageWrapper,
   withReducedMotionWrapper,
-  withIconsWrapper,
   unpackDecorator,
   withContextWrapper
 ];

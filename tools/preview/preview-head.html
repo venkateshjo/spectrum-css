@@ -3,9 +3,9 @@
 <!-- For Adobe Clean font support -->
 <link rel="stylesheet" href="https://use.typekit.net/bbk5msc.css" />
 
-<link rel="stylesheet" href="/base.css" />
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        document.body.classList.add('spectrum', 'spectrum--medium', 'spectrum--light');
-    });
-</script>
+<style>
+    /* Hide the SVG elements that only include references */
+    svg:has(symbol):not(:has(use)) {
+        display: none;
+    }
+</style>

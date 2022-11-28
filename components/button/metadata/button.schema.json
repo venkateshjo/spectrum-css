@@ -14,6 +14,7 @@
       "type": "string",
       "description": "Root class name for this element.",
       "const": "spectrum-Button",
+      "default": "spectrum-Button",
       "readonly": true,
       "hidden": true
     },
@@ -44,7 +45,7 @@
       "default": "accent"
     },
     "size": {
-      "title": "Help text size",
+      "title": "Button size",
       "type": "string",
       "enum": [
         "s",
@@ -79,12 +80,6 @@
       "default": false,
       "category": "Advanced"
     },
-    "isPending": {
-      "title": "Pending",
-      "type": "boolean",
-      "default": false,
-      "category": "Advanced"
-    },
     "isDisabled": {
       "title": "Disabled",
       "type": "boolean",
@@ -93,13 +88,33 @@
     },
     "actions": {
       "title": "Actions",
+      "description": "A list of the user interactions supported by this component.",
       "type": "array",
       "items": {
         "$ref": "#/global/properties/action"
       },
       "default": [
         {
+          "type": "mouseover",
+          "selector": ".spectrum-Button"
+        },
+        {
           "type": "click",
+          "selector": ".spectrum-Button"
+        },
+        {
+          "type": "focus",
+          "pseudo": true,
+          "selector": ".spectrum-Button"
+        },
+        {
+          "type": "active",
+          "pseudo": true,
+          "selector": ".spectrum-Button"
+        },
+        {
+          "type": "hover",
+          "pseudo": true,
           "selector": ".spectrum-Button"
         }
       ],
@@ -107,6 +122,7 @@
     }
   },
   "required": [
+    "className",
     "label",
     "variant",
     "style",

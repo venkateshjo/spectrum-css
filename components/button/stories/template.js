@@ -1,4 +1,4 @@
-import { html } from 'lit';
+import { html } from 'lit-html';
 import { classMap } from 'lit/directives/class-map.js';
 
 import { generateSVG } from '@spectrum-css/preview/helpers/storyAssets.js';
@@ -12,18 +12,16 @@ export const Template = ({ label, hideLabel, icon, size, variant, staticColor, s
   classList[className] = true;
 
   [variant, style].forEach((value) => {
-    if (value) classList[`${className}--${value}`] = true;
+    if (value) classList[`${className}--${value.toLowerCase()}`] = true;
   });
 
-  if (isDisabled) classList['is-disabled'] = true;
-  if (isPending) classList['is-pending'] = true;
   if (size) classList[`${className}--size${size.toUpperCase()}`] = true;
   if (staticColor) classList[`${className}--static${titleCase(staticColor)}`] = true;
 
   return html`
-    <button class="${classMap(classList)}">
-        ${icon ? generateSVG(icon, size) : ''}
-        ${label && !hideLabel ? html`<span class=${`${className}-label`}>${label}</span>` : ''}
+    <button class=${classMap(classList)} ?disabled=${isDisabled}>
+      ${generateSVG(icon, size)}
+      ${label && !hideLabel ? html`<span class=${`${className}-label`}>${label}</span>` : ''}
     </button>
   `;
 };

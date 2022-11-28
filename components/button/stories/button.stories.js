@@ -18,7 +18,6 @@ const { meta, argTypes, args, actions } = getArgsFromSchema(schema);
 
 // Load styles for this component
 import '../dist/index-vars.css';
-import '../dist/vars.css';
 
 export default {
   ...meta,
@@ -29,11 +28,7 @@ export default {
   args,
   parameters: {
     jsonschema: schema,
-    actions: {
-      pseudo: {
-        hover: true,
-      }
-    }
+    actions,
   }
 };
 

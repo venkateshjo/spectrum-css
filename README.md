@@ -11,7 +11,7 @@ Spectrum CSS provides a standard CSS implementation of the Spectrum design langu
 
 ## Show me a demo
 
-Check out [the documentation site](http://opensource.adobe.com/spectrum-css/) for a demo of every component included in Spectrum CSS.
+Check out [the documentation site](http://opensource.adobe.com/spectrum-css/) for a demo of every component included in Spectrum CSS or spin up a local version using `yarn start`.
 
 ## Where is the JavaScript?
 

@@ -48,7 +48,7 @@ export const getArgsFromSchema = (inputSchema) => {
     const { title, description, $id, properties, required } = inputSchema;
     const { pseudos, actions, ...props } = properties;
     const meta = {
-        title,
+        title: title ?? $id.replace(/^#/, '').replace(/([a-z])([A-Z])/, '$1 $2'),
         description,
         component: $id.replace(/^#/, ''),
     };
@@ -78,5 +78,18 @@ export const getArgsFromSchema = (inputSchema) => {
         };
     }
 
-    return { meta, argTypes, args, actions };
+
+    const retActions = {
+        handles: [],
+        pseudo: {},
+    };
+    if (actions) {
+        const arr = getDefaultValue(actions);
+        for (const a of arr) {
+            retActions.handles.push(`${a.type}${a.selector ? ` ${a.selector}` : ''}`);
+            if (a.pseudo) retActions.pseudo[a.pseudo] = a.selector ?? true;
+        }
+    }
+
+    return { meta, argTypes, args, retActions };
 };

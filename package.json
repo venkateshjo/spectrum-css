@@ -2,6 +2,7 @@
   "name": "spectrum-css-monorepo",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
   "scripts": {
     "build": "run-s build:site build:preview mv:preview",
     "build:site": "gulp -LL",
@@ -92,7 +93,6 @@
   },
   "workspaces": [
     "components/*",
-    "bundles/*",
     "tools/*"
   ],
   "husky": {

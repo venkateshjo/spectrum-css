@@ -16,7 +16,7 @@ import schema from "../metadata/helptext.schema.json";
 const { meta, argTypes, args, actions } = getArgsFromSchema(schema);
 
 // Load styles for this component
-import '../dist/index.css';
+import '../dist/index-vars.css';
 
 export default {
   ...meta,

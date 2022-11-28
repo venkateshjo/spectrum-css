@@ -19,7 +19,7 @@ export const Template = ({ isDisabled, hideIcon, text, variant, size, className 
 
   return html`
     <div class=${classMap(classList)}>
-      ${!hideIcon ? generateSVG('Alert', size) : ''}
+      ${!hideIcon ? generateSVG('Alert', size, ['spectrum-HelpText-validationIcon']) : ''}
       <div class=${`${className}-text`}>${text}</div>
     </div>
   `;
