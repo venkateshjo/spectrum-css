@@ -20,24 +20,16 @@ module.exports = {
         },
       }
     },
-    // @todo: Use this to track migration status
-    // '@etchteam/storybook-addon-status',
-
     // https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
     '@storybook/addon-a11y',
     "@hover/storybook-addon-pseudo-states",
     
     '@whitespace/storybook-addon-html',
     '@kickstartds/storybook-addon-jsonschema',
-
-    // @todo: Design tokens plugin could be a nice addition later on (requires some configuration)
-    //"storybook-design-token",
     {
       name: '@storybook/addon-docs',
       options: {
-
         transcludeMarkdown: true,
-
       }
     },
     'storybook-preset-inline-svg',

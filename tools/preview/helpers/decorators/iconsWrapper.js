@@ -26,7 +26,7 @@ export const withIconsWrapper = (StoryFn, context) => {
         }
     }, [parameters.icons, parameters.scale]);
 
-    // @todo: load only the icons in use rather than the whole set
+    // @todo https://jira.corp.adobe.com/browse/CSS-315
     if (hasIcons) return html`
         ${unsafeHTML(workflowIcons)}
         ${unsafeHTML(icons)}

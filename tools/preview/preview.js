@@ -6,8 +6,6 @@ import {
   langType,
 } from "./helpers/argTypes/index.js";
 
-// textDirectionType,
-// langType,
 import {
   withContextWrapper,
   withTextDirectionWrapper,
@@ -48,7 +46,6 @@ export const parameters = {
   html: {
     root: '#root-inner',
     removeComments: true,
-    // removeEmptyComments: true,
     prettier: {
       tabWidth: 4,
       useTabs: false,
@@ -64,16 +61,6 @@ export const parameters = {
   docs: {
     inlineStories: true,
   },
-  // @todo use this to represent token migration
-  // status: {
-  //   statuses: {
-  //     released: {
-  //       background: '#0000ff',
-  //       color: '#ffffff',
-  //       description: 'This component is stable and released',
-  //     },
-  //   },
-  // },
 };
 
 export const decorators = [

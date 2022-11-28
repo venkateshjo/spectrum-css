@@ -1,4 +1,3 @@
-// @todo: get schemas importing automatically; Q: do these align with a specific component
 import globals from '../schemas/global.schema.json';
 import { isObject, titleCase } from './utilities.js';
 
@@ -36,12 +35,8 @@ const argControlTypes = ({ format, type, minimum, maximum, enum: options, $ref }
         ],
         control: format === 'radio' ? 'inline-radio' : 'select',
     };
-    if (!type && $ref) {
-        // const { fileName, prop } = $ref.match(/^#\/(.*?)\/properties\/(.*?)/); // #/global/properties/icon
-        // @todo: Read-in the referenced schema and return the control type
-        if ($ref.endsWith('icon')) {
-            return argControlTypes(globals.properties.icon, isRequired);
-        }
+    if (!type && $ref && $ref.endsWith('icon')) {
+        return argControlTypes(globals.properties.icon, isRequired);
     }
 
     return {
