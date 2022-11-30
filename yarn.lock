@@ -1468,6 +1468,11 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/closebutton/-/closebutton-1.2.13.tgz#a02a33e211349138bcde0988cd4317749a7618e4"
   integrity sha512-V/P/XVWPh/TR2Qo66vn6o+vi5/utDbrMIdNV+zuF1dbl1wxH5QMOdCQrQOtzHrzcwulJRu3+Sk759VRPojLYCA==
 
+"@spectrum-css/divider@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/divider/-/divider-2.0.1.tgz#fadd80f89af9f9da97f5365309fb5ee6c9c61887"
+  integrity sha512-bDN9Y9NaAoW/NzQBep+Gxos+WModcPp4/xhsvIp5Eael/jJHUtceeI2lvwIvo4uC1JqkPw283FMakIP9HNRiYA==
+
 "@spectrum-css/divider@^1.0.27":
   version "1.0.27"
   resolved "https://registry.yarnpkg.com/@spectrum-css/divider/-/divider-1.0.27.tgz#435bf738a65b4eb15c899edf5c536bea22f2d679"
@@ -1504,6 +1509,11 @@
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/@spectrum-css/tokens/-/tokens-1.0.7.tgz#7256ed9383ac4555f7bc0cf43a9ebe4f5e41b117"
   integrity sha512-KGP78ZBPLVyj1+2uHU4IOVcPrQipqGkO9e9j3p3eQVbb4JuBJ9v9sJ5p5Z+z3nmcJV6wdg/zLpf1ZH0tnjl3hg==
+
+"@spectrum-css/tokens@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/tokens/-/tokens-4.0.0.tgz#581b858225aae05b9b784db1aa0e257c3e9c53cf"
+  integrity sha512-lDUDbc1BocZR5q9pKpLvFicb7v8Owjhm0mxd+JPk+sVHXHC/u37PEZf7R0QBzl3D/13fNqurtV9DhlPjrhDm0g==
 
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
