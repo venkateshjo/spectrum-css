@@ -1510,11 +1510,6 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/tokens/-/tokens-1.0.7.tgz#7256ed9383ac4555f7bc0cf43a9ebe4f5e41b117"
   integrity sha512-KGP78ZBPLVyj1+2uHU4IOVcPrQipqGkO9e9j3p3eQVbb4JuBJ9v9sJ5p5Z+z3nmcJV6wdg/zLpf1ZH0tnjl3hg==
 
-"@spectrum-css/tokens@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/tokens/-/tokens-4.0.0.tgz#581b858225aae05b9b784db1aa0e257c3e9c53cf"
-  integrity sha512-lDUDbc1BocZR5q9pKpLvFicb7v8Owjhm0mxd+JPk+sVHXHC/u37PEZf7R0QBzl3D/13fNqurtV9DhlPjrhDm0g==
-
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@szmarczak/http-timer/-/http-timer-1.1.2.tgz#b1665e2c461a2cd92f4c1bbf50d5454de0d4b421"
