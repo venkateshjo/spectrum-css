@@ -22,46 +22,47 @@ governing permissions and limitations under the License.
   /* Font family */
 
   /* Default is san-serif */
-  --spectrum-heading-sans-serif: var(--spectrum-font-family-default);
-  --spectrum-heading-serif: var(--spectrum-font-family-serif);
+  --spectrum-heading-font-family-sans-serif: var(--spectrum-heading-sans-serif-font-family);
+  --spectrum-heading-font-family-serif: var(--spectrum-heading-serif-font-family);
 
-  --spectrum-heading-heading-strong: var(--spectrum-heading-strong);
-  --spectrum-heading-heading-strong-emphasized: var(--spectrum-heading-heading-strong-emphasized);
+  --spectrum-heading-font-weight-sans-serif-strong: var(--spectrum-heading-sans-serif-strong-font-weight);
+  --spectrum-heading-font-weight-sans-serif-strong-emphasized: var(--spectrum-heading-sans-serif-strong-emphasized-font-weight);
+  --spectrum-heading-font-weight-serif-strong: var(--spectrum-heading-serif-strong-font-weight);
 
-  --spectrum-heading-cjk: var(--spectrum-cjk-heading);
-  --spectrum-heading-cjk-strong: var(--spectrum-heading-strong);
-  --spectrum-heading-cjk-emphasized: var(--spectrum-cjk-heading-emphasized);
-  --spectrum-heading-cjk-strong-emphasized: var(--spectrum-cjk-heading-strong-emphasized);
+  --spectrum-heading-font-family-cjk: var(--spectrum-heading-cjk-font-family);
+  --spectrum-heading-font-weight-cjk-strong: var(--spectrum-heading-cjk-strong-font-weight);
+  --spectrum-heading-font-weight-cjk-emphasized: var(--spectrum-heading-cjk-emphasized-font-weight);
+  --spectrum-heading-font-weight-cjk-strong-emphasized: var(--spectrum-heading-cjk-strong-emphasized-font-weight);
 
   /* Light */
-  --spectrum-heading-heading-light-strong: var(--spectrum-heading-light-strong);
-  --spectrum-heading-heading-light-strong-emphasized: var(--spectrum-heading-light-strong-emphasized);
+  --spectrum-heading-font-weight-sans-serif-light-strong: var(--spectrum-heading-sans-serif-light-strong-font-weight);
+  --spectrum-heading-font-weight-sans-serif-light-strong-emphasized: var(--spectrum-heading-sans-serif-light-strong-emphasized-font-weight);
 
-  --spectrum-heading-serif-light: var(--spectrum-serif-heading-light);
-  --spectrum-heading-serif-light-emphasized: var(--spectrum-serif-heading-light-emphasized);
+  --spectrum-heading-font-weight-serif-light: var(--spectrum-heading-serif-light-font-weight);
+  --spectrum-heading-font-weight-serif-light-emphasized: var(--spectrum-heading-serif-light-emphasized-font-weight);
 
-  --spectrum-heading-sans-serif-light: var(--spectrum-sans-serif-heading-light);
-  --spectrum-heading-sans-serif-light-emphasized: var(--spectrum-sans-serif-heading-light-emphasized);
+  --spectrum-heading-font-weight-sans-serif-light: var(--spectrum-heading-sans-serif-light-font-weight);
+  --spectrum-heading-font-weight-sans-serif-light-emphasized: var(--spectrum-heading-sans-serif-light-emphasized-font-weight);
 
-  --spectrum-heading-cjk-light: var(--spectrum-cjk-heading-light);
-  --spectrum-heading-cjk-light-strong: var(--spectrum-cjk-heading-light-strong);
-  --spectrum-heading-cjk-light-emphasized: var(--spectrum-cjk-heading-light-emphasized);
-  --spectrum-heading-cjk-light-strong-emphasized: var(--spectrum-cjk-heading-light-strong-emphasized);
+  --spectrum-heading-font-weight-cjk-light: var(--spectrum-heading-cjk-light-font-weight);
+  --spectrum-heading-font-weight-cjk-light-strong: var(--spectrum-heading-cjk-light-strong-font-weight);
+  --spectrum-heading-font-weight-cjk-light-emphasized: var(--spectrum-heading-cjk-light-emphasized-font-weight);
+  --spectrum-heading-font-weight-cjk-light-strong-emphasized: var(--spectrum-heading-cjk-light-strong-emphasized-font-weight);
 
   /* Heavy */
-  --spectrum-heading-heading-heavy: var(--spectrum-heading-heavy);
-  --spectrum-heading-heading-heavy-strong: var(--spectrum-heading-heavy-strong);
-  --spectrum-heading-heading-heavy-strong-emphasized: var(--spectrum-heading-heavy-strong-emphasized);
+  --spectrum-heading-font-weight-sans-serif-heavy: var(--spectrum-heading-sans-serif-heavy-font-weight);
+  --spectrum-heading-font-weight-sans-serif-heavy-strong: var(--spectrum-heading-sans-serif-heavy-strong-font-weight);
+  --spectrum-heading-font-weight-sans-serif-heavy-strong-emphasized: var(--spectrum-heading-sans-serif-heavy-strong-emphasized-font-weight);
 
-  --spectrum-heading-cjk-heavy: var(--spectrum-cjk-heading-heavy);
-  --spectrum-heading-cjk-heavy-strong: var(--spectrum-cjk-heading-heavy-strong);
-  --spectrum-heading-cjk-heavy-emphasized: var(--spectrum-cjk-heading-heavy-emphasized);
-  --spectrum-heading-cjk-heavy-strong-emphasized: var(--spectrum-cjk-heading-heavy-strong-emphasized);
+  --spectrum-heading-font-weight-cjk-heavy: var(--spectrum-heading-cjk-heavy-font-weight);
+  --spectrum-heading-font-weight-cjk-heavy-strong: var(--spectrum-heading-cjk-heavy-strong-font-weight);
+  --spectrum-heading-font-weight-cjk-heavy-emphasized: var(--spectrum-heading-cjk-heavy-emphasized-font-weight);
+  --spectrum-heading-font-weight-cjk-heavy-strong-emphasized: var(--spectrum-heading-cjk-heavy-strong-emphasized-font-weight);
 
-  --spectrum-heading-heading-line-height: var(--spectrum-heading-line-height);
-  --spectrum-heading-cjk-line-height: var(--spectrum-cjk-heading-line-height);
+  --spectrum-heading-line-height: var(--spectrum-heading-line-height);
+  --spectrum-heading-line-height-cjk: var(--spectrum-heading-line-height-cjk);
 
-  --spectrum-heading-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
+  --spectrum-heading-letter-spacing-cjk: var(--spectrum-letter-spacing-cjk);
 
   --spectrum-heading-margin-start: var(--spectrum-heading-margin-top-multiplier);
   --spectrum-heading-margin-end: var(--spectrum-heading-margin-bottom-multiplier);
@@ -98,7 +99,7 @@ governing permissions and limitations under the License.
 /* Base Heading is sans serif */
 .spectrum-Heading {
   /* TODO: how are the font-family-default and heading tokens supposed to be used? */
-  font-family: var(--spectrum-heading-sans-serif);
+  font-family: var(--spectrum-heading-font-family-sans-serif);
 
   font-size: var(--spectrum-heading-font-size);
 
@@ -107,38 +108,38 @@ governing permissions and limitations under the License.
   margin-block-start: var(--spectrum-heading-margin-start);
   margin-block-end: var(--spectrum-heading-margin-end);
 
-  line-height: var(--spectrum-heading-heading-line-height);
+  line-height: var(--spectrum-heading-line-height);
 
 
   strong,
   .spectrum-Heading-strong {
-    font-family: var(--spectrum-heading-heading-strong);
+    font-weight: var(--spectrum-heading-font-weight-sans-serif-strong);
   }
 
   .spectrum-Heading-strong.spectrum-Heading-emphasized {
-    font-family: var(--spectrum-heading-heading-strong-emphasized);
+    font-weight: var(--spectrum-heading-font-weight-sans-serif-strong-emphasized);
   }
 
   &:lang(zh),
   &:lang(ja),
   &:lang(ko) {
-    line-height: var(--spectrum-heading-cjk-line-height);
-    letter-spacing: var(--spectrum-heading-cjk-letter-spacing);
+    line-height: var(--spectrum-heading-line-height-cjk);
+    letter-spacing: var(--spectrum-heading-letter-spacing-cjk);
 
-    font-family: var(--spectrum-heading-cjk);
+    font-family: var(--spectrum-heading-font-family-cjk);
 
     em,
     .spectrum-Heading-emphasized {
-      font-family: var(--spectrum-heading-cjk-emphasized);
+      font-weight: var(--spectrum-heading-font-weight-cjk-emphasized);
     }
 
     strong,
     .spectrum-Heading-strong {
-      font-family: var(--spectrum-heading-cjk-strong);
+      font-weight: var(--spectrum-heading-font-weight-cjk-strong);
     }
 
     .spectrum-Heading-strong.spectrum-Heading-emphasized {
-      font-family: var(--spectrum-heading-cjk-strong-emphasized);
+      font-weight: var(--spectrum-heading-font-weight-cjk-strong-emphasized);
     }
   }
 }
@@ -146,45 +147,45 @@ governing permissions and limitations under the License.
 .spectrum-Heading--serif,
 .spectrum-Heading--serif.spectrum-Heading--heavy,
 .spectrum-Heading--serif.spectrum-Heading--light {
-  font-family: var(--spectrum-heading-serif);
+  font-family: var(--spectrum-heading-font-family-serif);
 
   strong,
   .spectrum-Heading-strong {
-    font-family: var(--spectrum-heading-serif);
+    font-family: var(--spectrum-heading-font-weight-serif-strong);
   }
 }
 
 /* Heavy */
 .spectrum-Heading--heavy {
-  font-family: var(--spectrum-heading-heading-heavy);
+  font-weight: var(--spectrum-heading-font-weight-sans-serif-heavy);
 
   strong,
   .spectrum-Heading-strong {
-    font-family: var(--spectrum-heading-heading-heavy-strong);
+    font-weight: var(--spectrum-heading-font-weight-sans-serif-heavy-strong);
   }
 
   .spectrum-Heading-strong.spectrum-Heading-emphasized {
-    font-family: var(--spectrum-heading-heading-heavy-strong-emphasized);
+    font-weight: var(--spectrum-heading-font-weight-sans-serif-heavy-strong-emphasized);
   }
 
   &:lang(zh),
   &:lang(ja),
   &:lang(ko) {
-    font-family: var(--spectrum-heading-cjk-heavy);
+    font-weight: var(--spectrum-heading-font-weight-cjk-heavy);
   }
 
   em,
   .spectrum-Heading-emphasized {
-    font-family: var(--spectrum-heading-cjk-heavy-emphasized);
+    font-weight: var(--spectrum-heading-font-weight-cjk-heavy-emphasized);
   }
 
   strong,
   .spectrum-Heading-strong {
-    font-family: var(--spectrum-heading-cjk-heavy-strong);
+    font-weight: var(--spectrum-heading-font-weight-cjk-heavy-strong);
   }
 
   .spectrum-Heading-strong.spectrum-Heading-emphasized {
-    font-family: var(--spectrum-heading-cjk-heavy-strong-emphasized);
+    font-weight: var(--spectrum-heading-font-weight-cjk-heavy-strong-emphasized);
   }
 }
 
@@ -200,51 +201,50 @@ governing permissions and limitations under the License.
 
 /* Light */
 .spectrum-Heading--light {
-  font-family: var(--spectrum-heading-sans-serif-light);
+  font-weight: var(--spectrum-heading-font-weight-sans-serif-light);
 
   em,
   .spectrum-Heading-emphasized {
-    /* TODO Is this sans serif token value correct? */
-    font-family: var(--spectrum-heading-sans-serif-light-emphasized);
+    font-weight: var(--spectrum-heading-font-weight-sans-serif-light-emphasized);
   }
 
   strong,
   .spectrum-Heading-strong {
-    font-family: var(--spectrum-heading-heading-light-strong);
+    font-weight: var(--spectrum-heading-font-weight-sans-serif-light-strong);
   }
 
   .spectrum-Heading-strong.spectrum-Heading-emphasized {
-    font-family: var(--spectrum-heading-heading-light-strong-emphasized);
+    font-weight: var(--spectrum-heading-font-weight-sans-serif-light-strong-emphasized);
   }
 
   &:lang(zh),
   &:lang(ja),
   &:lang(ko) {
-    font-family: var(--spectrum-heading-cjk-light);
+    font-family: var(--spectrum-heading-font-weight-cjk-light);
   }
 
   em,
   .spectrum-Heading-emphasized {
-    font-family: var(--spectrum-heading-cjk-light-emphasized);
+    font-weight: var(--spectrum-heading-font-weight-cjk-light-emphasized);
   }
 
   strong,
   .spectrum-Heading-strong {
-    font-family: var(--spectrum-heading-cjk-light-strong);
+    font-weight: var(--spectrum-heading-font-weight-cjk-light-strong);
   }
 
   .spectrum-Heading-strong.spectrum-Heading-emphasized {
-    font-family: var(--spectrum-heading-cjk-light-strong-emphasized);
+    font-weight: var(--spectrum-heading-font-weight-cjk-light-strong-emphasized);
   }
 }
 
 /* Light Serif */
 .spectrum-Heading--light.spectrum-Heading--serif {
-  font-family: var(--spectrum-heading-serif-light);
+  font-weight: var(--spectrum-heading-font-weight-serif-light);
 
   em,
   .spectrum-Heading-emphasized {
-    font-family: var(--spectrum-heading-serif-light-emphasized);
+    font-weight: var(--spectrum-heading-font-weight-serif-light-emphasized);
   }
 }
 
@@ -252,347 +252,347 @@ governing permissions and limitations under the License.
 /* Body */
 
 /* Body tokens */
-.spectrum-Body {
-  /* Font family */
-  --spectrum-body-sans-serif: var(--spectrum-font-family-default);
-  --spectrum-body-serif: var(--spectrum-font-family-serif);
-
-  --spectrum-body-body-strong: var(--spectrum-body-strong);
-  /* --spectrum-body-body-emphasized: var(--spectrum-body-emphasized); */
-  --spectrum-body-body-strong-emphasized: var(--spectrum-body-strong-emphasized);
-
-  --spectrum-body-cjk: var(--spectrum-cjk-body);
-  --spectrum-body-cjk-strong: var(--spectrum-cjk-body-strong);
-  --spectrum-body-cjk-emphasized: var(--spectrum-cjk-body-emphasized);
-  --spectrum-body-cjk-strong-emphasized: var(--spectrum-cjk-body-strong-emphasized);
-
-  --spectrum-body-body-line-height: var(--spectrum-body-line-height);
-  --spectrum-body-cjk-line-height: var(--spectrum-cjk-body-line-height);
-
-  --spectrum-body-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
-
-  --spectrum-body-margin: var(--spectrum-body-margin-multiplier);
-
-  /* Font color */
-  --spectrum-body-font-color: var(--spectrum-gray-800);
-}
-
-/* Body t-shirt sizes */
-.spectrum-Body--sizeXXXL {
-  --spectrum-body-font-size: var(--spectrum-body-size-xxxl);
-}
-.spectrum-Body--sizeXXL {
-  --spectrum-body-font-size: var(--spectrum-body-size-xxl);
-}
-.spectrum-Body--sizeXL {
-  --spectrum-body-font-size: var(--spectrum-body-size-xl);
-}
-.spectrum-Body--sizeL {
-  --spectrum-body-font-size: var(--spectrum-body-size-l);
-}
-.spectrum-Body--sizeM {
-  --spectrum-body-font-size: var(--spectrum-body-size-m);
-}
-.spectrum-Body--sizeS {
-  --spectrum-body-font-size: var(--spectrum-body-size-s);
-}
-.spectrum-Body--sizeXS {
-  --spectrum-body-font-size: var(--spectrum-body-size-xs);
-}
-
-&,
-.spectrum-Body {
-  color: var(--spectrum-body-font-color);
-}
-
-.spectrum-Body {
-  font-family: var(--spectrum-body-sans-serif);
-  font-size: var(--spectrum-body-font-size);
-
-  line-height: var(--spectrum-body-body-line-height);
-
-  margin-block: var(--spectrum-body-margin);
-
-  strong,
-  .spectrum-Body-strong {
-    font-family: var(--spectrum-body-body-strong);
-  }
-
-  em,
-  .spectrum-Body-emphasized {
-    /* font-family: var(--spectrum-body-body-emphasized); */
-  }
-
-  .spectrum-Body-strong.spectrum-Body-emphasized {
-    font-family: var(--spectrum-body-body-strong-emphasized);
-  }
-
-  &:lang(zh),
-  &:lang(ja),
-  &:lang(ko) {
-    font-family: var(--spectrum-body-cjk);
-
-    line-height: var(--spectrum-body-cjk-line-height);
-
-    letter-spacing: var(--spectrum-body-cjk-letter-spacing);
-
-    strong,
-    .spectrum-Body-strong {
-      font-family: var(--spectrum-body-cjk-strong);
-    }
-
-    em,
-    .spectrum-Body-emphasized {
-      font-family: var(--spectrum-body-cjk-emphasized);
-    }
-
-    .spectrum-Body-strong.spectrum-Body-emphasized {
-      font-family: var(--spectrum-body-cjk-strong-emphasized);
-    }
-  }
-}
-
-.spectrum-Body--serif {
-  font-family: var(--spectrum-body-serif);
-}
-
-/* Detail */
-
-/* Detail tokens */
-.spectrum-Detail {
-  --spectrum-detail-sans-serif: var(--spectrum-font-family-default);
-  --spectrum-detail-serif: var(--spectrum-font-family-serif);
-
-  --spectrum-detail-detail-strong: var(--spectrum-detail-strong);
-  --spectrum-detail-detail-emphasized: var(--spectrum-detail-emphasized);
-  --spectrum-detail-detail-strong-emphasized: var(--spectrum-detail-strong-emphasized);
-
-  --spectrum-detail-detail-light: var(--spectrum-detail-light);
-  --spectrum-detail-detail-light-strong: var(--spectrum-detail-light-strong);
-  --spectrum-detail-detail-light-emphasized: var(--spectrum-detail-light-emphasized);
-  --spectrum-detail-detail-light-strong-emphasized: var(--spectrum-detail-light-strong-emphasized);
-
-  --spectrum-detail-cjk: var(--spectrum-cjk-detail);
-  --spectrum-detail-cjk-emphasized: var(--spectrum-cjk-detail-emphasized);
-  --spectrum-detail-cjk-strong: var(--spectrum-cjk-detail-strong);
-  --spectrum-detail-cjk-strong-emphasized: var(--spectrum-cjk-detail-strong-emphasized);
-
-  --spectrum-detail-cjk-light: var(--spectrum-cjk-detail-light);
-  --spectrum-detail-cjk-light-strong: var(--spectrum-cjk-detail-light-strong);
-  --spectrum-detail-cjk-light-emphasized: var(--spectrum-cjk-detail-light-emphasized);
-  --spectrum-detail-cjk-light-strong-emphasized: var(--spectrum-cjk-detail-light-strong-emphasized);
-
-  --spectrum-detail-detail-line-height: var(--spectrum-detail-line-height);
-  --spectrum-detail-cjk-line-height: var(--spectrum-cjk-detail-line-height);
-
-  --spectrum-detail-detail-letter-spacing: var(--spectrum-detail-letter-spacing);
-
-  --spectrum-detail-margin-start: var(--spectrum-detail-margin-top-mulitplier);
-  --spectrum-detail-margin-end: var(--spectrum-detail-margin-bottom-multiplier);
-
-  --spectrum-detail-font-color: var(--spectrum-gray-900);
-}
-
-/* Detail t-shirt sizes */
-.spectrum-Detail--sizeXL {
-  --spectrum-detail-font-size: var(--spectrum-detail-size-xl);
-}
-.spectrum-Detail--sizeL {
-  --spectrum-detail-font-size: var(--spectrum-detail-size-l);
-}
-.spectrum-Detail--sizeM {
-  --spectrum-detail-font-size: var(--spectrum-detail-size-m);
-}
-.spectrum-Detail--sizeS {
-  --spectrum-detail-font-size: var(--spectrum-detail-size-s);
-}
-
-.spectrum-Detail {
-  font-family: var(--spectrum-detail-sans-serif);
-  font-size: var(--spectrum-detail-font-size);
-
-  line-height: var(--spectrum-detail-detail-line-height);
-
-  letter-spacing: var(--spectrum-detail-detail-letter-spacing);
-
-  color: var(--spectrum-detail-font-color);
-
-  strong,
-  .spectrum-Detail-strong {
-    font-family: var(--spectrum-detail-detail-strong);
-  }
-
-  em,
-  .spectrum-Detail-emphasized {
-    font-family: var(--spectrum-detail-detail-emphasized);
-  }
-
- .spectrum-Detail-strong.spectrum-Detail-emphasized {
-    font-family: var(--spectrum-detail-detail-strong-emphasized);
-  }
-
-  &:lang(zh),
-  &:lang(ja),
-  &:lang(ko) {
-    font-family: var(--spectrum-detail-cjk);
-
-    line-height: var(--spectrum-detail-cjk-line-height);
-
-    strong,
-    .spectrum-Detail-strong {
-      font-family: var(--spectrum-detail-cjk-strong);
-    }
-
-    em,
-    .spectrum-Detail-emphasized {
-      font-family: var(--spectrum-detail-cjk-emphasized);
-    }
-
-    .spectrum-Detail-strong.spectrum-Detail-emphasized {
-      font-family: var(--spectrum-detail-cjk-strong-emphasized);
-    }
-  }
-}
-
-/* Detail - Light  */
-.spectrum-Detail--light {
-  font-family: var(--spectrum-detail-detail-light);
-
-  margin-block-start: var(--spectrum-detail-margin-start);
-  margin-block-end: var(--spectrum-detail-margin-end);
-
-  strong,
-  .spectrum-Detail-strong {
-    font-family: var(--spectrum-detail-detail-light-strong);
-  }
-
-  em,
-  .spectrum-Detail-emphasized {
-    font-family: var(--spectrum-detail-detail-light-emphasized);
-  }
-
-  .spectrum-Body-strong.spectrum-Body-emphasized {
-    font-family: var(--spectrum-detail-detail-light-strong-emphasized);
-  }
-
- &:lang(zh),
-  &:lang(ja),
-  &:lang(ko) {
-    font-family: var(--spectrum-detail-cjk-light);
-
-    strong,
-    .spectrum-Detail-strong {
-      font-family: var(--spectrum-detail-cjk-light-strong);
-    }
-
-    em,
-    .spectrum-Detail-emphasized {
-      font-family: var(--spectrum-detail-cjk-light-emphasized);
-    }
-
-    .spectrum-Detail-strong.spectrum-Detail-emphasized {
-      font-family: var(--spectrum-detail-cjk-light-strong-emphasized);
-    }
-  }
-}
-
-.spectrum-Detail--serif {
-  font-family: var(--spectrum-detail-serif);
-}
-
-/* Code */
-
-/* Code tokens */
-.spectrum-Code {
-  /* Font family */
-  --spectrum-code-font-family: var(--spectrum-font-family-code);
-
-  /* --spectrum-code-code: var(--spectrum-code); */
-  --spectrum-code-code-strong: var(--spectrum-code-strong);
-  --spectrum-code-code-emphasized: var(--spectrum-code-emphasized);
-  --spectrum-code-code-strong-emphasized: var(--spectrum-code-strong-emphasized);
-
-  --spectrum-code-cjk: var(--spectrum-cjk-code);
-  --spectrum-code-cjk-strong: var(--spectrum-cjk-code-strong);
-  --spectrum-code-cjk-emphasized: var(--spectrum-cjk-code-emphasized);
-  --spectrum-code-cjk-strong-emphasized: var(--spectrum-cjk-code-strong-emphasized);
-
-  --spectrum-code-code-line-height: var(--spectrum-code-line-height);
-  --spectrum-code-cjk-line-height: var(--spectrum-cjk-code-line-height);
-
-  --spectrum-code-letter-spacing: var(--spectrum-cjk-letter-spacing);
-
-  --spectrum-code-font-color: var(--spectrum-gray-800);
-}
-
-.spectrum-Code--sizeXS {
-  --spectrum-code-font-size: var(--spectrum-code-size-xs);
-}
-
-.spectrum-Code--sizeS {
-  --spectrum-code-font-size: var(--spectrum-code-size-s);
-}
-
-.spectrum-Code--sizeM {
-  --spectrum-code-font-size: var(--spectrum-code-size-m);
-}
-
-.spectrum-Code--sizeL {
-  --spectrum-code-font-size: var(--spectrum-code-size-l);
-}
-
-.spectrum-Code--sizeXL {
-  --spectrum-code-font-size: var(--spectrum-code-size-xl);
-}
-
-
-/* Code t-shirt sizes */
-.spectrum-Code--sizeXL {
-}
-
-.spectrum-Code {
-  font-familly: var(--spectrum-code-font-family);
-  font-size: var(--spectrum-code-font-size);
-
-  line-height: var(--spectrum-code-code-line-height);
-
-  color: var(--spectrum-code-font-color);
-
-  strong,
-  .spectrum-Code-strong {
-    font-family: var(--spectrum-code-code-strong);
-  }
-
-  em,
-  .spectrum-Code-emphasized {
-    font-family: var(--spectrum-code-code-emphasized);
-  }
-
- .spectrum-Code-strong.spectrum-Code-emphasized {
-    font-family: var(--spectrum-code-code-strong-emphasized);
-  }
-
-
-  &:lang(zh),
-  &:lang(ja),
-  &:lang(ko) {
-    font-family: var(--spectrum-code-cjk);
-
-    line-height: var(--spectrum-code-cjk-line-height);
-    letter-spacing: var(--spectrum-code-letter-spacing);
-
-    strong,
-    .spectrum-Code-strong {
-      font-family: var(--spectrum-code-cjk-strong);
-    }
-
-    em,
-    .spectrum-Code-emphasized {
-      font-family: var(--spectrum-code-cjk-emphasized);
-    }
-
-    .spectrum-Code-strong.spectrum-Code-emphasized {
-      font-family: var(--spectrum-code-cjk-strong-emphasized);
-    }
-  }
-}
+/* .spectrum-Body { */
+/*   /\* Font family *\/ */
+/*   --spectrum-body-sans-serif: var(--spectrum-font-family-default); */
+/*   --spectrum-body-serif: var(--spectrum-font-family-serif); */
+
+/*   --spectrum-body-body-strong: var(--spectrum-body-strong); */
+/*   /\* --spectrum-body-body-emphasized: var(--spectrum-body-emphasized); *\/ */
+/*   --spectrum-body-body-strong-emphasized: var(--spectrum-body-strong-emphasized); */
+
+/*   --spectrum-body-cjk: var(--spectrum-cjk-body); */
+/*   --spectrum-body-cjk-strong: var(--spectrum-cjk-body-strong); */
+/*   --spectrum-body-cjk-emphasized: var(--spectrum-cjk-body-emphasized); */
+/*   --spectrum-body-cjk-strong-emphasized: var(--spectrum-cjk-body-strong-emphasized); */
+
+/*   --spectrum-body-body-line-height: var(--spectrum-body-line-height); */
+/*   --spectrum-body-cjk-line-height: var(--spectrum-cjk-body-line-height); */
+
+/*   --spectrum-body-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing); */
+
+/*   --spectrum-body-margin: var(--spectrum-body-margin-multiplier); */
+
+/*   /\* Font color *\/ */
+/*   --spectrum-body-font-color: var(--spectrum-gray-800); */
+/* } */
+
+/* /\* Body t-shirt sizes *\/ */
+/* .spectrum-Body--sizeXXXL { */
+/*   --spectrum-body-font-size: var(--spectrum-body-size-xxxl); */
+/* } */
+/* .spectrum-Body--sizeXXL { */
+/*   --spectrum-body-font-size: var(--spectrum-body-size-xxl); */
+/* } */
+/* .spectrum-Body--sizeXL { */
+/*   --spectrum-body-font-size: var(--spectrum-body-size-xl); */
+/* } */
+/* .spectrum-Body--sizeL { */
+/*   --spectrum-body-font-size: var(--spectrum-body-size-l); */
+/* } */
+/* .spectrum-Body--sizeM { */
+/*   --spectrum-body-font-size: var(--spectrum-body-size-m); */
+/* } */
+/* .spectrum-Body--sizeS { */
+/*   --spectrum-body-font-size: var(--spectrum-body-size-s); */
+/* } */
+/* .spectrum-Body--sizeXS { */
+/*   --spectrum-body-font-size: var(--spectrum-body-size-xs); */
+/* } */
+
+/* &, */
+/* .spectrum-Body { */
+/*   color: var(--spectrum-body-font-color); */
+/* } */
+
+/* .spectrum-Body { */
+/*   font-family: var(--spectrum-body-sans-serif); */
+/*   font-size: var(--spectrum-body-font-size); */
+
+/*   line-height: var(--spectrum-body-body-line-height); */
+
+/*   margin-block: var(--spectrum-body-margin); */
+
+/*   strong, */
+/*   .spectrum-Body-strong { */
+/*     font-family: var(--spectrum-body-body-strong); */
+/*   } */
+
+/*   em, */
+/*   .spectrum-Body-emphasized { */
+/*     /\* font-family: var(--spectrum-body-body-emphasized); *\/ */
+/*   } */
+
+/*   .spectrum-Body-strong.spectrum-Body-emphasized { */
+/*     font-family: var(--spectrum-body-body-strong-emphasized); */
+/*   } */
+
+/*   &:lang(zh), */
+/*   &:lang(ja), */
+/*   &:lang(ko) { */
+/*     font-family: var(--spectrum-body-cjk); */
+
+/*     line-height: var(--spectrum-body-cjk-line-height); */
+
+/*     letter-spacing: var(--spectrum-body-cjk-letter-spacing); */
+
+/*     strong, */
+/*     .spectrum-Body-strong { */
+/*       font-family: var(--spectrum-body-cjk-strong); */
+/*     } */
+
+/*     em, */
+/*     .spectrum-Body-emphasized { */
+/*       font-family: var(--spectrum-body-cjk-emphasized); */
+/*     } */
+
+/*     .spectrum-Body-strong.spectrum-Body-emphasized { */
+/*       font-family: var(--spectrum-body-cjk-strong-emphasized); */
+/*     } */
+/*   } */
+/* } */
+
+/* .spectrum-Body--serif { */
+/*   font-family: var(--spectrum-body-serif); */
+/* } */
+
+/* /\* Detail *\/ */
+
+/* /\* Detail tokens *\/ */
+/* .spectrum-Detail { */
+/*   --spectrum-detail-sans-serif: var(--spectrum-font-family-default); */
+/*   --spectrum-detail-serif: var(--spectrum-font-family-serif); */
+
+/*   --spectrum-detail-detail-strong: var(--spectrum-detail-strong); */
+/*   --spectrum-detail-detail-emphasized: var(--spectrum-detail-emphasized); */
+/*   --spectrum-detail-detail-strong-emphasized: var(--spectrum-detail-strong-emphasized); */
+
+/*   --spectrum-detail-detail-light: var(--spectrum-detail-light); */
+/*   --spectrum-detail-detail-light-strong: var(--spectrum-detail-light-strong); */
+/*   --spectrum-detail-detail-light-emphasized: var(--spectrum-detail-light-emphasized); */
+/*   --spectrum-detail-detail-light-strong-emphasized: var(--spectrum-detail-light-strong-emphasized); */
+
+/*   --spectrum-detail-cjk: var(--spectrum-cjk-detail); */
+/*   --spectrum-detail-cjk-emphasized: var(--spectrum-cjk-detail-emphasized); */
+/*   --spectrum-detail-cjk-strong: var(--spectrum-cjk-detail-strong); */
+/*   --spectrum-detail-cjk-strong-emphasized: var(--spectrum-cjk-detail-strong-emphasized); */
+
+/*   --spectrum-detail-cjk-light: var(--spectrum-cjk-detail-light); */
+/*   --spectrum-detail-cjk-light-strong: var(--spectrum-cjk-detail-light-strong); */
+/*   --spectrum-detail-cjk-light-emphasized: var(--spectrum-cjk-detail-light-emphasized); */
+/*   --spectrum-detail-cjk-light-strong-emphasized: var(--spectrum-cjk-detail-light-strong-emphasized); */
+
+/*   --spectrum-detail-detail-line-height: var(--spectrum-detail-line-height); */
+/*   --spectrum-detail-cjk-line-height: var(--spectrum-cjk-detail-line-height); */
+
+/*   --spectrum-detail-detail-letter-spacing: var(--spectrum-detail-letter-spacing); */
+
+/*   --spectrum-detail-margin-start: var(--spectrum-detail-margin-top-mulitplier); */
+/*   --spectrum-detail-margin-end: var(--spectrum-detail-margin-bottom-multiplier); */
+
+/*   --spectrum-detail-font-color: var(--spectrum-gray-900); */
+/* } */
+
+/* /\* Detail t-shirt sizes *\/ */
+/* .spectrum-Detail--sizeXL { */
+/*   --spectrum-detail-font-size: var(--spectrum-detail-size-xl); */
+/* } */
+/* .spectrum-Detail--sizeL { */
+/*   --spectrum-detail-font-size: var(--spectrum-detail-size-l); */
+/* } */
+/* .spectrum-Detail--sizeM { */
+/*   --spectrum-detail-font-size: var(--spectrum-detail-size-m); */
+/* } */
+/* .spectrum-Detail--sizeS { */
+/*   --spectrum-detail-font-size: var(--spectrum-detail-size-s); */
+/* } */
+
+/* .spectrum-Detail { */
+/*   font-family: var(--spectrum-detail-sans-serif); */
+/*   font-size: var(--spectrum-detail-font-size); */
+
+/*   line-height: var(--spectrum-detail-detail-line-height); */
+
+/*   letter-spacing: var(--spectrum-detail-detail-letter-spacing); */
+
+/*   color: var(--spectrum-detail-font-color); */
+
+/*   strong, */
+/*   .spectrum-Detail-strong { */
+/*     font-family: var(--spectrum-detail-detail-strong); */
+/*   } */
+
+/*   em, */
+/*   .spectrum-Detail-emphasized { */
+/*     font-family: var(--spectrum-detail-detail-emphasized); */
+/*   } */
+
+/*  .spectrum-Detail-strong.spectrum-Detail-emphasized { */
+/*     font-family: var(--spectrum-detail-detail-strong-emphasized); */
+/*   } */
+
+/*   &:lang(zh), */
+/*   &:lang(ja), */
+/*   &:lang(ko) { */
+/*     font-family: var(--spectrum-detail-cjk); */
+
+/*     line-height: var(--spectrum-detail-cjk-line-height); */
+
+/*     strong, */
+/*     .spectrum-Detail-strong { */
+/*       font-family: var(--spectrum-detail-cjk-strong); */
+/*     } */
+
+/*     em, */
+/*     .spectrum-Detail-emphasized { */
+/*       font-family: var(--spectrum-detail-cjk-emphasized); */
+/*     } */
+
+/*     .spectrum-Detail-strong.spectrum-Detail-emphasized { */
+/*       font-family: var(--spectrum-detail-cjk-strong-emphasized); */
+/*     } */
+/*   } */
+/* } */
+
+/* /\* Detail - Light  *\/ */
+/* .spectrum-Detail--light { */
+/*   font-family: var(--spectrum-detail-detail-light); */
+
+/*   margin-block-start: var(--spectrum-detail-margin-start); */
+/*   margin-block-end: var(--spectrum-detail-margin-end); */
+
+/*   strong, */
+/*   .spectrum-Detail-strong { */
+/*     font-family: var(--spectrum-detail-detail-light-strong); */
+/*   } */
+
+/*   em, */
+/*   .spectrum-Detail-emphasized { */
+/*     font-family: var(--spectrum-detail-detail-light-emphasized); */
+/*   } */
+
+/*   .spectrum-Body-strong.spectrum-Body-emphasized { */
+/*     font-family: var(--spectrum-detail-detail-light-strong-emphasized); */
+/*   } */
+
+/*  &:lang(zh), */
+/*   &:lang(ja), */
+/*   &:lang(ko) { */
+/*     font-family: var(--spectrum-detail-cjk-light); */
+
+/*     strong, */
+/*     .spectrum-Detail-strong { */
+/*       font-family: var(--spectrum-detail-cjk-light-strong); */
+/*     } */
+
+/*     em, */
+/*     .spectrum-Detail-emphasized { */
+/*       font-family: var(--spectrum-detail-cjk-light-emphasized); */
+/*     } */
+
+/*     .spectrum-Detail-strong.spectrum-Detail-emphasized { */
+/*       font-family: var(--spectrum-detail-cjk-light-strong-emphasized); */
+/*     } */
+/*   } */
+/* } */
+
+/* .spectrum-Detail--serif { */
+/*   font-family: var(--spectrum-detail-serif); */
+/* } */
+
+/* /\* Code *\/ */
+
+/* /\* Code tokens *\/ */
+/* .spectrum-Code { */
+/*   /\* Font family *\/ */
+/*   --spectrum-code-font-family: var(--spectrum-font-family-code); */
+
+/*   /\* --spectrum-code-code: var(--spectrum-code); *\/ */
+/*   --spectrum-code-code-strong: var(--spectrum-code-strong); */
+/*   --spectrum-code-code-emphasized: var(--spectrum-code-emphasized); */
+/*   --spectrum-code-code-strong-emphasized: var(--spectrum-code-strong-emphasized); */
+
+/*   --spectrum-code-cjk: var(--spectrum-cjk-code); */
+/*   --spectrum-code-cjk-strong: var(--spectrum-cjk-code-strong); */
+/*   --spectrum-code-cjk-emphasized: var(--spectrum-cjk-code-emphasized); */
+/*   --spectrum-code-cjk-strong-emphasized: var(--spectrum-cjk-code-strong-emphasized); */
+
+/*   --spectrum-code-code-line-height: var(--spectrum-code-line-height); */
+/*   --spectrum-code-cjk-line-height: var(--spectrum-cjk-code-line-height); */
+
+/*   --spectrum-code-letter-spacing: var(--spectrum-cjk-letter-spacing); */
+
+/*   --spectrum-code-font-color: var(--spectrum-gray-800); */
+/* } */
+
+/* .spectrum-Code--sizeXS { */
+/*   --spectrum-code-font-size: var(--spectrum-code-size-xs); */
+/* } */
+
+/* .spectrum-Code--sizeS { */
+/*   --spectrum-code-font-size: var(--spectrum-code-size-s); */
+/* } */
+
+/* .spectrum-Code--sizeM { */
+/*   --spectrum-code-font-size: var(--spectrum-code-size-m); */
+/* } */
+
+/* .spectrum-Code--sizeL { */
+/*   --spectrum-code-font-size: var(--spectrum-code-size-l); */
+/* } */
+
+/* .spectrum-Code--sizeXL { */
+/*   --spectrum-code-font-size: var(--spectrum-code-size-xl); */
+/* } */
+
+
+/* /\* Code t-shirt sizes *\/ */
+/* .spectrum-Code--sizeXL { */
+/* } */
+
+/* .spectrum-Code { */
+/*   font-familly: var(--spectrum-code-font-family); */
+/*   font-size: var(--spectrum-code-font-size); */
+
+/*   line-height: var(--spectrum-code-code-line-height); */
+
+/*   color: var(--spectrum-code-font-color); */
+
+/*   strong, */
+/*   .spectrum-Code-strong { */
+/*     font-family: var(--spectrum-code-code-strong); */
+/*   } */
+
+/*   em, */
+/*   .spectrum-Code-emphasized { */
+/*     font-family: var(--spectrum-code-code-emphasized); */
+/*   } */
+
+/*  .spectrum-Code-strong.spectrum-Code-emphasized { */
+/*     font-family: var(--spectrum-code-code-strong-emphasized); */
+/*   } */
+
+
+/*   &:lang(zh), */
+/*   &:lang(ja), */
+/*   &:lang(ko) { */
+/*     font-family: var(--spectrum-code-cjk); */
+
+/*     line-height: var(--spectrum-code-cjk-line-height); */
+/*     letter-spacing: var(--spectrum-code-letter-spacing); */
+
+/*     strong, */
+/*     .spectrum-Code-strong { */
+/*       font-family: var(--spectrum-code-cjk-strong); */
+/*     } */
+
+/*     em, */
+/*     .spectrum-Code-emphasized { */
+/*       font-family: var(--spectrum-code-cjk-emphasized); */
+/*     } */
+
+/*     .spectrum-Code-strong.spectrum-Code-emphasized { */
+/*       font-family: var(--spectrum-code-cjk-strong-emphasized); */
+/*     } */
+/*   } */
+/* } */
