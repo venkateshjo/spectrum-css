@@ -73,7 +73,7 @@ export const getArgsFromSchema = (inputSchema) => {
             table: {
                 disable: schema.const || schema.readonly || schema.hidden,
                 category: category ?? 'Component',
-                defaultValue: { summary: schema.default },
+                // defaultValue: { summary: schema.default },
             },
         };
     }

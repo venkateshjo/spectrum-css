@@ -5,7 +5,7 @@ import { generateSVG } from '@spectrum-css/preview/helpers/storyAssets.js';
 import { titleCase } from '@spectrum-css/preview/helpers/utilities.js';
 
 // More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
-export const Template = ({ label, hideLabel, icon, size, variant, staticColor, style, isPending, isDisabled, className }) => {
+export const Template = ({ label, hideLabel, icon, size, variant, staticColor, style, isDisabled, className }) => {
   let classList = {};
   
   if (!className) className = 'spectrum-Button';

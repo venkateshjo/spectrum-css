@@ -33,10 +33,11 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = args;
 
 export const Accent = Template.bind({});
 Accent.args = {
+  ...args,
   variant: 'accent',
   style: 'fill',
   label: 'Edit'
@@ -44,6 +45,7 @@ Accent.args = {
 
 export const Outline = Template.bind({});
 Accent.args = {
+  ...args,
   variant: 'accent',
   style: 'outline',
   icon: 'ABC',
