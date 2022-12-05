@@ -1,6 +1,12 @@
 import { unpackDecorator } from "./helpers/utilities.js";
 
 import {
+  // Read in the global arguments
+  colorType,
+  scaleType,
+  expressType,
+  // Read in the document arguments
+  reducedMotionType,
   textDirectionType,
   langType,
 } from "./helpers/argTypes/index.js";
@@ -25,6 +31,20 @@ window.addEventListener('DOMContentLoaded', () => {
 export const globalTypes = {
   textDirection: textDirectionType,
   lang: langType,
+};
+
+export const argTypes = {
+    color: colorType,
+    scale: scaleType,
+    reducedMotion: reducedMotionType,
+    express: expressType,
+};
+
+export const args = {
+    color: 'light',
+    scale: 'medium',
+    reducedMotion: false,
+    express: false,
 };
 
 export const parameters = {

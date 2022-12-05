@@ -248,6 +248,5 @@ exports.clean = clean;
 exports.build = build;
 exports.watch = dev.watch;
 exports.default = buildMedium;
-exports.buildHeavy = buildHeavy;
 
 exports.updateAndTagRelease = release.updateAndTagRelease;

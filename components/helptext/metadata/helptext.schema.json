@@ -61,6 +61,7 @@
         }
     },
     "required": [
+        "text",
         "hideIcon",
         "size",
         "isDisabled"

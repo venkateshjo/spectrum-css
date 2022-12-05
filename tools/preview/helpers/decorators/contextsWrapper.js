@@ -55,7 +55,6 @@ export const withContextWrapper = (StoryFn, context) => {
 
       for (let o of options) {
         const { className: cn, stylesheet } = fetchMetadata(ctx, o);
-        console.log(o, cn, stylesheet);
         if (cn && className && cn !== 'spectrum') {
           document.body.classList.toggle(cn, className === cn);
         }

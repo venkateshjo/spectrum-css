@@ -5,7 +5,7 @@
   "homepage": "https://opensource.adobe.com/spectrum-css/",
   "scripts": {
     "build": "run-s build:preview mv:preview build:site",
-    "build:components": "gulp buildHeavy -LLLL ",
+    "build:components": "gulp build -LLLL ",
     "build:site": "gulp -LL",
     "build:preview": "yarn workspace @spectrum-css/preview build",
     "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp dev",

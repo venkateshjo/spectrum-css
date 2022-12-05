@@ -1,17 +1,17 @@
 import globals from '../schemas/global.schema.json';
 import { isObject, titleCase } from './utilities.js';
 
-const getDefaultValue = ({ default: defaultValue, examples, type }) => {
-    if (defaultValue) return defaultValue;
+const getDefaultValue = (schema) => { //{ default: defaultValue, examples, type }) => {
+    if (schema.default) return schema.default;
     
-    if (examples && examples.length > 0) return examples[0];
+    if (schema.examples && schema.examples.length > 0) return schema.examples[0];
 
     // Use type to set an empty/null default value
-    if (type === 'boolean') return false;
-    if (type === 'string') return '';
-    if (type === 'number' || type === 'integer') return 0;
-    if (type === 'array') return [];
-    if (isObject(type)) return {};
+    if (schema.type === 'boolean') return false;
+    if (schema.type === 'string') return '';
+    if (schema.type === 'number' || schema.type === 'integer') return 0;
+    if (schema.type === 'array') return [];
+    if (isObject(schema.type)) return {};
     return;
 };
 
@@ -31,7 +31,7 @@ const argControlTypes = ({ format, type, minimum, maximum, enum: options, $ref }
     if (type === 'object' || type === 'array') return { control: 'object' };
     if (options && options.length > 0) return {
         options: [
-            ...options.map((option) => titleCase(option)),
+            ...options, // .map((option) => titleCase(option)),
         ],
         control: format === 'radio' ? 'inline-radio' : 'select',
     };
@@ -40,7 +40,9 @@ const argControlTypes = ({ format, type, minimum, maximum, enum: options, $ref }
     }
 
     return {
-        control: format ?? 'text',
+        control: {
+            type: format ?? 'text',
+        },
     };
 };
 
@@ -58,23 +60,27 @@ export const getArgsFromSchema = (inputSchema) => {
     for (const [key, schema] of Object.entries(props)) {
         if (!schema) continue;
 
-        args[key] = getDefaultValue(schema);
+        const isRequired = required?.includes(key);
+
+        args[key] = isRequired ? getDefaultValue(schema) : undefined;
 
         const { title, description, type, category } = schema;
 
         argTypes[key] = {
             name: title ?? key ? `${titleCase(key)}` : '',
-            description,
-            ...argControlTypes(schema, required?.includes(key)),
             type: {
-                required: required?.includes(key),
-                summary: type,
+                name: type,
+                required: isRequired,
             },
+            defaultValue: args[key],
+            description,
             table: {
+                type: { summary: type },
                 disable: schema.const || schema.readonly || schema.hidden,
                 category: category ?? 'Component',
-                // defaultValue: { summary: schema.default },
+                defaultValue: { summary: args[key] },
             },
+            ...argControlTypes(schema, isRequired),
         };
     }
 
