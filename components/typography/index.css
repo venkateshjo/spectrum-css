@@ -498,97 +498,94 @@ governing permissions and limitations under the License.
 
 /* Code */
 
-/* /\* Code tokens *\/ */
-/* .spectrum-Code { */
-/*   /\* Font family *\/ */
-/*   --spectrum-code-font-family: var(--spectrum-font-family-code); */
+/* Code tokens */
+.spectrum-Code {
+  /* Font family */
+  --spectrum-code-font-family: var(--spectrum-code-font-family);
 
-/*   /\* --spectrum-code-code: var(--spectrum-code); *\/ */
-/*   --spectrum-code-code-strong: var(--spectrum-code-strong); */
-/*   --spectrum-code-code-emphasized: var(--spectrum-code-emphasized); */
-/*   --spectrum-code-code-strong-emphasized: var(--spectrum-code-strong-emphasized); */
+  --spectrum-code-font-weight-strong: var(--spectrum-code-strong-font-weight);
+  --spectrum-code-font-weight-emphasized: var(--spectrum-code-emphasized-font-weight);
+  --spectrum-code-font-weight-strong-emphasized: var(--spectrum-code-strong-emphasized-font-weight);
 
-/*   --spectrum-code-cjk: var(--spectrum-cjk-code); */
-/*   --spectrum-code-cjk-strong: var(--spectrum-cjk-code-strong); */
-/*   --spectrum-code-cjk-emphasized: var(--spectrum-cjk-code-emphasized); */
-/*   --spectrum-code-cjk-strong-emphasized: var(--spectrum-cjk-code-strong-emphasized); */
+  --spectrum-code-font-family-cjk: var(--spectrum-code-cjk-font-family);
+  --spectrum-code-font-weight-cjk-strong: var(--spectrum-code-cjk-strong-font-weight);
+  --spectrum-code-font-weight-cjk-emphasized: var(--spectrum-code-cjk-emphasized-font-weight);
+  --spectrum-code-font-weight-cjk-strong-emphasized: var(--spectrum-code-cjk-strong-emphasized-font-weight);
 
-/*   --spectrum-code-code-line-height: var(--spectrum-code-line-height); */
-/*   --spectrum-code-cjk-line-height: var(--spectrum-cjk-code-line-height); */
+  --spectrum-code-line-height: var(--spectrum-code-line-height);
+  --spectrum-code-cjk-line-height: var(--spectrum-code-line-height-cjk);
 
-/*   --spectrum-code-letter-spacing: var(--spectrum-cjk-letter-spacing); */
+  --spectrum-code-cjk-letter-spacing: var(--spectrum-letter-spacing-cjk);
 
-/*   --spectrum-code-font-color: var(--spectrum-gray-800); */
-/* } */
+  --spectrum-code-font-color: var(--spectrum-gray-800);
+}
 
-/* .spectrum-Code--sizeXS { */
-/*   --spectrum-code-font-size: var(--spectrum-code-size-xs); */
-/* } */
+.spectrum-Code--sizeXS {
+  --spectrum-code-font-size: var(--spectrum-code-size-xs);
+}
 
-/* .spectrum-Code--sizeS { */
-/*   --spectrum-code-font-size: var(--spectrum-code-size-s); */
-/* } */
+.spectrum-Code--sizeS {
+  --spectrum-code-font-size: var(--spectrum-code-size-s);
+}
 
-/* .spectrum-Code--sizeM { */
-/*   --spectrum-code-font-size: var(--spectrum-code-size-m); */
-/* } */
+.spectrum-Code--sizeM {
+  --spectrum-code-font-size: var(--spectrum-code-size-m);
+}
 
-/* .spectrum-Code--sizeL { */
-/*   --spectrum-code-font-size: var(--spectrum-code-size-l); */
-/* } */
+.spectrum-Code--sizeL {
+  --spectrum-code-font-size: var(--spectrum-code-size-l);
+}
 
-/* .spectrum-Code--sizeXL { */
-/*   --spectrum-code-font-size: var(--spectrum-code-size-xl); */
-/* } */
+.spectrum-Code--sizeXL {
+  --spectrum-code-font-size: var(--spectrum-code-size-xl);
+}
 
+/* Code t-shirt sizes */
+.spectrum-Code--sizeXL {
+}
 
-/* /\* Code t-shirt sizes *\/ */
-/* .spectrum-Code--sizeXL { */
-/* } */
+.spectrum-Code {
+  font-family: var(--spectrum-code-font-family);
+  font-size: var(--spectrum-code-font-size);
 
-/* .spectrum-Code { */
-/*   font-familly: var(--spectrum-code-font-family); */
-/*   font-size: var(--spectrum-code-font-size); */
+  line-height: var(--spectrum-code-line-height);
 
-/*   line-height: var(--spectrum-code-code-line-height); */
+  color: var(--spectrum-code-font-color);
 
-/*   color: var(--spectrum-code-font-color); */
+  strong,
+  .spectrum-Code-strong {
+    font-weight: var(--spectrum-code-font-weight-strong);
+  }
 
-/*   strong, */
-/*   .spectrum-Code-strong { */
-/*     font-family: var(--spectrum-code-code-strong); */
-/*   } */
+  em,
+  .spectrum-Code-emphasized {
+    font-weight: var(--spectrum-code-font-weight-emphasized);
+  }
 
-/*   em, */
-/*   .spectrum-Code-emphasized { */
-/*     font-family: var(--spectrum-code-code-emphasized); */
-/*   } */
+ .spectrum-Code-strong.spectrum-Code-emphasized {
+    font-weight: var(--spectrum-code-font-weight-strong-emphasized);
+  }
 
-/*  .spectrum-Code-strong.spectrum-Code-emphasized { */
-/*     font-family: var(--spectrum-code-code-strong-emphasized); */
-/*   } */
+  &:lang(zh),
+  &:lang(ja),
+  &:lang(ko) {
+    font-family: var(--spectrum-code-font-family-cjk);
 
+    line-height: var(--spectrum-code-cjk-line-height);
+    letter-spacing: var(--spectrum-code-cjk-letter-spacing);
 
-/*   &:lang(zh), */
-/*   &:lang(ja), */
-/*   &:lang(ko) { */
-/*     font-family: var(--spectrum-code-cjk); */
+    strong,
+    .spectrum-Code-strong {
+      font-weight: var(--spectrum-code-font-weight-cjk-strong);
+    }
 
-/*     line-height: var(--spectrum-code-cjk-line-height); */
-/*     letter-spacing: var(--spectrum-code-letter-spacing); */
+    em,
+    .spectrum-Code-emphasized {
+      font-weight: var(--spectrum-code-font-weight-cjk-emphasized);
+    }
 
-/*     strong, */
-/*     .spectrum-Code-strong { */
-/*       font-family: var(--spectrum-code-cjk-strong); */
-/*     } */
-
-/*     em, */
-/*     .spectrum-Code-emphasized { */
-/*       font-family: var(--spectrum-code-cjk-emphasized); */
-/*     } */
-
-/*     .spectrum-Code-strong.spectrum-Code-emphasized { */
-/*       font-family: var(--spectrum-code-cjk-strong-emphasized); */
-/*     } */
-/*   } */
-/* } */
+    .spectrum-Code-strong.spectrum-Code-emphasized {
+      font-weight: var(--spectrum-code-font-weight-cjk-strong-emphasized);
+    }
+  }
+}
