@@ -252,13 +252,13 @@ governing permissions and limitations under the License.
 /* Body */
 
 /* Body tokens */
-/* .spectrum-Body { */
-/*   /\* Font family *\/ */
-/*   --spectrum-body-sans-serif: var(--spectrum-font-family-default); */
-/*   --spectrum-body-serif: var(--spectrum-font-family-serif); */
+.spectrum-Body {
+  /* Font family */
+  --spectrum-body-font-family-sans-serif: var(--spectrum-body-sans-serif-font-family);
+  --spectrum-body-font-family-serif: var(--spectrum-body-serif-font-family);
 
 /*   --spectrum-body-body-strong: var(--spectrum-body-strong); */
-/*   /\* --spectrum-body-body-emphasized: var(--spectrum-body-emphasized); *\/ */
+  /* --spectrum-body-body-emphasized: var(--spectrum-body-emphasized); */
 /*   --spectrum-body-body-strong-emphasized: var(--spectrum-body-strong-emphasized); */
 
 /*   --spectrum-body-cjk: var(--spectrum-cjk-body); */
@@ -273,11 +273,11 @@ governing permissions and limitations under the License.
 
 /*   --spectrum-body-margin: var(--spectrum-body-margin-multiplier); */
 
-/*   /\* Font color *\/ */
+  /* Font color */
 /*   --spectrum-body-font-color: var(--spectrum-gray-800); */
-/* } */
+}
 
-/* /\* Body t-shirt sizes *\/ */
+/* Body t-shirt sizes */
 /* .spectrum-Body--sizeXXXL { */
 /*   --spectrum-body-font-size: var(--spectrum-body-size-xxxl); */
 /* } */
@@ -305,9 +305,9 @@ governing permissions and limitations under the License.
 /*   color: var(--spectrum-body-font-color); */
 /* } */
 
-/* .spectrum-Body { */
-/*   font-family: var(--spectrum-body-sans-serif); */
-/*   font-size: var(--spectrum-body-font-size); */
+.spectrum-Body {
+  font-family: var(--spectrum-body-font-family-sans-serif);
+  /* font-size: var(--spectrum-body-font-size); */
 
 /*   line-height: var(--spectrum-body-body-line-height); */
 
@@ -350,11 +350,11 @@ governing permissions and limitations under the License.
 /*       font-family: var(--spectrum-body-cjk-strong-emphasized); */
 /*     } */
 /*   } */
-/* } */
+}
 
-/* .spectrum-Body--serif { */
-/*   font-family: var(--spectrum-body-serif); */
-/* } */
+.spectrum-Body--serif {
+  font-family: var(--spectrum-body-font-family-serif);
+}
 
 /* /\* Detail *\/ */
 
