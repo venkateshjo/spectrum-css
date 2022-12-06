@@ -359,34 +359,32 @@ governing permissions and limitations under the License.
 /* Detail tokens */
 .spectrum-Detail {
   --spectrum-detail-font-family-sans-serif: var(--spectrum-detail-sans-serif-font-family);
-  /* --spectrum-detail-font-family-serif: var(--spectrum-serif-font-family); */
+  --spectrum-detail-font-family-serif: var(--spectrum-detail-serif-font-family);
+  --spectrum-detail-font-family: var(--spectrum-font-family-default);
+  --spectrum-detail-font-family-cjk: var(--spectrum-detail-cjk-font-family);
 
   --spectrum-detail-font-weight-strong: var(--spectrum-detail-sans-serif-strong-font-weight);
   --spectrum-detail-font-weight-emphasized: var(--spectrum-detail-sans-serif-emphasized-font-weight);
   --spectrum-detail-font-weight-strong-emphasized: var(--spectrum-detail-sans-serif-strong-emphasized-font-weight);
-
-/*   --spectrum-detail-detail-light: var(--spectrum-detail-light); */
-/*   --spectrum-detail-detail-light-strong: var(--spectrum-detail-light-strong); */
-/*   --spectrum-detail-detail-light-emphasized: var(--spectrum-detail-light-emphasized); */
-/*   --spectrum-detail-detail-light-strong-emphasized: var(--spectrum-detail-light-strong-emphasized); */
-
-  --spectrum-detail-font-family-cjk: var(--spectrum-detail-cjk-font-family);
   --spectrum-detail-font-weight-cjk-emphasized: var(--spectrum-detail-cjk-emphasized-font-weight);
   --spectrum-detail-font-weight-cjk-strong: var(--spectrum-detail-cjk-strong-font-weight);
   --spectrum-detail-font-weight-cjk-strong-emphasized: var(--spectrum-detail-cjk-strong-emphasized-font-weight);
 
-/*   --spectrum-detail-cjk-light: var(--spectrum-cjk-detail-light); */
-/*   --spectrum-detail-cjk-light-strong: var(--spectrum-cjk-detail-light-strong); */
-/*   --spectrum-detail-cjk-light-emphasized: var(--spectrum-cjk-detail-light-emphasized); */
-/*   --spectrum-detail-cjk-light-strong-emphasized: var(--spectrum-cjk-detail-light-strong-emphasized); */
+  --spectrum-detail-font-weight-light-strong: var(--spectrum-detail-sans-serif-light-strong-font-weight);
+  --spectrum-detail-font-weight-light-emphasized: var(--spectrum-detail-sans-serif-light-emphasized-font-weight);
+  --spectrum-detail-font-weight-light-strong-emphasized: var(--spectrum-detail-sans-serif-light-strong-emphasized-font-weight);
+
+  --spectrum-detail-cjk-light-strong: var(--spectrum-detail-cjk-light-font-weight);
+  --spectrum-detail-cjk-light-emphasized: var(--spectrum-detail-cjk-light-emphasized);
+  --spectrum-detail-cjk-light-strong-emphasized: var(--spectrum-detail-cjk-light-strong-emphasized);
 
   --spectrum-detail-line-height-default: var(--spectrum-detail-line-height);
   --spectrum-detail-cjk-line-height: var(--spectrum-detail-line-height-cjk);
 
   --spectrum-detail-letter-spacing-default: var(--spectrum-detail-letter-spacing);
 
-/*   --spectrum-detail-margin-start: var(--spectrum-detail-margin-top-mulitplier); */
-/*   --spectrum-detail-margin-end: var(--spectrum-detail-margin-bottom-multiplier); */
+  --spectrum-detail-margin-start: var(--spectrum-detail-margin-top-mulitplier);
+  --spectrum-detail-margin-end: var(--spectrum-detail-margin-bottom-multiplier);
 
   --spectrum-detail-font-color: var(--spectrum-gray-900);
 }
@@ -452,53 +450,53 @@ governing permissions and limitations under the License.
   }
 }
 
-/* /\* Detail - Light  *\/ */
-/* .spectrum-Detail--light { */
-/*   font-family: var(--spectrum-detail-detail-light); */
+/* Detail - Light  */
+.spectrum-Detail--light {
+  font-family: var(--spectrum-detail-font-family);
 
-/*   margin-block-start: var(--spectrum-detail-margin-start); */
-/*   margin-block-end: var(--spectrum-detail-margin-end); */
+  margin-block-start: var(--spectrum-detail-margin-start);
+  margin-block-end: var(--spectrum-detail-margin-end);
 
-/*   strong, */
-/*   .spectrum-Detail-strong { */
-/*     font-family: var(--spectrum-detail-detail-light-strong); */
-/*   } */
+  strong,
+  .spectrum-Detail-strong {
+    font-weight: var(--spectrum-detail-font-weight-light-strong);
+  }
 
-/*   em, */
-/*   .spectrum-Detail-emphasized { */
-/*     font-family: var(--spectrum-detail-detail-light-emphasized); */
-/*   } */
+  em,
+  .spectrum-Detail-emphasized {
+    font-weight: var(--spectrum-detail-font-weight-light-emphasized);
+  }
 
-/*   .spectrum-Body-strong.spectrum-Body-emphasized { */
-/*     font-family: var(--spectrum-detail-detail-light-strong-emphasized); */
-/*   } */
+  .spectrum-Detail-strong.spectrum-Body-emphasized {
+    font-weight: var(--spectrum-detail-font-weight-light-strong-emphasized);
+  }
 
-/*  &:lang(zh), */
-/*   &:lang(ja), */
-/*   &:lang(ko) { */
-/*     font-family: var(--spectrum-detail-cjk-light); */
+ &:lang(zh),
+  &:lang(ja),
+  &:lang(ko) {
+    font-family: var(--spectrum-detail-font-family-cjk);
 
-/*     strong, */
-/*     .spectrum-Detail-strong { */
-/*       font-family: var(--spectrum-detail-cjk-light-strong); */
-/*     } */
+    strong,
+    .spectrum-Detail-strong {
+      font-weight: var(--spectrum-detail-cjk-light-strong);
+    }
 
-/*     em, */
-/*     .spectrum-Detail-emphasized { */
-/*       font-family: var(--spectrum-detail-cjk-light-emphasized); */
-/*     } */
+    em,
+    .spectrum-Detail-emphasized {
+      font-weight: var(--spectrum-detail-cjk-light-emphasized);
+    }
 
-/*     .spectrum-Detail-strong.spectrum-Detail-emphasized { */
-/*       font-family: var(--spectrum-detail-cjk-light-strong-emphasized); */
-/*     } */
-/*   } */
-/* } */
+    .spectrum-Detail-strong.spectrum-Detail-emphasized {
+      font-weight: var(--spectrum-detail-cjk-light-strong-emphasized);
+    }
+  }
+}
 
-/* .spectrum-Detail--serif { */
-/*   font-family: var(--spectrum-detail-serif); */
-/* } */
+.spectrum-Detail--serif {
+  font-family: var(--spectrum-detail-font-family-serif);
+}
 
-/* /\* Code *\/ */
+/* Code */
 
 /* /\* Code tokens *\/ */
 /* .spectrum-Code { */
