@@ -117,6 +117,13 @@ governing permissions and limitations under the License.
   --spectrum-heading-font-color: var(--spectrum-gray-900);
 }
 
+/* Windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-Heading {
+    --highcontrast-heading-font-color: Text;
+  }
+}
+
 /* Heading t-shirt sizes */
 .spectrum-Heading--sizeXXS {
   --spectrum-heading-font-size: var(--spectrum-heading-size-xxs);
@@ -149,7 +156,7 @@ governing permissions and limitations under the License.
   font-style: var(--spectrum-heading-font-style-sans-serif);
   font-weight: var(--spectrum-heading-font-weight-sans-serif);
   font-size: var(--spectrum-heading-font-size);
-  color: var(--spectrum-heading-font-color);
+  color: var(--highcontrast-heading-font-color, var(--mod-heading-font-color, var(--spectrum-heading-font-color)));
 
   margin-block-start: var(--spectrum-heading-margin-start);
   margin-block-end: var(--spectrum-heading-margin-end);
@@ -363,6 +370,13 @@ governing permissions and limitations under the License.
   --spectrum-body-font-color: var(--spectrum-gray-800);
 }
 
+/* Windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-body {
+    --highcontrast-body-font-color: Text;
+  }
+}
+
 /* Body t-shirt sizes */
 .spectrum-Body--sizeXS {
   --spectrum-body-font-size: var(--spectrum-body-size-xs);
@@ -394,7 +408,7 @@ governing permissions and limitations under the License.
   font-style: var(--spectrum-body-font-style-sans-serif);
   font-weight: var(--spectrum-body-font-weight-sans-serif);
   font-size: var(--spectrum-body-font-size);
-  color: var(--spectrum-body-font-color);
+  color: var(--highcontrast-body-font-color, var(--mod-body-font-color, var(--spectrum-body-font-color)));
 
   line-height: var(--spectrum-body-cjk-line-height);
 
@@ -515,6 +529,13 @@ governing permissions and limitations under the License.
   --spectrum-detail-font-color: var(--spectrum-gray-900);
 }
 
+/* Windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-Detail {
+    --highcontrast-detail-font-color: Text;
+  }
+}
+
 /* Detail t-shirt sizes */
 .spectrum-Detail--sizeS {
   --spectrum-detail-font-size: var(--spectrum-detail-size-s);
@@ -540,7 +561,7 @@ governing permissions and limitations under the License.
 
   letter-spacing: var(--spectrum-detail-letter-spacing-default);
 
-  color: var(--spectrum-detail-font-color);
+  color: var(--highcontrast-detail-font-color, var(--mod-detail-font-color, var(--spectrum-detail-font-color)));
 
   strong,
   .spectrum-Detail-strong {
@@ -683,6 +704,13 @@ governing permissions and limitations under the License.
   --spectrum-code-font-color: var(--spectrum-gray-800);
 }
 
+/* Windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-Code {
+    --highcontrast-code-font-color: Text;
+  }
+}
+
 /* Code t-shirt sizes */
 .spectrum-Code--sizeXS {
   --spectrum-code-font-size: var(--spectrum-code-size-xs);
@@ -713,7 +741,7 @@ governing permissions and limitations under the License.
 
   line-height: var(--spectrum-code-line-height);
 
-  color: var(--spectrum-code-font-color);
+  color: var(--highcontrast-code-font-color, var(--mod-code-font-color, var(--spectrum-code-font-color)));
 
   strong,
   .spectrum-Code-strong {
