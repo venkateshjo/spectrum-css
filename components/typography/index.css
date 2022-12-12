@@ -648,9 +648,9 @@ governing permissions and limitations under the License.
 
 /* Code tokens */
 .spectrum-Code {
-  --spectrum-code-font-family: var(--spectrum-code-font-family);
-  --spectrum-code-font-style: var(--spectrum-code-font-style);
-  --spectrum-code-font-weight: var(--spectrum-code-font-weight);
+  --spectrum-code-font-family-default: var(--spectrum-code-font-family);
+  --spectrum-code-font-style-default: var(--spectrum-code-font-style);
+  --spectrum-code-font-weight-default: var(--spectrum-code-font-weight);
 
   --spectrum-code-font-style-strong: var(--spectrum-code-strong-font-style);
   --spectrum-code-font-weight-strong: var(--spectrum-code-strong-font-weight);
@@ -706,9 +706,9 @@ governing permissions and limitations under the License.
 
 /* Code styles */
 .spectrum-Code {
-  font-family: var(--spectrum-code-font-family);
-  font-style: var(--spectrum-code-font-style);
-  font-weight: var(--spectrum-code-font-weight);
+  font-family: var(--spectrum-code-font-family-default);
+  font-style: var(--spectrum-code-font-style-default);
+  font-weight: var(--spectrum-code-font-weight-default);
   font-size: var(--spectrum-code-font-size);
 
   line-height: var(--spectrum-code-line-height);
