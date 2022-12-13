@@ -11,10 +11,4 @@ governing permissions and limitations under the License.
 */
 
 @container (--system: express) {
-  .spectrum-Heading {
-    --spectrum-heading-font-weight-sans-serif: var(--spectrum-heading-sans-serif-font-weight);
-    --spectrum-heading-font-weight-serif: var(--spectrum-heading-serif-font-weight);
-    --spectrum-heading-font-weight-serif-emphasized: var(--spectrum-heading-sans-serif-emphasized-font-weight);
-    --spectrum-heading-font-weight-cjk: var(--spectrum-heading-cjk-font-weight);
-  }
 }
