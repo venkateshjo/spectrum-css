@@ -10,6 +10,17 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/* Typography - Default */
+.spectrum {
+  --spectrum-font-family: var(--spectrum-font-family-default);
+  --spectrum-font-style: var(--spectrum-font-style-default);
+  --spectrum-font-size: var(--spectrum-font-size-100);
+
+  font-family: var(--spectrum-font-family);
+  font-style: var(--spectrum-font-style);
+  font-size: var(--spectrum-font-size);
+}
+
 /* Typography - Heading */
 
 /* Heading tokens */
@@ -410,7 +421,7 @@ governing permissions and limitations under the License.
   font-size: var(--mod-body-font-size, var(--spectrum-body-font-size));
   color: var(--highcontrast-body-font-color, var(--mod-body-font-color, var(--spectrum-body-font-color)));
 
-  line-height: var(--mod-body-cjk-line-height, var(--spectrum-body-cjk-line-height));
+  line-height: var(--mod-body-line-height, var(--spectrum-body-line-height));
 
   margin-block: var(--mod-body-margin, var(--spectrum-body-margin));
 
@@ -438,7 +449,7 @@ governing permissions and limitations under the License.
     font-style: var(--mod-body-font-style-cjk, var(--spectrum-body-font-style-cjk));
     font-weight: var(--mod-body-font-weight-cjk, var(--spectrum-body-font-weight-cjk));
 
-    line-height: var(--mod-body-line-height-cjk, var(--spectrum-body-line-height-cjk));
+    line-height: var(--mod-body-cjk-line-height, var(--spectrum-body-cjk-line-height));
 
     letter-spacing: var(--mod-body-cjk-letter-spacing, var(--spectrum-body-cjk-letter-spacing));
 
@@ -557,11 +568,13 @@ governing permissions and limitations under the License.
   font-weight: var(--mod-detail-font-weight-sans-serif, var(--spectrum-detail-font-weight-sans-serif));
   font-size: var(--mod-detail-font-size, var(--spectrum-detail-font-size));
 
+  color: var(--highcontrast-detail-font-color, var(--mod-detail-font-color, var(--spectrum-detail-font-color)));
+
   line-height: var(--mod-detail-line-height-default, var(--spectrum-detail-line-height-default));
 
   letter-spacing: var(--mod-detail-letter-spacing-default, var(--spectrum-detail-letter-spacing-default));
 
-  color: var(--highcontrast-detail-font-color, var(--mod-detail-font-color, var(--spectrum-detail-font-color)));
+  text-transform: uppercase;
 
   strong,
   .spectrum-Detail-strong {
