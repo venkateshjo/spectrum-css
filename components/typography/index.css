@@ -12,6 +12,9 @@ governing permissions and limitations under the License.
 
 /* Typography - Default */
 .spectrum {
+  --spectrum-font-family-ar: myriad-arabic, adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
+  --spectrum-font-family-he: myriad-hebrew, adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
+
   --spectrum-font-family: var(--spectrum-font-family-default);
   --spectrum-font-style: var(--spectrum-font-style-default);
   --spectrum-font-size: var(--spectrum-font-size-100);
@@ -19,6 +22,14 @@ governing permissions and limitations under the License.
   font-family: var(--spectrum-font-family);
   font-style: var(--spectrum-font-style);
   font-size: var(--spectrum-font-size);
+
+  &:lang(ar) {
+    font-family: var(--spectrum-font-family-ar);
+  }
+
+  &:lang(he) {
+    font-family: var(--spectrum-font-family-he);
+  }
 }
 
 /* Typography - Heading */
