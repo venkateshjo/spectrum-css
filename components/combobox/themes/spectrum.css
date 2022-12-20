@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 @container (--system: spectrum) {
-  .spectrum-InputGroup {
+  .spectrum-Combobox {
     --spectrum-combobox-border-color-default: var(--spectrum-gray-500);
     --spectrum-combobox-border-color-hover: var(--spectrum-gray-600);
     --spectrum-combobox-border-color-active: var(--spectrum-alias-infieldbutton-fill-border-color-key-focus);

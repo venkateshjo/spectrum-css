@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 @container (--system: express) {
-  .spectrum-InputGroup {
+  .spectrum-Combobox {
     --spectrum-combobox-border-color-default: var(--spectrum-gray-400);
     --spectrum-combobox-border-color-hover: var(--spectrum-gray-500);
     --spectrum-combobox-border-color-active: var(--spectrum-gray-900);
