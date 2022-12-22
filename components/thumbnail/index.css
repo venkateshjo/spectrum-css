@@ -10,6 +10,78 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+.spectrum-Thumbnail {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-100);
+
+  --spectrum-thumbnail-border-radius: var(--spectrum-corner-radius-75);
+  /* --spectrum-thumbnail-border-width: var(--spectrum-border-width-100);  */
+
+  /* --spectrum-thumbnail-layer-border-width-inner: var(--spectrum-border-width-400);
+  --spectrum-thumbnail-layer-border-width-outer: var(--spectrum-border-width-100);
+  --spectrum-thumbnail-layer-border-color-inner: var(--spectrum-white);
+  --spectrum-thumbnail-layer-border-color-outer: var(--spectrum-gray-500);
+  --spectrum-thumbnail-layer-border-color-selected: var(--spectrum-accent-color-800); */
+
+  /* --spectrum-thumbnail-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness); */
+  /* --spectrum-thumbnail-focus-indicator-gap: var(--spectrum-focus-indicator-gap); */
+  
+  /* --spectrum-thumbnail-border-color-default: var(--spectrum-thumbnail-border-color); */
+  /* --spectrum-thumbnail-border-color-opacity: var(--spectrum-thumbnail-border-opacity); */
+
+  /* --spectrum-thumbnail-color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled); */
+  /* --spectrum-thumbnail-focus-indicator-color: var(--spectrum-focus-indicator-color); */
+}
+
+.spectrum-Thumbnail--size50 {
+
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-100);
+
+}
+
+.spectrum-Thumbnail--size75 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-100);
+
+}
+
+.spectrum-Thumbnail--size100 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-100);
+}
+
+.spectrum-Thumbnail--size200 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-200);
+}
+
+.spectrum-Thumbnail--size300 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-300);
+}
+
+.spectrum-Thumbnail--size400 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-400);
+}
+
+.spectrum-Thumbnail--size500 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
+}
+
+.spectrum-Thumbnail--size600 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-600);
+}
+
+.spectrum-Thumbnail--size700 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-700);
+}
+
+.spectrum-Thumbnail--size800 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-800);
+}
+
+.spectrum-Thumbnail--size900 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-900);
+}
+
+.spectrum-Thumbnail--size1000 {
+  --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-1000);
+}
 
 .spectrum-Thumbnail {
   position: relative;
@@ -20,8 +92,8 @@ governing permissions and limitations under the License.
   align-items: center;
   justify-content: center;
 
-  width: var(--spectrum-thumbnail-width);
-  height: var(--spectrum-thumbnail-height);
+  inline-size: var(--spectrum-thumbnail-size);
+  block-size: var(--spectrum-thumbnail-size);
 
   border-radius: var(--spectrum-thumbnail-border-radius);
 
@@ -30,9 +102,9 @@ governing permissions and limitations under the License.
 
   overflow: hidden;
 
-  background-size: var(--spectrum-global-dimension-static-size-200) var(--spectrum-global-dimension-static-size-200);
+  /* background-size: var(--spectrum-global-dimension-static-size-200) var(--spectrum-global-dimension-static-size-200); */
 
-  background-position: 0 0, 0 var(--spectrum-global-dimension-static-size-100), var(--spectrum-global-dimension-static-size-100) calc(-1 * var(--spectrum-global-dimension-static-size-100)), calc(-1 * var(--spectrum-global-dimension-static-size-100)) 0;
+  /* background-position: 0 0, 0 var(--spectrum-global-dimension-static-size-100), var(--spectrum-global-dimension-static-size-100) calc(-1 * var(--spectrum-global-dimension-static-size-100)), calc(-1 * var(--spectrum-global-dimension-static-size-100)) 0; */
 
   z-index: 0;
 
@@ -43,41 +115,6 @@ governing permissions and limitations under the License.
     width: 100%;
     height: 100%;
     border-radius: var(--spectrum-thumbnail-border-radius);
-  }
-}
-
-.spectrum-Thumbnail--sizeXXS {
-  @remapvars {
-    find: /--spectrum-thumbnail(.*)-xxs-/;
-    replace: --spectrum-thumbnail$1-;
-  }
-}
-
-.spectrum-Thumbnail--sizeXS {
-  @remapvars {
-    find: /--spectrum-thumbnail(.*)-xs-/;
-    replace: --spectrum-thumbnail$1-;
-  }
-}
-
-.spectrum-Thumbnail--sizeS {
-  @remapvars {
-    find: /--spectrum-thumbnail(.*)-s-/;
-    replace: --spectrum-thumbnail$1-;
-  }
-}
-
-.spectrum-Thumbnail--sizeM {
-  @remapvars {
-    find: /--spectrum-thumbnail(.*)-m-/;
-    replace: --spectrum-thumbnail$1-;
-  }
-}
-
-.spectrum-Thumbnail--sizeL {
-  @remapvars {
-    find: /--spectrum-thumbnail(.*)-l-/;
-    replace: --spectrum-thumbnail$1-;
   }
 }
 
