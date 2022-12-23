@@ -11,6 +11,10 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Thumbnail {
+  /* Static tokens */
+  --spectrum-global-dimension-static-size-200: 16px;
+  --spectrum-global-dimension-static-size-100: 8px;
+
   --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-100);
 
   --spectrum-thumbnail-border-radius: var(--spectrum-corner-radius-75);
@@ -102,9 +106,9 @@ governing permissions and limitations under the License.
 
   overflow: hidden;
 
-  /* background-size: var(--spectrum-global-dimension-static-size-200) var(--spectrum-global-dimension-static-size-200); */
+  background-size: var(--spectrum-global-dimension-static-size-200) var(--spectrum-global-dimension-static-size-200);
 
-  /* background-position: 0 0, 0 var(--spectrum-global-dimension-static-size-100), var(--spectrum-global-dimension-static-size-100) calc(-1 * var(--spectrum-global-dimension-static-size-100)), calc(-1 * var(--spectrum-global-dimension-static-size-100)) 0; */
+  background-position: 0 0, 0 var(--spectrum-global-dimension-static-size-100), var(--spectrum-global-dimension-static-size-100) calc(-1 * var(--spectrum-global-dimension-static-size-100)), calc(-1 * var(--spectrum-global-dimension-static-size-100)) 0;
 
   z-index: 0;
 
