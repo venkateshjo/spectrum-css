@@ -18,18 +18,23 @@ governing permissions and limitations under the License.
   --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-100);
 
   --spectrum-thumbnail-border-radius: var(--spectrum-corner-radius-75);
-  /* --spectrum-thumbnail-border-width: var(--spectrum-border-width-100);  */
+  --spectrum-thumbnail-border-width: var(--spectrum-border-width-100); 
+  --spectrum-thumbnail-border-width-selected: var(--spectrum-border-width-200);
+  --spectrum-thumbnail-border-color-selected: var(--spectrum-accent-color-800);
 
-  /* --spectrum-thumbnail-layer-border-width-inner: var(--spectrum-border-width-400);
+  /*
+  --spectrum-thumbnail-layer-border-width-inner: var(--spectrum-border-width-400);
   --spectrum-thumbnail-layer-border-width-outer: var(--spectrum-border-width-100);
   --spectrum-thumbnail-layer-border-color-inner: var(--spectrum-white);
   --spectrum-thumbnail-layer-border-color-outer: var(--spectrum-gray-500);
-  --spectrum-thumbnail-layer-border-color-selected: var(--spectrum-accent-color-800); */
+  */
+
+  --spectrum-thumbnail-border-color-selected: var(--spectrum-accent-color-800);
 
   /* --spectrum-thumbnail-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness); */
-  /* --spectrum-thumbnail-focus-indicator-gap: var(--spectrum-focus-indicator-gap); */
+  --spectrum-thumbnail-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
   
-  /* --spectrum-thumbnail-border-color-default: var(--spectrum-thumbnail-border-color); */
+  --spectrum-thumbnail-border-color-default: var(--spectrum-thumbnail-border-color);
   /* --spectrum-thumbnail-border-color-opacity: var(--spectrum-thumbnail-border-opacity); */
 
   /* --spectrum-thumbnail-color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled); */
@@ -37,14 +42,11 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Thumbnail--size50 {
-
   --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-100);
-
 }
 
 .spectrum-Thumbnail--size75 {
   --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-100);
-
 }
 
 .spectrum-Thumbnail--size100 {
@@ -99,15 +101,26 @@ governing permissions and limitations under the License.
   inline-size: var(--spectrum-thumbnail-size);
   block-size: var(--spectrum-thumbnail-size);
 
+  border-style: solid;
+  border-width: var(--spectrum-thumbnail-border-width);
   border-radius: var(--spectrum-thumbnail-border-radius);
+  border-color: var(--spectrum-thumbnail-border-color-default);
 
+  /* background-color: var(--spectrum-global-color-static-white); */
+
+  /* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
+  /* background-image:
+    linear-gradient(-45deg, transparent 75.5%, var(--spectrum-thumbnail-darksquare-background-color) 75.5%),
+    linear-gradient(45deg, transparent 75.5%, var(--spectrum-thumbnail-darksquare-background-color) 75.5%),
+    linear-gradient(-45deg, var(--spectrum-thumbnail-darksquare-background-color) 25.5%, transparent 25.5%),
+    linear-gradient(45deg, var(--spectrum-thumbnail-darksquare-background-color) 25.5%, transparent 25.5%);
+ */
   /* Friends should align to the top of the tabs */
   vertical-align: top;
 
   overflow: hidden;
 
   background-size: var(--spectrum-global-dimension-static-size-200) var(--spectrum-global-dimension-static-size-200);
-
   background-position: 0 0, 0 var(--spectrum-global-dimension-static-size-100), var(--spectrum-global-dimension-static-size-100) calc(-1 * var(--spectrum-global-dimension-static-size-100)), calc(-1 * var(--spectrum-global-dimension-static-size-100)) 0;
 
   z-index: 0;
@@ -119,6 +132,42 @@ governing permissions and limitations under the License.
     width: 100%;
     height: 100%;
     border-radius: var(--spectrum-thumbnail-border-radius);
+
+    box-shadow: inset 0 0 0 var(--spectrum-thumbnail-border-width) var(--spectrum-thumbnail-border-color-default);
+  }
+
+  &.is-selected {
+    box-shadow: 0 0 0 calc(var(--spectrum-thumbnail-border-width-selected) / 2) var(--spectrum-thumbnail-border-color-selected);
+    &:before {
+      box-shadow: inset 0 0 0 calc(var(--spectrum-thumbnail-border-width-selected) / 2) var(--spectrum-thumbnail-border-color-selected);
+    }
+  }
+  
+  &.is-focused,
+  &:focus-ring {
+    box-shadow: 0 0 0 calc(var(--spectrum-thumbnail-border-width-selected) / 2) var(--spectrum-thumbnail-border-color-selected);
+    outline: none;
+    overflow: visible;
+
+    &:before {
+      box-shadow: inset 0 0 0 calc(var(--spectrum-thumbnail-border-width-selected) / 2) var(--spectrum-thumbnail-border-color-selected);
+    }
+
+    &:after {
+      box-shadow: 0 0 0 var(--spectrum-thumbnail-border-width-selected) var(--spectrum-thumbnail-border-color-default);
+      border-radius: calc(
+        var(--spectrum-thumbnail-border-radius) +
+          var(--spectrum-thumbnail-focus-indicator-gap)
+      );
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: calc(var(--spectrum-thumbnail-focus-indicator-gap) * -1);
+    }
   }
 }
 
