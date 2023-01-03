@@ -16,11 +16,25 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/checkbox": "^5.0.0",
-    "@spectrum-css/helptext": "^3.0.0",
-    "@spectrum-css/icon": "^3.0.21",
-    "@spectrum-css/radio": "^6.0.0",
-    "@spectrum-css/tokens": "^6.0.0"
+    "@spectrum-css/checkbox": "5.x",
+    "@spectrum-css/helptext": "3.x",
+    "@spectrum-css/icon": "3.x",
+    "@spectrum-css/radio": "6.x",
+    "@spectrum-css/tokens": "6.x"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/checkbox": {
+      "optional": true
+    },
+    "@spectrum-css/helptext": {
+      "optional": true
+    },
+    "@spectrum-css/icon": {
+      "optional": true
+    },
+    "@spectrum-css/radio": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@spectrum-css/checkbox": "^5.0.5",

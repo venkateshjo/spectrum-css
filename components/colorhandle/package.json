@@ -16,8 +16,13 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/colorloupe": "^2.0.0",
-    "@spectrum-css/vars": "^8.0.0"
+    "@spectrum-css/colorloupe": "2.x",
+    "@spectrum-css/vars": "8.x"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/colorloupe": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@spectrum-css/colorloupe": "^2.0.9",

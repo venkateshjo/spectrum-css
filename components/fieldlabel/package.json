@@ -16,8 +16,13 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/icon": "^3.0.21",
-    "@spectrum-css/tokens": "^6.0.0"
+    "@spectrum-css/icon": "3.x",
+    "@spectrum-css/tokens": "6.x"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/icon": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@spectrum-css/checkbox": "^3.1.3",

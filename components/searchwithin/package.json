@@ -15,20 +15,19 @@
   "scripts": {
     "build": "gulp"
   },
-  "dependencies": {
-    "@spectrum-css/clearbutton": "^1.2.13",
-    "@spectrum-css/icon": "^3.0.25",
-    "@spectrum-css/picker": "^1.2.14",
-    "@spectrum-css/textfield": "^3.2.6",
-    "@spectrum-css/vars": "^8.0.0"
+  "peerDependencies": {
+    "@spectrum-css/clearbutton": "1.x",
+    "@spectrum-css/picker": "1.x",
+    "@spectrum-css/textfield": "3.x",
+    "@spectrum-css/vars": "3.x"
   },
   "devDependencies": {
-    "@spectrum-css/clearbutton": "1.0.0",
+    "@spectrum-css/clearbutton": "^1.2.13",
     "@spectrum-css/component-builder": "^3.2.1",
-    "@spectrum-css/icon": "^3.0.1",
+    "@spectrum-css/icon": "^3.0.25",
     "@spectrum-css/picker": "^1.0.1",
     "@spectrum-css/textfield": "^3.0.1",
-    "@spectrum-css/vars": "^3.0.1",
+    "@spectrum-css/vars": "^3.0.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

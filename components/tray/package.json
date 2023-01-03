@@ -16,10 +16,8 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/button": "^6.0.0",
-    "@spectrum-css/icon": "^3.0.21",
-    "@spectrum-css/modal": "^3.0.20",
-    "@spectrum-css/tokens": "^6.0.0"
+    "@spectrum-css/modal": "3.x",
+    "@spectrum-css/tokens": "6.x"
   },
   "devDependencies": {
     "@spectrum-css/button": "^6.0.17",

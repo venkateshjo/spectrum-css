@@ -2737,6 +2737,11 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/tooltip/-/tooltip-3.1.20.tgz#c3b6cf274be3ed552f86534f1fede7169827dc83"
   integrity sha512-37knTGAjj4GE22M3MQrLa4PyecEc07xOZIle9igfRohXUwHv6ZIyoqy2/cQfmBkeGP6iGEzy8oKJp4nbBKZGsQ==
 
+"@spectrum-css/vars@^3.0.0":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/vars/-/vars-3.0.2.tgz#ea9062c3c98dfc6ba59e5df14a03025ad8969999"
+  integrity sha512-vzS9KqYXot4J3AEER/u618MXWAS+IoMvYMNrOoscKiLLKYQWenaueakUWulFonToPd/9vIpqtdbwxznqrK5qDw==
+
 "@storybook/addon-a11y@^6.5.14":
   version "6.5.14"
   resolved "https://registry.npmjs.org/@storybook/addon-a11y/-/addon-a11y-6.5.14.tgz#3095f87396955f64d86110636e6e2fdf603dd10e"

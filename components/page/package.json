@@ -15,12 +15,12 @@
   "scripts": {
     "build": "gulp"
   },
-  "dependencies": {
-    "@spectrum-css/vars": "^8.0.0"
+  "peerDependencies": {
+    "@spectrum-css/vars": "8.x"
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "^3.2.1",
-    "@spectrum-css/vars": "^4.0.0",
+    "@spectrum-css/vars": "^8.0.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

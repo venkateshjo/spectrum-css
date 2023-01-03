@@ -17,7 +17,7 @@
     "update": "gulp updateIcons"
   },
   "peerDependencies": {
-    "@spectrum-css/vars": "^8.0.0"
+    "@spectrum-css/vars": "8.x"
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "^3.2.1",

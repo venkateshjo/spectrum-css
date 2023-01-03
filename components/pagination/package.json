@@ -16,12 +16,26 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/actionbutton": "^1.1.13",
-    "@spectrum-css/button": "^6.0.0",
-    "@spectrum-css/icon": "^3.0.21",
-    "@spectrum-css/splitbutton": "^5.0.0",
-    "@spectrum-css/textfield": "^3.2.2",
-    "@spectrum-css/vars": "^8.0.0"
+    "@spectrum-css/actionbutton": "1.x",
+    "@spectrum-css/button": "6.x",
+    "@spectrum-css/icon": "3.x",
+    "@spectrum-css/splitbutton": "5.x",
+    "@spectrum-css/textfield": "3.x",
+    "@spectrum-css/vars": "8.x"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/actionbutton": {
+      "optional": true
+    },
+    "@spectrum-css/button": {
+      "optional": true
+    },
+    "@spectrum-css/splitbutton": {
+      "optional": true
+    },
+    "@spectrum-css/textfield": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@spectrum-css/actionbutton": "^1.1.14",

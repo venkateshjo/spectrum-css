@@ -16,8 +16,8 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/icon": "^3.0.21",
-    "@spectrum-css/vars": "^8.0.0"
+    "@spectrum-css/icon": "3.x",
+    "@spectrum-css/vars": "8.x"
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "^3.2.1",

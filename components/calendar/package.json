@@ -16,9 +16,9 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/actionbutton": "^1.1.13",
-    "@spectrum-css/icon": "^3.0.22",
-    "@spectrum-css/vars": "^8.0.0"
+    "@spectrum-css/actionbutton": "1.x",
+    "@spectrum-css/icon": "3.x",
+    "@spectrum-css/vars": "8.x"
   },
   "devDependencies": {
     "@spectrum-css/actionbutton": "^1.1.14",

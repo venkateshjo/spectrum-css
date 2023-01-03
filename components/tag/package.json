@@ -16,8 +16,21 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/clearbutton": "^1.2.13",
-    "@spectrum-css/tokens": "^6.0.0"
+    "@spectrum-css/avatar": "5.x",
+    "@spectrum-css/icon": "3.x",
+    "@spectrum-css/clearbutton": "1.x",
+    "@spectrum-css/tokens": "6.x"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/avatar": {
+      "optional": true
+    },
+    "@spectrum-css/clearbutton": {
+      "optional": true
+    },
+    "@spectrum-css/icon": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@spectrum-css/avatar": "^5.0.20",

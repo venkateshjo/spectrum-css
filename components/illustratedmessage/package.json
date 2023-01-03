@@ -16,8 +16,8 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/typography": "^4.0.18",
-    "@spectrum-css/vars": "^8.0.0"
+    "@spectrum-css/typography": "4.x",
+    "@spectrum-css/vars": "8.x"
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "^3.2.1",

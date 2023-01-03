@@ -16,13 +16,16 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/actionbutton": "^3.0.0",
-    "@spectrum-css/actiongroup": "^3.0.1",
-    "@spectrum-css/closebutton": "^3.0.0",
-    "@spectrum-css/fieldlabel": "^5.0.2",
-    "@spectrum-css/icon": "^3.0.21",
-    "@spectrum-css/popover": "^5.0.0",
-    "@spectrum-css/tokens": "^6.0.0"
+    "@spectrum-css/actionbutton": "3.x",
+    "@spectrum-css/actiongroup": "3.x",
+    "@spectrum-css/closebutton": "3.x",
+    "@spectrum-css/fieldlabel": "5.x",
+    "@spectrum-css/icon": "3.x",
+    "@spectrum-css/popover": "5.x",
+    "@spectrum-css/tokens": "6.x"
+  },
+  "dependencies": {
+    "@spectrum-css/popover": "^5.0.18"
   },
   "devDependencies": {
     "@spectrum-css/actionbutton": "^3.0.5",
@@ -31,7 +34,6 @@
     "@spectrum-css/component-builder-simple": "^2.0.0",
     "@spectrum-css/fieldlabel": "^5.0.9",
     "@spectrum-css/icon": "^3.0.25",
-    "@spectrum-css/popover": "^5.0.18",
     "@spectrum-css/table": "^4.0.21",
     "@spectrum-css/tokens": "^6.1.0",
     "gulp": "^4.0.0"

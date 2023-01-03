@@ -16,8 +16,8 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/colorhandle": "^2.0.0",
-    "@spectrum-css/vars": "^8.0.0"
+    "@spectrum-css/colorhandle": "2.x",
+    "@spectrum-css/vars": "8.x"
   },
   "devDependencies": {
     "@spectrum-css/colorhandle": "^2.0.9",
