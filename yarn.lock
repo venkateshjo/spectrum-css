@@ -1505,10 +1505,10 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/tokens/-/tokens-1.0.8.tgz#2eb52b1b895668d09cf2dc2d4bf9f6a1f00a8cc5"
   integrity sha512-IzfHeojEjE6G+YeZ/Rrwz31471V09dxBZ9RLloUpHUcLghwzzlkBqnkDIetgCBpsDyH/20jYvI0UaLM6zH+cKw==
 
-"@spectrum-css/tokens@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/tokens/-/tokens-3.0.0.tgz#eed203fc10ac332fd3595ee23a6e9be0169e7d8f"
-  integrity sha512-EJ/Xlc43avTzeXnaH9yzs8m7SkiWy6w9vvQpm2rJ2gDKLJT/FEMNuRCEwDrLOLgGwGFmmqhveR4DsEf+CKrSsA==
+"@spectrum-css/tokens@^6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/tokens/-/tokens-6.1.0.tgz#a53fab75983227afa3997f74818384cd620b874b"
+  integrity sha512-LJU4mLUr2HGEtuh1OFqO7a1JUCAv3gi9GS5y1Pr63izU1HTPeORZR+TdMMl74eJNol5BwNBWUkOM161N2XYTfQ==
 
 "@spectrum-css/tooltip@^3.1.20":
   version "3.1.20"
