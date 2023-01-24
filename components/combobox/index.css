@@ -251,7 +251,15 @@ governing permissions and limitations under the License.
     var(--mod-combobox-button-size, var(--spectrum-combobox-button-size))
   );
   inset-block-start: var(--mod-combobox-block-spacing-edge-to-progress-circle, var(--spectrum-combobox-block-spacing-edge-to-progress-circle));
-  inset-block-end: var(--mod-combobox-block-spacing-edge-to-alert, var(--spectrum-combobox-block-spacing-edge-to-alert));
+  inset-block-end: var(--mod-combobox-block-spacing-edge-to-alert, var(--spectrum-combobox-block-spacing-edge-to-alert)); 
+
+  [dir="rtl"] & {
+    inset-inline-end: inherit;
+    inset-inline-start: calc(
+      var(--mod-combobox-spacing-inline-icon-to-button, var(--spectrum-combobox-spacing-inline-icon-to-button)) +
+      var(--mod-combobox-button-size, var(--spectrum-combobox-button-size))
+    );
+  }
 }
 
 /* Overrides inset-inline position from spectrum-Textfield.is-invalid */
