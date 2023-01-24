@@ -16,7 +16,6 @@ const concat = require('gulp-concat');
 const processors = require('./processors').processors;
 const rename = require('gulp-rename');
 
-const legacyBuild = require('./legacyBuild');
 const vars = require('./vars');
 
 // Read in all variables used
@@ -53,13 +52,4 @@ exports.buildCSS = gulp.series(
       }))
       .pipe(gulp.dest('dist/'))
   }
-  /*
-  ,gulp.parallel(
-    legacyBuild.buildDiff,
-    legacyBuild.buildMedium,
-    legacyBuild.buildLarge,
-    legacyBuild.buildSingleStops,
-    legacyBuild.buildMultiStops
-  )
-  */
 );

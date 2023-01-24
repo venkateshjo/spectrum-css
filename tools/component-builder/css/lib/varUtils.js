@@ -10,13 +10,14 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+const fsp = require('fs').promises;
+const path = require('path');
+
 const gulp = require('gulp');
 const postcss = require('postcss');
 const concat = require('gulp-concat');
 const through = require('through2');
-const fsp = require('fs').promises;
 const logger = require('gulplog');
-const path = require('path');
 
 function getVarsFromCSS(css) {
   let variableList = [];
@@ -78,19 +79,12 @@ function getClassNames(contents, pkgName) {
     }
   }
 
-  let result = root.walkRules((rule, ruleIndex) => {
-    let selector = rule.selectors[0];
-
-    if (pkgName === 'page') {
-      className = '';
-      return 'false';
-    }
+  root.walkRules((rule, ruleIndex) => {
+    if (pkgName === 'page') return;
 
     rule.selectors.forEach((fullSelector) => {
       // Skip compound selectors, they may not start with the component itself
-      if (fullSelector.match(/~|\+/)) {
-        return true;
-      }
+      if (fullSelector.match(/~|\+/)) return;
 
       let selector = fullSelector.split(' ').shift();
 

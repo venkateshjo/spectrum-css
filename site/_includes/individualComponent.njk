@@ -1,0 +1,22 @@
+---
+layout: layout.njk
+---
+<article class="spectrum-CSSComponent">
+    <header id="{{ name | slug }}" class="spectrum-CSSComponent-heading">
+        <h1 class="spectrum-CSSComponent-title spectrum-Heading spectrum-Heading--sizeXXXL spectrum-Heading--serif">
+            <a href="#{{ name | slug }}" class="spectrum-BigSubtleLink">{{ name }}</a>
+        </h1>
+        <p class="spectrum-CSSComponent-version spectrum-Body spectrum-Body--sizeS">Version {{ pkg.version }}</p>
+    </header>
+    {% if description %}
+        <section class="spectrum-CSSComponent-description spectrum-Body spectrum-Body--sizeL">{{ description | safe }}</section>
+    {% endif %}
+    {% for example in examples %}
+        <article class="spectrum-CSSExample">
+            {% if example != component %}
+                <h3 id="{{ example.name | slug }}">{{ example.name }}</h3>
+            {% endif %}
+            {{ example.markup | safe }}
+        </article>
+    {% endfor %}
+</article>

@@ -1,0 +1,30 @@
+{
+    "name": "@spectrum-css/site-builder",
+    "version": "1.0.0",
+    "description": "This package builds the Spectrum CSS site.",
+    "license": "Apache-2.0",
+    "author": "Adobe",
+    "homepage": "https://opensource.adobe.com/spectrum-css",
+    "main": ".eleventy.js",
+    "scripts": {
+      "build": "eleventy --config=.eleventy.js",
+      "start": "NODE_ENV=development BROWSERSYNC_OPEN=true yarn build --serve",
+      "build:components": "node scripts/build_component-pages.js"
+    },
+    "devDependencies": {
+        "@adobe/focus-ring-polyfill": "^0.1.5",
+        "@11ty/eleventy": "^1.0.2",
+        "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
+        "@11ty/eleventy-navigation": "^0.3.5",
+        "js-yaml": "^4.1.0",
+        "lunr": "^2.3.6",
+        "gulp": "^4.0.0",
+        "loadicons": "^1.0.0",
+        "markdown-it": "^12.3.2",
+        "markdown-it-anchor": "^8.6.5",
+        "glob": "^8.0.3",
+        "fast-glob": "^3.2.12",
+        "prismjs": "^1.23.0",
+        "replace-ext": "^2.0.0"
+    }
+  }

@@ -14,7 +14,7 @@ const gulp = require('gulp');
 const del = require('del');
 
 const css = require('./css');
-const docs = require('./docs');
+// const docs = require('./docs');
 
 function clean() {
   return del('dist/*');
@@ -24,7 +24,7 @@ const build = gulp.series(
   clean,
   gulp.parallel(
     css.buildVars,
-    docs.buildDocs
+    // docs.buildDocs
   )
 );
 
@@ -53,5 +53,5 @@ exports.clean = clean;
 exports.buildCSS = css.buildCSS;
 exports.buildVars = css.buildVars;
 
-exports.buildDocs = docs.buildDocs;
-exports.buildDocs_html = docs.buildDocs_html;
+// exports.buildDocs = docs.buildDocs;
+// exports.buildDocs_html = docs.buildDocs_html;

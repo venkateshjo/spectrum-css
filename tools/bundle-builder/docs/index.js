@@ -9,26 +9,28 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-const gulp = require('gulp');
+
 const fs = require('fs');
 const fsp = fs.promises;
 const path = require('path');
-const pugCompiler = require('pug');
-const pug = require('gulp-pug');
+
+const gulp = require('gulp');
 const data = require('gulp-data');
 const rename = require('gulp-rename');
+const logger = require('gulplog');
+
 const yaml = require('js-yaml');
 const through = require('through2');
 const ext = require('replace-ext');
-const logger = require('gulplog');
-const colors = require('colors');
 const lunr = require('lunr');
 
 const dirs = require('../lib/dirs');
-const exec = require('../lib/exec');
 const depUtils = require('../lib/depUtils');
 
 const npmFetch = require('npm-registry-fetch');
+
+// adding nunjucks
+const nunjucksRender = require('gulp-nunjucks-render');
 
 let minimumDeps = [
   'icon',
@@ -108,7 +110,6 @@ async function buildDocs_forDep(dep) {
         }
 
         return Object.assign({}, {
-          util: require(`${dirs.site}/util`),
           dnaVars: metadata
         }, templateData, {
           pageURL: path.basename(file.basename, '.yml') + '.html',
@@ -116,39 +117,6 @@ async function buildDocs_forDep(dep) {
           releaseDate: date,
           pkg: pkg
         });
-      }))
-      .pipe(through.obj(function compilePug(file, enc, cb) {
-        let component;
-        var componentName = file.dirname.replace('/metadata', '').split('/').pop();
-        try {
-          component = yaml.safeLoad(String(file.contents));
-        } catch (safeloadError) {
-          logger.error('Uh, oh... during buildDocs_forDep, yaml loading failed for'.yellow, componentName.red);
-          throw safeloadError;
-        }
-
-        if (!component.id) {
-          if (file.basename === 'metadata.yml') {
-            // Use the component's name
-            component.id = dep;
-          }
-          else {
-            // Use the example file name
-            component.id = path.basename(file.basename, '.yml');
-          }
-        }
-        let templateData = Object.assign({}, { component: component }, file.data || {});
-
-        file.path = ext(file.path, '.html');
-
-        try {
-          const templatePath = `${dirs.site}/templates/siteComponent.pug`;
-          let compiled = pugCompiler.renderFile(templatePath, templateData);
-          file.contents = Buffer.from(compiled);
-        } catch (err) {
-          return cb(err);
-        }
-        cb(null, file);
       }))
       .pipe(gulp.dest('dist/docs/'))
       .on('end', resolve)
@@ -252,7 +220,7 @@ function buildSite_getData() {
     } catch (safeloadError) {
       logger.error('Uh, oh... during buildDocs_getData, yaml loading failed for'.yellow, componentName.red);
       throw safeloadError;
-    } 
+    }
 
     if (path.basename(file.basename) === 'metadata.yml') {
       file.basename = componentName;
@@ -288,16 +256,16 @@ function buildSite_copyFreshResources() {
 }
 
 function buildSite_html() {
-  return gulp.src(`${dirs.site}/*.pug`)
+  return gulp.src(`${dirs.site}/*.njk`)
     .pipe(data(function(file) {
       return {
-        util: require(`${dirs.site}/util`),
-        pageURL: path.basename(file.basename, '.pug') + '.html',
-        dependencyOrder: minimumDeps
+        pageURL: path.basename(file.basename, '.njk') + '.html',
+        dependencyOrder: minimumDeps,
+        nav: templateData.nav // adding navigation data
       };
     }))
-    .pipe(pug({
-      locals: templateData
+    .pipe(nunjucksRender({
+      path: 'site/_includes'
     }))
     .pipe(gulp.dest('dist/docs/'));
 }

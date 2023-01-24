@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+    <head>
+        <title>{{ title }} Spectrum CSS</title>
+        {% include './partials/meta-info.njk' %}
+        {% block head %}{% endblock %}
+        {# <script>
+            loadIcons('dependencies/@spectrum-css/icon/spectrum-css-icons.svg');
+            var switcher = new SpectrumSwitcher();
+        </script>
+        <style type="text/css">
+            body {
+                overflow: auto;
+            }
+            .spectrum-CSSExample-example {
+                border-radius: 0;
+            }
+        </style> #}
+    </head>
+    <body class="spectrum spectrum--light spectrum--medium">
+        {% block content %}
+            {{ content | safe }}
+        {% endblock %}
+    </body>
+</html>

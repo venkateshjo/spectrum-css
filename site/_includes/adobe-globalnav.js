@@ -1,4 +1,3 @@
-<script>
 window.adobeGlobalnavConfig = {
   locale: 'en',
   footer: {
@@ -6,13 +5,13 @@ window.adobeGlobalnavConfig = {
     excludeNavigation: true
   },
   callbacks: {
-    globalnav_ready: function() {
+    globalnav_ready() {
       document.querySelector('.Footernav-region').style.visibility = 'hidden';
 
       document.querySelector('#AdobeFooterNav').classList.add('has-spectrum-css-customTheme');
 
       var css = document.createElement('style');
-      css.type = 'text/css';
+      css.rel = 'stylesheet';
 
       var styles = `
         #AdobeFooterNav.Footernav-wrapper.has-spectrum-css-customTheme {
@@ -45,4 +44,3 @@ window.adobeGlobalnavConfig = {
     }
   }
 }
-</script>

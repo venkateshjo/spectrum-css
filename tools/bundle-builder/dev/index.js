@@ -120,7 +120,7 @@ function reload(cb) {
 
 function watchSite() {
   gulp.watch(
-    `${dirs.site}/*.pug`,
+    `${dirs.site}/*.njk`,
     gulp.series(
       docs.buildSite_pages,
       reload
@@ -128,7 +128,7 @@ function watchSite() {
   );
 
   gulp.watch(
-    `${dirs.site}/includes/*.pug`,
+    `${dirs.site}/includes/*.njk`,
     gulp.series(
       gulp.parallel(
         docs.buildSite_html,
@@ -140,13 +140,10 @@ function watchSite() {
 
   gulp.watch(
     [
-      `${dirs.site}/templates/siteComponent.pug`,
-      `${dirs.site}/util.js`
+      `${dirs.site}/_includes/siteComponent.njk`
     ],
     gulp.series(
-      gulp.parallel(
-        docs.buildDocs
-      ),
+      docs.buildDocs,
       reload
     )
   );
@@ -169,9 +166,9 @@ function watchSite() {
   );
 }
 
-function watchCommons() {  
+function watchCommons() {
   gulp.watch(
-    [`${dirs.components}/commons/*.css`], 
+    [`${dirs.components}/commons/*.css`],
     gulp.series(bundleBuilder.buildDepenenciesOfCommons, bundleBuilder.copyPackages, reload)
   );
 }
@@ -207,18 +204,18 @@ function watch() {
           }
           )();
         // this catches yaml parsing errors
-        // should stop the series from running 
+        // should stop the series from running
         } catch (error) {
           done(error);
         } finally {
-          // we have to do this 
+          // we have to do this
           // or gulp will get wedged by the error
           done();
           reload();
         }
     }
   );
-    
+
   watchSite();
 
 }
