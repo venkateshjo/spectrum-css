@@ -47,7 +47,7 @@ governing permissions and limitations under the License.
     --spectrum-tag-background-color-selected-focus: var(--spectrum-neutral-subdued-background-color-key-focus);
 
     /* disabled variant */
-    --spectrum-tag-border-color-disabled: transparent;
+    --spectrum-tag-border-color-disabled: 0, 0, 0, 0;
     --spectrum-tag-background-color-disabled: var(--spectrum-disabled-background-color);
 
     /* tokens based on theme and t-shirt size */

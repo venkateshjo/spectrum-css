@@ -73,7 +73,7 @@ governing permissions and limitations under the License.
       cubic-bezier(0.5, 0, 1, 1)
       var(--mod-tray-exit-animation-delay, var(--spectrum-tray-exit-animation-delay));
 
-  background-color: var(--highcontrast-tray-background-color, var(--mod-tray-background-color, var(--spectrum-tray-background-color)));
+  background-color: var(--highcontrast-tray-background-color, var(--mod-tray-background-color, rgba(var(--spectrum-tray-background-color))));
 
   &.is-open {
     /* Entry animations */
@@ -99,4 +99,3 @@ governing permissions and limitations under the License.
     max-inline-size: var(--mod-tray-max-inline-size, var(--spectrum-tray-max-inline-size));
   }
 }
-

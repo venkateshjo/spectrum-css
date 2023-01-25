@@ -9,13 +9,12 @@ the License is distributed on an 'AS IS' BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-
 const path = require('path');
+
 const StyleDictionary = require('style-dictionary');
 const CSSSetsFormatter = require('style-dictionary-sets').CSSSetsFormatter;
 const NameKebabTransfom = require('style-dictionary-sets').NameKebabTransfom;
 const AttributeSetsTransform = require('style-dictionary-sets').AttributeSetsTransform;
-const CSSRGBTransform = require('./customFormatters/custom-rgb-transform');
 
 /** 
  * @note This references the package.json because we want the root folder and
@@ -27,8 +26,23 @@ const tokensDir = path.dirname(tokensPath);
 
 StyleDictionary.registerTransform(NameKebabTransfom);
 StyleDictionary.registerTransform(AttributeSetsTransform);
-StyleDictionary.registerTransform(CSSRGBTransform);
 StyleDictionary.registerFormat(CSSSetsFormatter);
+
+/* Custom transform to output raw RGBA values */
+StyleDictionary.registerTransform({
+  name: "value/rawRGBA",
+  type: "value",
+  matcher: (token)  => token.original.value.startsWith("rgb") || token.original.value === "transparent",
+  transformer: (prop) => {
+    const color = prop.original.value;
+    if (color === 'transparent') return '0, 0, 0, 0';
+
+    const [, r, g, b, a] = color.match(/rgba?\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})(?:,\s*([\d\.]+%?))?\)/) || [];
+
+    if (!(r && g && b)) return color;
+    return `${r}, ${g}, ${b}${a ? `, ${a}` : ''}`;
+  },
+});
 
 const systemNames = ['express', 'spectrum', 'wireframe'];
 
@@ -136,12 +150,13 @@ const generateGlobalSetConfig = (setName) => {
   }
 }
 
+const tokenPath = path.dirname(require.resolve('@adobe/spectrum-tokens/package.json'));
 module.exports = {
-  source: [`${tokensDir}/src/*.json`],
+  source: [`${tokenPath}/src/**/*.json`],
   platforms: {
     CSS: {
       buildPath: 'dist/css/',
-      transforms: [AttributeSetsTransform.name, NameKebabTransfom.name,CSSRGBTransform.name],
+      transforms: [AttributeSetsTransform.name, NameKebabTransfom.name, "value/rawRGBA"],
       prefix: 'spectrum',
       files: [
         {

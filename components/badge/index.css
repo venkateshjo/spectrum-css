@@ -151,41 +151,33 @@ governing permissions and limitations under the License.
                     var(--spectrum-badge-corner-radius));
   border: 1px solid transparent;
 
-  background: var(--mod-badge-background-color-default,
-                  var(--spectrum-badge-background-color-default));
-  color: var(--mod-badge-label-icon-color-white,
-            var(--spectrum-badge-label-icon-color-white));
+  background: var(--mod-badge-background-color-default, rgba(var(--spectrum-badge-background-color-default)));
+  color: var(--mod-badge-label-icon-color-white, rgba(var(--spectrum-badge-label-icon-color-white)));
 
   /* text and icon black */
   &--black-text {
-    color: var(--mod-badge-label-icon-color-black,
-              var(--spectrum-badge-label-icon-color-black));
+    color: var(--mod-badge-label-icon-color-black, rgba(var(--spectrum-badge-label-icon-color-black)));
   }
 
   /* background color variants */
   &--neutral {
-    background: var(--mod-badge-background-color-default,
-                    var(--spectrum-badge-background-color-default));
+    background: var(--mod-badge-background-color-default, rgba(var(--spectrum-badge-background-color-default)));
   }
 
   &--accent {
-    background: var(--mod-badge-background-color-accent,
-                    var(--spectrum-badge-background-color-accent));
+    background: var(--mod-badge-background-color-accent, rgba(var(--spectrum-badge-background-color-accent)));
   }
 
   &--informative {
-    background: var(--mod-badge-background-color-informative,
-                    var(--spectrum-badge-background-color-informative));
+    background: var(--mod-badge-background-color-informative, rgba(var(--spectrum-badge-background-color-informative)));
   }
 
   &--negative {
-    background: var(--mod-badge-background-color-negative,
-                    var(--spectrum-badge-background-color-negative));
+    background: var(--mod-badge-background-color-negative, rgba(var(--spectrum-badge-background-color-negative)));
   }
 
   &--positive {
-    background: var(--mod-badge-background-color-positive,
-                    var(--spectrum-badge-background-color-positive));
+    background: var(--mod-badge-background-color-positive, rgba(var(--spectrum-badge-background-color-positive)));
   }
 
   /* fixed position variants with border radius 0 on the fixed edge of the component */
@@ -226,13 +218,11 @@ governing permissions and limitations under the License.
   padding-block-end: var(--mod-badge-label-spacing-vertical-bottom,
                       var(--spectrum-badge-label-spacing-vertical-bottom));
 
-  color: var(--mod-badge-label-icon-color-white,
-                      var(--spectrum-badge-label-icon-color-white));
+  color: var(--mod-badge-label-icon-color-white, rgba(var(--spectrum-badge-label-icon-color-white)));
 
   /* black text and icon variant */
   .spectrum-Badge--black-text & {
-    color: var(--mod-badge-label-icon-color-black,
-                      var(--spectrum-badge-label-icon-color-black));
+    color: var(--mod-badge-label-icon-color-black, rgba(var(--spectrum-badge-label-icon-color-black)));
   }
 
   /* cjk language support */
@@ -270,8 +260,7 @@ governing permissions and limitations under the License.
   padding-block-end: var(--mod-badge-icon-spacing-vertical-top,
                       var(--spectrum-badge-icon-spacing-vertical-top));
 
-  color: var(--mod-badge-label-icon-color-white,
-                      var(--spectrum-badge-label-icon-color-white));
+  color: var(--mod-badge-label-icon-color-white, rgba(var(--spectrum-badge-label-icon-color-white)));
 
   &--no-label {
     /* icon without label has identical padding left and right */
@@ -283,7 +272,6 @@ governing permissions and limitations under the License.
 
   /* black text and icon variant */
   .spectrum-Badge--black-text & {
-    color: var(--mod-badge-label-icon-color-black,
-                      var(--spectrum-badge-label-icon-color-black));
+    color: var(--mod-badge-label-icon-color-black, rgba(var(--spectrum-badge-label-icon-color-black)));
   }
 }

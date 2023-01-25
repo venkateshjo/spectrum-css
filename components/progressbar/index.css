@@ -126,7 +126,7 @@ governing permissions and limitations under the License.
       line-height: var(--mod-progressbar-line-height-cjk, var(--spectrum-progressbar-line-height-cjk));
     }
 
-    color: var(--mod-progressbar-text-color, var(--spectrum-progressbar-text-color));
+    color: var(--mod-progressbar-text-color, rgba(var(--spectrum-progressbar-text-color)));
   }
 
   /* Label */
@@ -148,23 +148,23 @@ governing permissions and limitations under the License.
     block-size: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
     border-radius: var(--spectrum-progressbar-corner-radius);
 
-    background: var(--highcontrast-progressbar-track-color, var(--mod-progressbar-track-color, var(--spectrum-progressbar-track-color)));
+    background: var(--highcontrast-progressbar-track-color, var(--mod-progressbar-track-color, rgba(var(--spectrum-progressbar-track-color))));
   }
 
   /* Fill variants */
   &.is-positive {
     .spectrum-ProgressBar-fill {
-      background: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-positive, var(--spectrum-progressbar-fill-color-positive)));
+      background: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-positive, rgba(var(--spectrum-progressbar-fill-color-positive))));
     }
   }
   &.is-notice {
     .spectrum-ProgressBar-fill {
-      background: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-notice, var(--spectrum-progressbar-fill-color-notice)));
+      background: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-notice, rgba(var(--spectrum-progressbar-fill-color-notice))));
     }
   }
   &.is-negative {
     .spectrum-ProgressBar-fill {
-      background: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-negative, var(--spectrum-progressbar-fill-color-negative)));
+      background: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-negative, rgba(var(--spectrum-progressbar-fill-color-negative))));
     }
   }
 
@@ -172,7 +172,7 @@ governing permissions and limitations under the License.
     border: none;
     block-size: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
     transition: width 1s;
-    background: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color, var(--spectrum-progressbar-fill-color)));
+    background: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color, rgba(var(--spectrum-progressbar-fill-color))));
   }
 
   &--indeterminate .spectrum-ProgressBar-fill {
@@ -210,17 +210,19 @@ governing permissions and limitations under the License.
   /* Static White */
   &--staticWhite {
     .spectrum-ProgressBar-fill {
-      color: var(--mod-progressbar-label-and-value-white, var(--spectrum-progressbar-label-and-value-white));
-      background: var(--mod-progressbar-fill-color-white, var(--spectrum-progressbar-fill-color-white));
+      /* @todo other variables with colors as a value include the word color in the var name */
+      color: var(--mod-progressbar-label-and-value-white, rgba(var(--spectrum-progressbar-label-and-value-white)));
+      background: var(--mod-progressbar-fill-color-white, rgba(var(--spectrum-progressbar-fill-color-white)));
     }
 
     .spectrum-ProgressBar-label,
     .spectrum-ProgressBar-percentage {
-      color: var(--mod-progressbar-label-and-value-white, var(--spectrum-progressbar-label-and-value-white));
+      /* @todo other variables with colors as a value include the word color in the var name */
+      color: var(--mod-progressbar-label-and-value-white, rgba(var(--spectrum-progressbar-label-and-value-white)));
     }
 
     .spectrum-ProgressBar-track {
-      background-color: var(--spectrum-progressbar-track-color-white);
+      background-color: rgba(var(--spectrum-progressbar-track-color-white));
     }
   }
 }

@@ -99,8 +99,8 @@ governing permissions and limitations under the License.
   min-block-size: var(--mod-tooltip-height, var(--spectrum-tooltip-height));
   max-inline-size: var(--mod-tooltip-max-inline-size, var(--spectrum-tooltip-max-inline-size));
 
-  background-color: var(--highcontrast-tooltip-background-color-default, var(--mod-tooltip-background-color-default, var(--spectrum-tooltip-background-color-default)));
-  color: var(--mod-tooltip-content-color, var(--spectrum-tooltip-content-color));
+  background-color: var(--highcontrast-tooltip-background-color-default, var(--mod-tooltip-background-color-default, rgba(var(--spectrum-tooltip-background-color-default))));
+  color: var(--mod-tooltip-content-color, rgba(var(--spectrum-tooltip-content-color)));
 
   font-size: var(--mod-tooltip-font-size, var(--spectrum-tooltip-font-size));
   font-weight: var(--mod-tooltip-font-weight, var(--spectrum-tooltip-font-weight));
@@ -133,15 +133,15 @@ governing permissions and limitations under the License.
 
   /****** Variants ******/
   &--info {
-    background-color: var(--highcontrast-tooltip-background-color-informative, var(--mod-tooltip-background-color-informative, var(--spectrum-tooltip-background-color-informative)));
+    background-color: var(--highcontrast-tooltip-background-color-informative, var(--mod-tooltip-background-color-informative, rgba(var(--spectrum-tooltip-background-color-informative))));
   }
 
   &--positive {
-    background-color: var(--highcontrast-tooltip-background-color-positive, var(--mod-tooltip-background-color-positive, var(--spectrum-tooltip-background-color-positive)));
+    background-color: var(--highcontrast-tooltip-background-color-positive, var(--mod-tooltip-background-color-positive, rgba(var(--spectrum-tooltip-background-color-positive))));
   }
 
   &--negative {
-    background-color: var(--highcontrast-tooltip-background-color-negative, var(--mod-tooltip-background-color-negative, var(--spectrum-tooltip-background-color-negative)));
+    background-color: var(--highcontrast-tooltip-background-color-negative, var(--mod-tooltip-background-color-negative, rgba(var(--spectrum-tooltip-background-color-negative))));
   }
 }
 
@@ -156,21 +156,21 @@ governing permissions and limitations under the License.
   left: 50%;
   transform: translateX(-50%);
 
-  background-color: var(--highcontrast-tooltip-background-color-default, var(--mod-tooltip-background-color-default, var(--spectrum-tooltip-background-color-default)));
+  background-color: var(--highcontrast-tooltip-background-color-default, var(--mod-tooltip-background-color-default, rgba(var(--spectrum-tooltip-background-color-default))));
 
   /* clip path has -5% to avoid hairline gap */
   clip-path: polygon(0 -5%, 50% 100%, 100% -5%);
 
   .spectrum-Tooltip--info & {
-    background-color: var(--highcontrast-tooltip-background-color-informative, var(--mod-tooltip-background-color-informative, var(--spectrum-tooltip-background-color-informative)));
+    background-color: var(--highcontrast-tooltip-background-color-informative, var(--mod-tooltip-background-color-informative, rgba(var(--spectrum-tooltip-background-color-informative))));
   }
 
   .spectrum-Tooltip--positive & {
-    background-color: var(--highcontrast-tooltip-background-color-positive, var(--mod-tooltip-background-color-positive, var(--spectrum-tooltip-background-color-positive)));
+    background-color: var(--highcontrast-tooltip-background-color-positive, var(--mod-tooltip-background-color-positive, rgba(var(--spectrum-tooltip-background-color-positive))));
   }
 
   .spectrum-Tooltip--negative & {
-    background-color: var(--highcontrast-tooltip-background-color-negative, var(--mod-tooltip-background-color-negative, var(--spectrum-tooltip-background-color-negative)));
+    background-color: var(--highcontrast-tooltip-background-color-negative, var(--mod-tooltip-background-color-negative, rgba(var(--spectrum-tooltip-background-color-negative))));
   }
 
   /*** Tip Placement ***/

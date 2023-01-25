@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 @container (--system: express) {
   .spectrum-Tag {
     /* border */
-    --spectrum-tag-background-color: transparent;
+    --spectrum-tag-background-color: 0, 0, 0, 0;
     --spectrum-tag-background-color-hover: var(--spectrum-gray-300);
     --spectrum-tag-background-color-active: var(--spectrum-gray-400);
     --spectrum-tag-background-color-focus: var(--spectrum-gray-300);
@@ -48,7 +48,7 @@ governing permissions and limitations under the License.
 
     /* disabled */
     --spectrum-tag-border-color-disabled: var(--spectrum-disabled-border-color);
-    --spectrum-tag-background-color-disabled: transparent;
+    --spectrum-tag-background-color-disabled: 0, 0, 0, 0;
 
     /* tokens based on theme and t-shirt size */
     --spectrum-tag-size-small-spacing-inline-start: var(--spectrum-component-pill-edge-to-visual-75);

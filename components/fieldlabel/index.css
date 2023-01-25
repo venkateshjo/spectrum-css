@@ -98,7 +98,7 @@ governing permissions and limitations under the License.
   -moz-osx-font-smoothing: auto;
   font-smoothing: subpixel-antialiased;
 
-  color: var(--spectrum-fieldlabel-color);
+  color: rgba(var(--spectrum-fieldlabel-color));
 }
 
 /* international lang support */
@@ -160,10 +160,10 @@ governing permissions and limitations under the License.
 .spectrum-FieldLabel,
 .spectrum-Form-itemLabel {
   &.is-disabled {
-    color: var(--mod-disabled-content-color, var(--spectrum-disabled-content-color));
+    color: var(--mod-disabled-content-color, rgba(var(--spectrum-disabled-content-color)));
 
     .spectrum-FieldLabel-requiredIcon {
-      color: var(--mod-disabled-content-color, var(--spectrum-disabled-content-color));
+      color: var(--mod-disabled-content-color, rgba(var(--spectrum-disabled-content-color)));
     }
   }
 }

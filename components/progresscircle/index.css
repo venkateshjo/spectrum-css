@@ -18,7 +18,7 @@ governing permissions and limitations under the License.
 
   /* circle progress fill border color */
   --spectrum-progress-circle-fill-border-color: var(--spectrum-accent-content-color-default);
-  
+
   /* over background unfilled border color */
   --spectrum-progress-circle-track-border-color-over-background: var(--spectrum-transparent-white-300);
 
@@ -92,8 +92,7 @@ governing permissions and limitations under the License.
                     var(--spectrum-progress-circle-thickness));
   border-radius: var(--mod-progress-circle-size,
                     var(--spectrum-progress-circle-size));
-  border-color: var(--mod-progress-circle-track-border-color,
-                        var(--spectrum-progress-circle-track-border-color));
+  border-color: var(--mod-progress-circle-track-border-color, rgba(var(--spectrum-progress-circle-track-border-color)));
 }
 
 /* circle progress fill parent container */
@@ -118,21 +117,16 @@ governing permissions and limitations under the License.
                     var(--spectrum-progress-circle-thickness));
   border-radius: var(--mod-progress-circle-size,
                       var(--spectrum-progress-circle-size));
-  border-color:  var(--highcontrast-progress-circle-fill-border-color,
-                    var(--mod-progress-circle-fill-border-color,
-                        var(--spectrum-progress-circle-fill-border-color)));
+  border-color:  var(--highcontrast-progress-circle-fill-border-color, var(--mod-progress-circle-fill-border-color, rgba(var(--spectrum-progress-circle-fill-border-color))));
 }
 
 /* circle colors over background */
 .spectrum-ProgressCircle.spectrum-ProgressCircle--staticWhite {
   .spectrum-ProgressCircle-track {
-    border-color: var(--mod-progress-circle-track-border-color-over-background,
-                      var(--spectrum-progress-circle-track-border-color-over-background));
+    border-color: var(--mod-progress-circle-track-border-color-over-background, rgba(var(--spectrum-progress-circle-track-border-color-over-background)));
   }
   .spectrum-ProgressCircle-fill {
-    border-color: var(--highcontrast-progress-circle-fill-border-color-over-background,
-                      var(--mod-progress-circle-fill-border-color-over-background,
-                          var(--spectrum-progress-circle-fill-border-color-over-background)));
+    border-color: var(--highcontrast-progress-circle-fill-border-color-over-background, var(--mod-progress-circle-fill-border-color-over-background, rgba(var(--spectrum-progress-circle-fill-border-color-over-background))));
   }
 }
 

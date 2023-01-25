@@ -41,10 +41,10 @@ governing permissions and limitations under the License.
 
   --spectrum-toast-spacing-block-start: var(--spectrum-spacing-100);
   --spectrum-toast-spacing-block-end: var(--spectrum-spacing-100);
-  
+
   --spectrum-toast-spacing-top-edge-to-text: var(--spectrum-toast-top-to-text);
   --spectrum-toast-spacing-bottom-edge-to-text: var(--spectrum-toast-bottom-to-text);
-  
+
   /* Color */
 
   --spectrum-toast-negative-background-color-default: var(--spectrum-negative-background-color-default);
@@ -81,38 +81,38 @@ governing permissions and limitations under the License.
 
   -webkit-font-smoothing: antialiased;
 
-  background-color: var(--highcontrast-toast-background-color-default, var(--mod-toast-background-color-default, var(--spectrum-toast-background-color-default)));
-  color: var(--highcontrast-toast-background-color-default, var(--mod-toast-background-color-default, var(--spectrum-toast-background-color-default)));
+  background-color: var(--highcontrast-toast-background-color-default, var(--mod-toast-background-color-default, rgba(var(--spectrum-toast-background-color-default))));
+  color: var(--highcontrast-toast-background-color-default, var(--mod-toast-background-color-default, rgba(var(--spectrum-toast-background-color-default))));
 
   &--negative {
-    background-color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default)));
-    color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default)));
+    background-color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, rgba(var(--spectrum-toast-negative-background-color-default))));
+    color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, rgba(var(--spectrum-toast-negative-background-color-default))));
 
     .spectrum-Toast-closeButton {
       &:focus-visible:not(:active) {
-        color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default)));
+        color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, rgba(var(--spectrum-toast-negative-background-color-default))));
       }
     }
   }
 
   &--info {
-    background-color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default)));
-    color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default)));
+    background-color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, rgba(var(--spectrum-toast-informative-background-color-default))));
+    color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, rgba(var(--spectrum-toast-informative-background-color-default))));
 
     .spectrum-Toast-closeButton {
       &:focus-visible:not(:active) {
-        color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default)));
+        color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, rgba(var(--spectrum-toast-informative-background-color-default))));
       }
     }
   }
 
   &--positive {
-    background-color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default)));
-    color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default)));
+    background-color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, rgba(var(--spectrum-toast-positive-background-color-default))));
+    color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, rgba(var(--spectrum-toast-positive-background-color-default))));
 
     .spectrum-Toast-closeButton {
       &:focus-visible:not(:active) {
-        color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default)));
+        color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, rgba(var(--spectrum-toast-positive-background-color-default))));
       }
     }
   }
@@ -126,7 +126,7 @@ governing permissions and limitations under the License.
   margin-inline-end: var(--mod-toast-spacing-icon-to-text, var(--spectrum-toast-spacing-icon-to-text));
   margin-inline-start: 0;
 
-  color: var(--highcontrast-toast-text-and-icon-color, var(--mod-toast-text-and-icon-color, var(--spectrum-toast-text-and-icon-color)));
+  color: var(--highcontrast-toast-text-and-icon-color, var(--mod-toast-text-and-icon-color, rgba(var(--spectrum-toast-text-and-icon-color))));
 }
 
 .spectrum-Toast-content {
@@ -144,7 +144,7 @@ governing permissions and limitations under the License.
 
   text-align: start;
 
-  color: var(--highcontrast-toast-text-and-icon-color, var(--mod-toast-text-and-icon-color, var(--spectrum-toast-text-and-icon-color)));
+  color: var(--highcontrast-toast-text-and-icon-color, var(--mod-toast-text-and-icon-color, rgba(var(--spectrum-toast-text-and-icon-color))));
 
   &:lang(ja),
   &:lang(zh),
@@ -162,7 +162,7 @@ governing permissions and limitations under the License.
   margin-block-end: var(--mod-toast-spacing-bottom-edge-to-divider, var(--spectrum-toast-spacing-bottom-edge-to-divider));
 
   /* Divider color for Text | Action Button */
-  border-inline-start-color: var(--mod-toast-divider-color, var(--spectrum-toast-divider-color));
+  border-inline-start-color: var(--mod-toast-divider-color, rgba(var(--spectrum-toast-divider-color)));
   padding-inline-end: var(--mod-toast-spacing-close-button, var(--spectrum-toast-spacing-close-button));
 
   .spectrum-CloseButton {
