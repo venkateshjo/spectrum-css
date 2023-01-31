@@ -23,6 +23,8 @@ governing permissions and limitations under the License.
   --spectrum-combobox-spacing-block-end-edge-to-textfield: var(--spectrum-component-bottom-to-text-75);
   --spectrum-combobox-spacing-inline-start-edge-to-textfield: var(--spectrum-component-edge-to-text-75);
   --spectrum-combobox-spacing-inline-end-edge-to-button: var(--spectrum-component-edge-to-text-75);
+
+  --spectrum-combobox-border-radius: var(--spectrum-corner-radius-75);
 }
 
 .spectrum-Combobox--sizeM {
@@ -38,6 +40,8 @@ governing permissions and limitations under the License.
   --spectrum-combobox-spacing-block-end-edge-to-textfield: var(--spectrum-component-bottom-to-text-100);
   --spectrum-combobox-spacing-inline-start-edge-to-textfield: var(--spectrum-component-edge-to-text-100);
   --spectrum-combobox-spacing-inline-end-edge-to-button: var(--spectrum-component-edge-to-text-100);
+
+  --spectrum-combobox-border-radius: var(--spectrum-corner-radius-100);
 }
 
 .spectrum-Combobox--sizeL {
@@ -53,6 +57,8 @@ governing permissions and limitations under the License.
   --spectrum-combobox-spacing-block-end-edge-to-textfield: var(--spectrum-component-bottom-to-text-200);
   --spectrum-combobox-spacing-inline-start-edge-to-textfield: var(--spectrum-component-edge-to-text-200);
   --spectrum-combobox-spacing-inline-end-edge-to-button: var(--spectrum-component-edge-to-text-200);
+
+  --spectrum-combobox-border-radius: var(--spectrum-corner-radius-100);
 }
 
 .spectrum-Combobox--sizeXL {
@@ -68,6 +74,8 @@ governing permissions and limitations under the License.
   --spectrum-combobox-spacing-block-end-edge-to-textfield: var(--spectrum-component-bottom-to-text-300);
   --spectrum-combobox-spacing-inline-start-edge-to-textfield: var(--spectrum-component-edge-to-text-300);
   --spectrum-combobox-spacing-inline-end-edge-to-button: var(--spectrum-component-edge-to-text-300);
+
+  --spectrum-combobox-border-radius: var(--spectrum-corner-radius-200);
 }
 
 .spectrum-Combobox {
@@ -93,7 +101,7 @@ governing permissions and limitations under the License.
   --spectrum-combobox-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
   --spectrum-combobox-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
-  --spectrum-combobox-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-combobox-border-radius: var(--spectrum-combobox-border-radius);
   --spectrum-combobox-border-width: var(--spectrum-border-width-100);
 
   --spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component);

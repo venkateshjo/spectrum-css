@@ -29,7 +29,7 @@
     "@spectrum-css/popover": "^5.0.18",
     "@spectrum-css/textfield": "^3.2.6",
     "@spectrum-css/progresscircle": "^2.0.1",
-    "@spectrum-css/tokens": "^6.2.0",
+    "@spectrum-css/tokens": "^6.3.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
