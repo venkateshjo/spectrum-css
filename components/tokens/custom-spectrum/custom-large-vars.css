@@ -21,4 +21,5 @@ governing permissions and limitations under the License.
 
   --spectrum-slider-tick-mark-height: 13px;
   --spectrum-slider-ramp-track-height: 20px;
+  --spectrum-slider-label-margin-block-end: 10px;
 }
