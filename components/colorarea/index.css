@@ -84,3 +84,42 @@ governing permissions and limitations under the License.
 .spectrum-ColorArea-slider {
   @extend %spectrum-ColorControl-hiddenField;
 }
+
+
+/* from skin  */
+.spectrum-ColorArea {
+  &:before {
+    box-shadow: inset 0 0 0 var(--spectrum-colorarea-border-width) var(--spectrum-colorarea-border-color);
+  }
+}
+.spectrum-ColorArea-gradient {
+  forced-color-adjust: none;
+}
+.spectrum-ColorHandle-color {
+  forced-color-adjust: none;
+}
+
+.spectrum-ColorArea {
+  &.is-disabled {
+
+
+    &:before {
+      box-shadow: inset 0 0 0 var(--spectrum-colorarea-border-width) var(--spectrum-colorarea-disabled-background-color);
+    }
+
+    .spectrum-ColorArea-gradient {
+      display: none;
+    }
+  }
+}
+
+/* @media (forced-colors: active) {
+  .spectrum-ColorArea {
+    --spectrum-colorarea-fill-color-disabled : GrayText;
+  }
+  .spectrum-ColorArea {
+    &.is-disabled {
+      forced-color-adjust: none;
+    }
+  }
+} */
