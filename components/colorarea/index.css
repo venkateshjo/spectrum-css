@@ -13,8 +13,10 @@ governing permissions and limitations under the License.
 .spectrum-ColorArea {
   position: relative;
   display: inline-block;
-  width: 192px; /* placeholder for var(--spectrum-colorarea-default-width) */
-  height: 192px; /* placeholder for var(--spectrum-colorarea-default-height) */
+  min-width: var(--spectrum-color-area-minimum-width);
+  min-height: var(--spectrum-color-area-minimum-height);
+  width: var(--spectrum-color-area-width);
+  height:  var(--spectrum-color-area-height);
 
   border-radius: 10px; /* placeholder for var(--spectrum-colorarea-border-radius) */
 
