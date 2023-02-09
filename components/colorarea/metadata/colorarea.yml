@@ -9,6 +9,10 @@ description: |
   - Set the `value` attribute of `.spectrum-ColorArea-slider[name=y]` to the currently selected y value (i.e. value)
   - Set the value of the ColorHandle component to the selected color
   - Marshall focus between the saturation and value sliders according to which keys are pressed (up/down for value, left/right for saturation)
+sections:
+  - name: Migration Guide
+    description: |
+      - canvas variant has been removed
 examples:
   - id: color-area
     name: Standard
