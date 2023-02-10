@@ -8,14 +8,12 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-
-
 .spectrum-ColorArea {
-  --spectrum-colorarea-radius: var(--spectrum-color-area-border-rounding);
+  --spectrum-colorarea-border-radius: var(--spectrum-color-area-border-rounding);
+  --spetrcum-colorarea-border-color: var(--spectrum-color-area-border-color);
+    /* --spectrum-colorarea-border-opacity: var(--spectrum-color-area-border-opacity); */
   --spectrum-colorarea-disabled-background-color: var(--spectrum-disabled-background-color);
   --spectrum-colorarea-border-width: var(--spectrum-color-area-border-width);
-  --spectrum-colorarea-border-color: var(--spectrum-color-area-border-color);
-  --spectrum-colorarea-border-opacity: var(--spectrum-color-area-border-opacity);
   --spectrum-colorarea-height: var(--spectrum-color-area-height);
   --spectrum-colorarea-width: var(--spectrum-color-area-width);
   --spectrum-colorarea-minimum-width: var(--spectrum-color-area-minimum-width);
@@ -26,14 +24,14 @@ governing permissions and limitations under the License.
 .spectrum-ColorArea  {
   position: relative;
   display: inline-block;
+  cursor: default;
+  user-select: none;
   min-width: var(--spectrum-colorarea-minimum-width);
   min-height: var(--spectrum-colorarea-minimum-height);
   width: var(--spectrum-colorarea-width);
   height:  var(--spectrum-colorarea-height);
-  border-radius: var(--spectrum-colorarea-radius);
-
-  cursor: default;
-  user-select: none;
+  border: var(--spectrum-colorarea-border-width) solid var(--spetrcum-colorarea-border-color);
+  border-radius: var(--spectrum-colorarea-border-radius);
 
   &.is-focused {
     z-index: 2;
@@ -45,27 +43,11 @@ governing permissions and limitations under the License.
   &.is-disabled {
     pointer-events: none;
     background: var(--spectrum-colorarea-disabled-background-color);
-
-    &:before {
-      box-shadow: inset 0 0 0 var(--spectrum-colorarea-border-width) var(--spectrum-colorarea-disabled-background-color);
-    }
+    border: none;
 
     .spectrum-ColorArea-gradient {
       display: none;
     }
-  }
-
-  /* the floating inset box shadow must be a separate element since <canvas> won't take it */
-  &:before {
-    content: '';
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border-radius: var(--spectrum-colorarea-radius); /* placeholder for var(--spectrum-colorarea-border-radius) */
-    box-shadow: inset 0 0 0 var(--spectrum-colorarea-border-width) var(--spectrum-colorarea-border-color), var(--spectrum-colorarea-border-opacity);
   }
 }
 
@@ -96,7 +78,6 @@ governing permissions and limitations under the License.
 .spectrum-ColorArea-gradient {
   width: 100%;
   height: 100%;
-  border-radius: var(--spectrum-colorarea-radius); /* placeholder for var(--spectrum-colorarea-border-radius) */
 }
 
 .spectrum-ColorArea-slider {
