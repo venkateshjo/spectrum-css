@@ -11,6 +11,7 @@ export const Template = ({
   size = "m",
   label,
   isChecked = false,
+  isEmphasized = false,
   title,
   value,
   id,
@@ -31,6 +32,7 @@ export const Template = ({
       class=${classMap({
         [rootClass]: true,
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+        [`${rootClass}--emphasized`]: isEmphasized,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}>
