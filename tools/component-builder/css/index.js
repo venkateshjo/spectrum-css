@@ -34,7 +34,7 @@ async function buildIndexVars() {
       contents += await fs.promises.readFile(file, "utf-8");
     }
     try {
-      const result = await postcss(processors).process(contents, { from: undefined });
+      const result = await postcss(processors).process(contents, { from: 'index.css' });
       await fs.promises.writeFile(path.join("dist", "index-vars.css"), result.css);
       console.log("File saved successfully");
       } catch (error) {
