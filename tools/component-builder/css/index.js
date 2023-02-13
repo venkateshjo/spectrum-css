@@ -24,9 +24,7 @@ async function buildIndexVars() {
   const files = await fg([
     "index.css",
     "skin.css"
-  ], {
-    ignore: ["skin.css"],
-  });
+  ]);
   try {
     // Allow missing skin.css
     let contents = "";

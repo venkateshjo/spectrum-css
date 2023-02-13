@@ -24,17 +24,25 @@ async function bakeVars() {
     const pkgName = pkg.name.split("/").pop()
 
   return new Promise((resolve, reject) => {
-    fs.readFile("dist/index-vars.css", "utf-8", async (err, filePath) => {
+    fs.readFile("dist/index-vars.css", "utf-8", async (err, fileContent) => {
       if (err) {
         reject(err)
       }
-      if(filePath){
-      const file = await fs.promises.readFile(filePath)
-      const classNames = varUtils.getClassNames(file, pkgName)
-      const variableList = varUtils.getVarsFromCSS(file)
-      const componentVars = varUtils.getVarsDefinedInCSS(file)
-      const vars = await varUtils.getAllComponentVars()
-      const allVars = await varUtils.getAllVars()
+      if(fileContent){
+      // const file = await fs.promises.readFile(filePath)
+      const classNames = varUtils.getClassNames(fileContent, pkgName)
+
+      // Find all custom properties used in the component
+      let variableList = varUtils.getVarsFromCSS(fileContent);
+
+      // Get vars defined inside of the component
+      let componentVars = varUtils.getVarsDefinedInCSS(fileContent);
+
+      // Get vars in ALL components
+      let vars = await varUtils.getAllComponentVars();
+
+      // Get literally all of the possible vars (even overridden vars that are different between themes/scales)
+      let allVars = await varUtils.getAllVars();
 
       let errors = []
       let usedVars = {}
@@ -64,8 +72,8 @@ async function bakeVars() {
       }
 
       const contents = varUtils.getVariableDeclarations(classNames, usedVars)
-      const newFilePath = filePath.replace("index-vars.css", "vars.css")
-      await fs.promises.writeFile(newFilePath, contents)
+     // const newFilePath = filePath.replace("index-vars.css", "vars.css")
+      await fs.promises.writeFile('dist/vars.css', contents)
       resolve();
     } else {
       reject(new Error('No file'))
