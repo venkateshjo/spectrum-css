@@ -10,8 +10,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+const fs = require('fs');
 const path = require('path');
 
+// const prism = require('prismjs');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const loadicons = require.resolve('loadicons');
 const workflowIcons = require.resolve('@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg');
@@ -20,7 +22,10 @@ const focusPolyfill = require.resolve('@adobe/focus-ring-polyfill');
 const lunr = require.resolve('lunr');
 const prism = path.dirname(require.resolve('prismjs'));
 
-const getAllYMLFiles = require('./scripts/build_navigation-items.js');
+const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
+
+const markdownIt = require('markdown-it');
+const markdownItAnchors = require('markdown-it-anchor');
 
 const hostSettings = {
   notify: true,
@@ -33,7 +38,22 @@ if (process.env.BROWSERSYNC_PORT) {
   hostSettings.port = process.env.BROWSERSYNC_PORT;
 }
 
-module.exports = function (eleventyConfig) {
+const components = fs.readdirSync(path.join(__dirname, '../components'), {
+  withFileTypes: true,
+}).filter((d) => d.isDirectory()).map((c) => c.name);
+
+/**
+ * @type import('@11ty/eleventy').EleventyConfig
+*/
+module.exports = (eleventyConfig) => {
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(syntaxHighlight, {
+    init: function ({ Prism }) {
+      Prism.languages['html-live'] = Prism.languages.html;
+      Prism.languages['html-no-demo'] = Prism.languages.html;
+    },
+  });
+
   eleventyConfig.addNunjucksGlobal('WATCH_MODE', process.env.WATCH_MODE);
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.setBrowserSyncConfig(hostSettings);
@@ -49,16 +69,16 @@ module.exports = function (eleventyConfig) {
     [focusPolyfill]: 'docs/js/focus-ring-polyfill/index.js',
     [lunr]: 'docs/js/lunr/lunr.js',
     [`${prism}/themes/{prism-dark,prism}.min.css`]: 'docs/css/prism/',
+    ...components.reduce((acc, c) => {
+      acc[`../components/${c}/dist/**`] = `components/${c}/`;
+      acc[`../components/${c}/package.json`] = `components/${c}/package.json`;
+      return acc;
+    }, {}),
   });
-
-  let markdownIt = require('markdown-it');
-  let markdownItAnchors = require('markdown-it-anchor');
 
   eleventyConfig.setLibrary(
     'md',
-    markdownIt({
-      html: true,
-    }).use(markdownItAnchors, {
+    markdownIt({ html: true }).use(markdownItAnchors, {
       level: [2, 3, 4],
       permalink: true,
       permalinkSymbol: '#',
@@ -101,24 +121,95 @@ module.exports = function (eleventyConfig) {
     })
   );
 
-  // plugin for sysntax highlighting
-  eleventyConfig.addPlugin(syntaxHighlight, {
-    init: function ({ Prism }) {
-      Prism.languages['html-live'] = Prism.languages.html
-      Prism.languages['html-no-demo'] = Prism.languages.html
-    },
+  eleventyConfig.addFilter('markdownify', (value) => {
+    const md = markdownIt({
+      html: true,
+      linkify: false,
+      typographer: true,
+      breaks: true
+    });
+
+    const defaultRenderer = (tokens, idx, options, env, self) =>
+      self.renderToken(tokens, idx, options, env, self);
+
+    for (let [rule, className] of Object.entries({
+      'link_open': 'spectrum-Link',
+      'table_open': 'spectrum-Table spectrum-Table--sizeM',
+      'thead_open': 'spectrum-Table-head',
+      'tr_open': 'spectrum-Table-row',
+      'tbody_open': 'spectrum-Table-body',
+      'th_open': 'spectrum-Table-headCell',
+      'td_open': 'spectrum-Table-cell',
+      'code_inline': 'spectrum-Code spectrum-Code--sizeS',
+      'code_block': 'spectrum-Code spectrum-Code--sizeS'
+    })) {
+      md.renderer.rules[rule] = (function(className) {
+        const oldRule = md.renderer.rules[rule] || defaultRenderer;
+        return function (tokens, idx, options, env, self) {
+          tokens[idx].attrPush(['class', className]);
+          return oldRule(tokens, idx, options, env, self);
+        };
+      })(className);
+    }
+
+    const code_inline = md.renderer.rules.code_inline || defaultRenderer;
+    md.renderer.rules.code_inline = (tokens, idx, options, env, self) => {
+      const token = tokens[idx];
+      // ~ indicates markup that should be red
+      if (token.content.substr(0, 1) === '~' && token.content.substr(-1) === '~') {
+        let aIndex = tokens[idx].attrIndex('class');
+
+        let className = 'spectrum-CSSExample-oldAPI';
+        if (aIndex < 0) {
+          // add class
+          tokens[idx].attrPush(['class', className]);
+        }
+        else {
+          // append class
+          tokens[idx].attrs[aIndex][1] = `${tokens[idx].attrs[aIndex][1]} ${className}`;
+        }
+
+        token.content = token.content.slice(1, -1);
+      }
+      return code_inline(tokens, idx, options, env, self);
+    };
+
+    md.renderer.rules.heading_open = (tokens, idx, options, env, self) => {
+      const headingMap = {
+        'h1': 'spectrum-Heading spectrum-Heading--sizeL',
+        'h2': 'spectrum-Heading spectrum-Heading--sizeM',
+        'h3': 'spectrum-Heading spectrum-Heading--sizeS',
+        'h4': 'spectrum-Heading spectrum-Heading--sizeXS',
+        'h5': 'spectrum-Heading spectrum-Heading--sizeXXS'
+      };
+
+      let headingClass = headingMap[tokens[idx].tag];
+      if (headingClass) tokens[idx].attrPush(['class', headingClass]);
+      return defaultRenderer(tokens, idx, options, env, self);
+    };
+    return md.render(value);
   });
 
-  eleventyConfig.addNunjucksGlobal('template', () => getAllYMLFiles(path.resolve(__dirname, '../components')));
-  eleventyConfig.addNunjucksAsyncFilter('await', (value, cb) => value.then(result => cb(null, result)));
+  eleventyConfig.addFilter('jsonify', (value) => JSON.stringify(value));
+
+  eleventyConfig.addFilter('statusLightVariant', (status) => {
+    if (!status) return 'neutral';
+    if (status === 'Deprecated') return 'negative';
+    if (['Beta Contribution', 'Contribution', 'Unverified'].includes(status)) return 'notice';
+    if (['Canon', 'Verified'].includes(status)) return 'positive';
+    return 'neutral';
+  });
 
   return {
     dir: {
       input: 'content',
-      output: '../dist'
+      output: '../dist',
+      includes: '../_partials',
+      layouts: '../_includes',
+      data: '../_data',
     },
     passthroughFileCopy: true,
-    templateFormats: ['njk', 'md', 'css', 'yml'],
+    templateFormats: ['njk', '11ty.js', 'md', 'css', 'yml'],
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',

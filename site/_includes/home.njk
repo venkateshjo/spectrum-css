@@ -1,0 +1,21 @@
+---
+layout: layout.njk
+---
+
+<div class="spectrum-Site">
+    {% include 'header.njk' %}
+    <div class="spectrum-Site-content">
+        |{{ collections.all | eleventyNavigation | dump | safe }}|
+        |{{ collections.components | eleventyNavigation | eleventyNavigationToHtml | safe }}|
+        {# {% include "sidenav.njk" %} #}
+        <div class="spectrum-Site-mainContent">
+            <div class="spectrum-Site-mainContainer">
+                <div class="spectrum-Site-page spectrum-Typography">
+                    {{ content | safe }}
+                </div>
+            </div>
+            {% include 'footer.njk' %}
+        </div>
+    </div>
+</div>
+{% include 'pageBottom.njk' %}

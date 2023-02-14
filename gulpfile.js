@@ -209,6 +209,4 @@ exports['watch-relaunch'] = function() {
   exports.watch();
 }
 
-exports.buildDocs = builder.buildDocs;
-
 exports.releaseBundles = releaseBundles;

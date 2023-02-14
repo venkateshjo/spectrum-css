@@ -1,14 +1,14 @@
 {% if example.description %}
   <div class="spectrum-Typography">
     <section class="spectrum-CSSExample-description spectrum-Body spectrum-Body--sizeM">
-      {{ util.markdown.render(example.description) | safe }}
+      {{ example.description | markdownify | safe }}
     </section>
   </div>
 {% endif %}
 {% if example.details %}
   <div class="spectrum-Typography">
     <section class="spectrum-CSSExample-description spectrum-Body spectrum-Body--sizeM">
-      {{ util.markdown.render(example.details) | safe }}
+      {{ example.details | markdownify | safe }}
     </section>
   </div>
 {% endif %}
@@ -26,7 +26,7 @@
       {% endif %}
       <bdo dir="ltr">
 <pre class="spectrum-Code spectrum-Code--sizeXS">
-<code class="language-markup">{{ util.Prism.highlight(example.markup, util.Prism.languages.markup, 'markup') | safe }}</code>
+<code class="language-markup">{% highlight %}{{ example.markup | safe }}{% endhighlight %}</code>
 </pre>
       </bdo>
     </div>
