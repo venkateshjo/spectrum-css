@@ -1,8 +1,6 @@
 // Import the component markup template
 import { Template } from "./template";
 
-import ava from "./example-ava.jpg";
-
 export default {
   title: "Avatar",
   description: "An image representing a user.",
@@ -42,7 +40,7 @@ export default {
       type: { name: "boolean" },
       table: {
         type: { summary: "boolean" },
-        category: "Component",
+        category: "State",
       },
       control: "boolean",
     },
@@ -50,7 +48,7 @@ export default {
   args: {
     rootClass: "spectrum-Avatar",
     size: "700",
-    image: ava,
+    image: "example-ava.png",
     altText: "Avatar",
     isDisabled: false,
   },

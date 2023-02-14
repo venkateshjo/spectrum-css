@@ -2,6 +2,9 @@ import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
 
+import "../index.css";
+import "../skin.css";
+
 export const Template = ({
   rootClass = "spectrum-Thumbnail",
   size = "m",
@@ -16,14 +19,6 @@ export const Template = ({
 }) => {
   if (!imageURL && !svg) return html``;
 
-  try {
-    // Load styles for this component
-    import(/* webpackPrefetch: true */ "../index.css");
-    import(/* webpackPrefetch: true */ "../skin.css");
-  } catch (e) {
-    console.warn(e);
-  }
-
   return html`
     <div
       class=${classMap({
@@ -34,7 +29,7 @@ export const Template = ({
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
-      @click=${ifDefined(onclick)}
+      @click=${onclick}
     >
       ${imageURL
         ? html`<img
