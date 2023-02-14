@@ -43,13 +43,13 @@ governing permissions and limitations under the License.
   display: inline-block;
   cursor: default;
   user-select: none;
-  min-width: var(--spectrum-colorarea-minimum-width);
-  min-height: var(--spectrum-colorarea-minimum-height);
-  width: var(--spectrum-colorarea-width);
-  height:  var(--spectrum-colorarea-height);
+  min-width: var(--mod-colorarea-minimum-width, var(--spectrum-colorarea-minimum-width));
+  min-height: var(--mod-colorarea-minimum-height, var(--spectrum-colorarea-minimum-height));
+  width: var(--mod-colorarea-width, var(--spectrum-colorarea-width));
+  height:  var(--mod-colorarea-height, var(--spectrum-colorarea-height));
   box-sizing: border-box;
-  border-radius: var(--spectrum-colorarea-border-radius);
-  border: var(--spectrum-colorarea-border-width) solid var(--spetrcum-colorarea-border-color);
+  border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
+  border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--mod-colorarea-border-color, var(--spetrcum-colorarea-border-color));
 
   &.is-focused {
     z-index: 2;
@@ -60,7 +60,7 @@ governing permissions and limitations under the License.
 
   &.is-disabled {
     pointer-events: none;
-    background: var(--highcontrast-colorarea-fill-color-disabled, var(--spectrum-colorarea-disabled-background-color));
+    background: var(--highcontrast-colorarea-fill-color-disabled, var(--mod-colorarea-disabled-background-color, var(--spectrum-colorarea-disabled-background-color)));
     border: none;
 
     .spectrum-ColorArea-gradient {
@@ -89,7 +89,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ColorArea-handle {
-  transform: translate(var(--spectrum-colorarea-width), 0px);
+  transform: translate(var(--mod-colorarea-width, var(--spectrum-colorarea-width)), 0px);
   left: 0;
   top: 0;
 }
@@ -97,7 +97,7 @@ governing permissions and limitations under the License.
 .spectrum-ColorArea-gradient {
   width: 100%;
   height:  100%;
-  border-radius: var(--spectrum-colorarea-border-radius);
+  border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
 }
 
 .spectrum-ColorArea-slider {
