@@ -10,8 +10,7 @@ governing permissions and limitations under the License.
 */
 .spectrum-ColorArea {
   --spectrum-colorarea-border-radius: var(--spectrum-color-area-border-rounding);
-  --spetrcum-colorarea-border-color: var(--spectrum-color-area-border-color);
-    /* --spectrum-colorarea-border-opacity: var(--spectrum-color-area-border-opacity); */
+  --spetrcum-colorarea-border-color: rgba(0, 0, 0, 0.1); /* TODO replace with tokesn --spectrum-color-area-border-color and --spectrum-color-area-border-opacity using RGBA function */
   --spectrum-colorarea-disabled-background-color: var(--spectrum-disabled-background-color);
   --spectrum-colorarea-border-width: var(--spectrum-color-area-border-width);
   --spectrum-colorarea-height: var(--spectrum-color-area-height);
@@ -20,6 +19,24 @@ governing permissions and limitations under the License.
   --spectrum-colorarea-minimum-height: var(--spectrum-color-area-minimum-height);
   --spectrum-colorhandle-size: 16px; /* TODO replace with new token for ColorHandle, placeholder for old token var(--spectrum-colorhandle-size) */
 }
+
+/* Windows High Contrast Mode
+@media (forced-colors: active) {
+  .spectrum-ColorArea {
+    --highcontrast-colorarea-fill-color-disabled : GrayText;
+  }
+  .spectrum-ColorArea {
+    &.is-disabled {
+      forced-color-adjust: none;
+    }
+  }
+  .spectrum-ColorArea-gradient {
+    forced-color-adjust: none;
+  }
+  .spectrum-ColorHandle-color {
+    forced-color-adjust: none;
+  }
+} */
 
 .spectrum-ColorArea  {
   position: relative;
@@ -30,8 +47,9 @@ governing permissions and limitations under the License.
   min-height: var(--spectrum-colorarea-minimum-height);
   width: var(--spectrum-colorarea-width);
   height:  var(--spectrum-colorarea-height);
-  border: var(--spectrum-colorarea-border-width) solid var(--spetrcum-colorarea-border-color);
   border-radius: var(--spectrum-colorarea-border-radius);
+  border: var(--spectrum-colorarea-border-width) solid var(--spetrcum-colorarea-border-color);
+
 
   &.is-focused {
     z-index: 2;
@@ -83,24 +101,3 @@ governing permissions and limitations under the License.
 .spectrum-ColorArea-slider {
   @extend %spectrum-ColorControl-hiddenField;
 }
-
-/* from skin  */
-
-.spectrum-ColorArea-gradient {
-  forced-color-adjust: none;
-}
-.spectrum-ColorHandle-color {
-  forced-color-adjust: none;
-}
-
-
-/* @media (forced-colors: active) {
-  .spectrum-ColorArea {
-    --spectrum-colorarea-fill-color-disabled : GrayText;
-  }
-  .spectrum-ColorArea {
-    &.is-disabled {
-      forced-color-adjust: none;
-    }
-  }
-} */
