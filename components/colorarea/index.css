@@ -38,7 +38,7 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-ColorArea  {
+.spectrum-ColorArea {
   position: relative;
   display: inline-block;
   cursor: default;
@@ -96,7 +96,7 @@ governing permissions and limitations under the License.
 
 .spectrum-ColorArea-gradient {
   width: 100%;
-  height:  100%;
+  height: 100%;
   border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
 }
 
