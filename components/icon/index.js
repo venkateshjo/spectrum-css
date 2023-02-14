@@ -107,16 +107,16 @@ const tasks = require('@spectrum-css/component-builder');
   const files = glob.sync(`combined/*.svg`).map(filePath => {
     return {
       path: filePath,
-      name: 'spectrum-css-icon-' + path.basename(filePath)
+      name: 'spectrum-css-icon-' + path.basename(filePath, '.svg')
     };
   });
   let svgString = '';
   files.forEach(file => {
     svgString += fs.readFileSync(file.path, 'utf-8');
   });
-  const sprite = '<svg xmlns="http://www.w3.org/2000/svg">\n' +
-    files.map(file => `<symbol id="${file.name}" viewBox="0 0 24 24">${fs.readFileSync(file.path, 'utf-8')}</symbol>`).join('\n') +
-    '\n</svg>';
+  const sprite = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' +
+    files.map(file => `<symbol id="${file.name}">${fs.readFileSync(file.path, 'utf-8')}</symbol>`) +
+    '</svg>';
   fs.writeFileSync(`dist/spectrum-css-icons.svg`, sprite);
 }
 
@@ -135,7 +135,7 @@ const tasks = require('@spectrum-css/component-builder');
     const files = glob.sync(`${size}/*.svg`).map(filePath => {
       return {
         path: filePath,
-        name: 'spectrum-css-icon-' + path.basename(filePath).replace(/S_UI(.*?)_.*/, '$1')
+        name: 'spectrum-css-icon-' + path.basename(filePath, '.svg')
       };
     });
     let svgString = '';
