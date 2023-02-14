@@ -29,8 +29,7 @@
     "@spectrum-css/radio": "^7.0.1",
     "@spectrum-css/stepper": "^3.0.36",
     "@spectrum-css/textfield": "^3.2.13",
-    "@spectrum-css/tokens": "^7.0.0",
-    "gulp": "^4.0.0"
+    "@spectrum-css/tokens": "^7.0.0"
   },
   "publishConfig": {
     "access": "public"

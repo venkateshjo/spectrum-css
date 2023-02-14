@@ -23,8 +23,7 @@
   "devDependencies": {
     "@spectrum-css/component-builder-simple": "^2.0.4",
     "@spectrum-css/fieldlabel": "^6.0.1",
-    "@spectrum-css/tokens": "^7.0.0",
-    "gulp": "^4.0.0"
+    "@spectrum-css/tokens": "^7.0.0"
   },
   "publishConfig": {
     "access": "public"

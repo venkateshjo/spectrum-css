@@ -23,8 +23,7 @@
     "@spectrum-css/actionbutton": "^1.1.14",
     "@spectrum-css/actiongroup": "^2.0.0",
     "@spectrum-css/component-builder-simple": "^2.0.4",
-    "@spectrum-css/tokens": "^7.0.0",
-    "gulp": "^4.0.0"
+    "@spectrum-css/tokens": "^7.0.0"
   },
   "publishConfig": {
     "access": "public"

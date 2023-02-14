@@ -34,8 +34,7 @@
     "@spectrum-css/icon": "^3.0.32",
     "@spectrum-css/popover": "^5.0.18",
     "@spectrum-css/table": "^4.0.28",
-    "@spectrum-css/tokens": "^7.0.0",
-    "gulp": "^4.0.0"
+    "@spectrum-css/tokens": "^7.0.0"
   },
   "publishConfig": {
     "access": "public"

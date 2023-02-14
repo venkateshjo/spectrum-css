@@ -31,8 +31,7 @@
     "@spectrum-css/icon": "^3.0.32",
     "@spectrum-css/splitbutton": "^5.0.24",
     "@spectrum-css/textfield": "^3.2.13",
-    "@spectrum-css/vars": "^8.0.3",
-    "gulp": "^4.0.0"
+    "@spectrum-css/vars": "^8.0.3"
   },
   "publishConfig": {
     "access": "public"

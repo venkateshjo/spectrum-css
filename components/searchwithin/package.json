@@ -29,8 +29,7 @@
     "@spectrum-css/icon": "^3.0.1",
     "@spectrum-css/picker": "^1.0.1",
     "@spectrum-css/textfield": "^3.0.1",
-    "@spectrum-css/vars": "^3.0.1",
-    "gulp": "^4.0.0"
+    "@spectrum-css/vars": "^3.0.1"
   },
   "publishConfig": {
     "access": "public"

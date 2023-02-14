@@ -89,7 +89,6 @@
     "@spectrum-css/typography": "^3.0.0",
     "@spectrum-css/underlay": "^2.0.8",
     "@spectrum-css/vars": "^3.0.0",
-    "@spectrum-css/well": "^3.0.0",
-    "gulp": "^4.0.2"
+    "@spectrum-css/well": "^3.0.0"
   }
 }

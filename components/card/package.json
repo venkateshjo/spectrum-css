@@ -33,8 +33,7 @@
     "@spectrum-css/icon": "^3.0.32",
     "@spectrum-css/quickaction": "^3.0.34",
     "@spectrum-css/typography": "^4.0.27",
-    "@spectrum-css/vars": "^8.0.3",
-    "gulp": "^4.0.0"
+    "@spectrum-css/vars": "^8.0.3"
   },
   "publishConfig": {
     "access": "public"

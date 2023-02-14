@@ -29,8 +29,7 @@
     "@spectrum-css/divider": "^2.0.12",
     "@spectrum-css/icon": "^3.0.32",
     "@spectrum-css/modal": "^3.0.30",
-    "@spectrum-css/tokens": "^7.0.0",
-    "gulp": "^4.0.0"
+    "@spectrum-css/tokens": "^7.0.0"
   },
   "publishConfig": {
     "access": "public"
