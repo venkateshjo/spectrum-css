@@ -89,6 +89,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ColorArea-handle {
+  transform: translate(var(--spectrum-colorarea-width), 0px);
   left: 0;
   top: 0;
 }
