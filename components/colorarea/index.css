@@ -20,10 +20,10 @@ governing permissions and limitations under the License.
   --spectrum-colorhandle-size: 16px; /* TODO replace with new token for ColorHandle, placeholder for old token var(--spectrum-colorhandle-size) */
 }
 
-/* Windows High Contrast Mode
+/* Windows High Contrast Mode */
 @media (forced-colors: active) {
   .spectrum-ColorArea {
-    --highcontrast-colorarea-fill-color-disabled : GrayText;
+    --highcontrast-colorarea-fill-color-disabled: GrayText;
   }
   .spectrum-ColorArea {
     &.is-disabled {
@@ -36,7 +36,7 @@ governing permissions and limitations under the License.
   .spectrum-ColorHandle-color {
     forced-color-adjust: none;
   }
-} */
+}
 
 .spectrum-ColorArea  {
   position: relative;
@@ -60,7 +60,7 @@ governing permissions and limitations under the License.
 
   &.is-disabled {
     pointer-events: none;
-    background: var(--spectrum-colorarea-disabled-background-color);
+    background: var(--highcontrast-colorarea-fill-color-disabled, var(--spectrum-colorarea-disabled-background-color));
     border: none;
 
     .spectrum-ColorArea-gradient {
