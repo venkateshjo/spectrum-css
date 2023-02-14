@@ -15,7 +15,7 @@
     },
     "scripts": {
         "kill-zombies": "pkill -f \"(chrome)?(--headless)\"",
-        "init": "gulp test:init",
+        "init": "node index",
         "approve": "backstop approve --config=backstop_test.js",
         "docker:clean": "backstop clean --docker --config=backstop_test.js",
         "wait:docs": "wait-on http://127.0.0.1:3000/docs/index.html",
