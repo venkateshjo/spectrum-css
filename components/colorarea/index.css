@@ -45,10 +45,10 @@ governing permissions and limitations under the License.
   display: inline-block;
   cursor: default;
   user-select: none;
-  min-width: var(--mod-colorarea-minimum-width, var(--spectrum-colorarea-minimum-width));
-  min-height: var(--mod-colorarea-minimum-height, var(--spectrum-colorarea-minimum-height));
-  width: var(--mod-colorarea-width, var(--spectrum-colorarea-width));
-  height:  var(--mod-colorarea-height, var(--spectrum-colorarea-height));
+  min-inline-size: var(--mod-colorarea-minimum-width, var(--spectrum-colorarea-minimum-width));
+  min-block-size: var(--mod-colorarea-minimum-height, var(--spectrum-colorarea-minimum-height));
+  inline-size: var(--mod-colorarea-width, var(--spectrum-colorarea-width));
+  block-size:  var(--mod-colorarea-height, var(--spectrum-colorarea-height));
   box-sizing: border-box;
   border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
   border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color, var(--mod-colorarea-border-color, var(--spetrcum-colorarea-border-color)));
@@ -73,18 +73,20 @@ governing permissions and limitations under the License.
 
 %spectrum-ColorControl-handle--focused {
   /* Bigger color handle when focused */
-  width: calc(var(--spectrum-colorhandle-size) * 2);
-  height: calc(var(--spectrum-colorhandle-size) * 2);
+  inline-size: calc(var(--spectrum-colorhandle-size) * 2);
+  block-size: calc(var(--spectrum-colorhandle-size) * 2);
 
-  margin-left: calc(-1 * var(--spectrum-colorhandle-size));
-  margin-top: calc(-1 * var(--spectrum-colorhandle-size));
+  margin-inline-start: calc(-1 * var(--spectrum-colorhandle-size));
+  margin-block-start: calc(-1 * var(--spectrum-colorhandle-size));
 }
 
 %spectrum-ColorControl-hiddenField {
   opacity: 0;
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
   z-index: 0;
   margin: 0;
   pointer-events: none;
@@ -92,13 +94,13 @@ governing permissions and limitations under the License.
 
 .spectrum-ColorArea-handle {
   transform: translate(var(--mod-colorarea-width, var(--spectrum-colorarea-width)), 0px);
-  left: 0;
-  top: 0;
+  inset-inline-start: 0;
+  inset-block-start: 0;
 }
 
 .spectrum-ColorArea-gradient {
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
 }
 
