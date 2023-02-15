@@ -23,7 +23,9 @@ governing permissions and limitations under the License.
 /* Windows High Contrast Mode */
 @media (forced-colors: active) {
   .spectrum-ColorArea {
-    --highcontrast-colorarea-fill-color-disabled: GrayText;
+    --highcontrast-colorarea-border-color-disabled: GrayText;
+    --highcontrast-colorarea-border-color: Canvas;
+    --highcontrast-colorarea-fill-color-disabled: Canvas;
   }
   .spectrum-ColorArea {
     &.is-disabled {
@@ -49,7 +51,7 @@ governing permissions and limitations under the License.
   height:  var(--mod-colorarea-height, var(--spectrum-colorarea-height));
   box-sizing: border-box;
   border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
-  border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--mod-colorarea-border-color, var(--spetrcum-colorarea-border-color));
+  border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color, var(--mod-colorarea-border-color, var(--spetrcum-colorarea-border-color)));
 
   &.is-focused {
     z-index: 2;
@@ -61,7 +63,7 @@ governing permissions and limitations under the License.
   &.is-disabled {
     pointer-events: none;
     background: var(--highcontrast-colorarea-fill-color-disabled, var(--mod-colorarea-disabled-background-color, var(--spectrum-colorarea-disabled-background-color)));
-    border: none;
+    border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color-disabled);
 
     .spectrum-ColorArea-gradient {
       display: none;
