@@ -10,7 +10,7 @@ governing permissions and limitations under the License.
 */
 .spectrum-ColorArea {
   --spectrum-colorarea-border-radius: var(--spectrum-color-area-border-rounding);
-  --spetrcum-colorarea-border-color: rgba(0, 0, 0, 0.1); /* TODO replace with token --spectrum-color-area-border-color and --spectrum-color-area-border-opacity using RGBA function */
+  --spectrum-colorarea-border-color: rgba(0, 0, 0, 0.1); /* TODO replace with token --spectrum-color-area-border-color and --spectrum-color-area-border-opacity using RGBA function */
   --spectrum-colorarea-disabled-background-color: var(--spectrum-disabled-background-color);
   --spectrum-colorarea-border-width: var(--spectrum-color-area-border-width);
   --spectrum-colorarea-height: var(--spectrum-color-area-height);
@@ -51,7 +51,7 @@ governing permissions and limitations under the License.
   block-size:  var(--mod-colorarea-height, var(--spectrum-colorarea-height));
   box-sizing: border-box;
   border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
-  border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color, var(--mod-colorarea-border-color, var(--spetrcum-colorarea-border-color)));
+  border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color, var(--mod-colorarea-border-color, var(--spectrum-colorarea-border-color)));
 
   &.is-focused {
     z-index: 2;
