@@ -8,6 +8,7 @@
     "update": "gulp update",
     "build": "node index.js"
   },
+  "author": "Adobe",
   "homepage": "https://opensource.adobe.com/spectrum-css/",
   "repository": {
     "type": "git",

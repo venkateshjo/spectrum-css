@@ -36,6 +36,7 @@
     "dev": "run-p dev:*",
     "dev:components": "node index.js watch-relaunch",
     "dev:docs": "yarn workspace @spectrum-css/documentation dev",
+    "lint:components": "node ./tasks/packageLint.js",
     "new": "yarn workspace @spectrum-css/generator new",
     "precommit": "lint-staged",
     "prepare": "husky install",
@@ -78,16 +79,17 @@
     "prismjs": "^1.23.0",
     "replace-in-file": "^6.3.5",
     "rimraf": "^4.1.1",
-    "semver": "^6.3.0",
     "sort-stream": "^1.0.1",
     "splice-string": "^3.0.0",
     "stream-rename": "^1.0.1",
     "style-dictionary": "^3.7.1",
     "style-dictionary-sets": "^2.0.5",
     "svgmin": "^0.1.0",
-    "through2": "^3.0.1",
     "util": "^0.12.5",
-    "winston": "^3.8.2"
+    "winston": "^3.8.2",
+    "semver": "^7.3.8",
+    "through2": "^3.0.1",
+    "yargs": "^17.6.2"
   },
   "husky": {
     "hooks": {
@@ -96,6 +98,10 @@
     }
   },
   "lint-staged": {
+    "components/*/package.json": [
+      "yarn lint:components",
+      "prettier-package-json --write"
+    ],
     "package.json": [
       "prettier-package-json --write"
     ]
