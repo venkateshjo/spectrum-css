@@ -3,8 +3,7 @@
   "version": "4.0.15",
   "description": "The Spectrum CSS fieldgroup component",
   "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/fieldgroup",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",

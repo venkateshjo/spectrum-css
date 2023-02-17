@@ -3,12 +3,11 @@
   "version": "1.1.13",
   "description": "The Spectrum CSS asset card component",
   "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/assetcard",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "components/assetcard"
+    "directory": "components/card"
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"

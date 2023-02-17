@@ -3,8 +3,6 @@
   "version": "7.0.0",
   "description": "The Spectrum CSS tokens package",
   "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
@@ -28,5 +26,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "homepage": "https://opensource.adobe.com/spectrum-css/"
 }
